@@ -1,0 +1,87 @@
+{
+  "policy": "weighted_round_robin",
+  "concurrency": 8,
+  "workload": "sharegpt",
+  "rep": 2,
+  "start_ts": "2026-07-25T22:31:36Z",
+  "end_ts": "2026-07-25T22:41:11Z",
+  "router_git_commit": "a8feeef",
+  "frozen_config": {
+    "weights": [
+      3.1,
+      1.0,
+      1.0
+    ],
+    "poll_interval_ms": 350,
+    "poll_timeout_ms": 300,
+    "dispatch_eviction_threshold": 3,
+    "max_state_age_ms": 1000,
+    "connect_timeout_ms": 1000,
+    "upstream_timeout_ms": 120000,
+    "stream_idle_timeout_ms": 120000,
+    "llama_build": "9960 / a935fbffe",
+    "model": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "num_prompts": 100,
+    "request_rate": 2,
+    "seed": 42,
+    "bench_timeout_s": 2400,
+    "minimum_cooldown_s": 60,
+    "thermal_start_max_c": 60.0,
+    "thermal_stable_readings": 2,
+    "thermal_poll_s": 10,
+    "thermal_wait_timeout_s": 1200
+  },
+  "bench_result_file": "sharegpt_rate2.0_c8_20260726_004110.json",
+  "router_log_file": "router_log.jsonl",
+  "verdict": "clean",
+  "verdict_reason": null,
+  "router_metrics": {
+    "run_ids": [
+      "1785018708770831000-21733"
+    ],
+    "router_request_records": 103,
+    "no_healthy_replica": 0,
+    "failure_rate": 0.0097,
+    "eviction_events": 0,
+    "stale_mode_distribution": {
+      "stateless": 103
+    },
+    "chosen_replica_counts": {
+      "pi-node-1": 63,
+      "pi-node-2": 20,
+      "pi-node-3": 20
+    }
+  },
+  "bench_summary": {
+    "num_prompts": 100,
+    "num_warmup": 3,
+    "completed": 99,
+    "failed": 1,
+    "outcome_counts": {
+      "success": 99,
+      "connection_error": 1
+    },
+    "throughput_req_s": 0.1828,
+    "duration_s": 541.436
+  },
+  "reachability_events": [],
+  "thermal_gate": {
+    "threshold_c": 60.0,
+    "stable_readings_required": 2,
+    "poll_interval_s": 10,
+    "timeout_s": 1200,
+    "wait_s": 12.173,
+    "samples": 2,
+    "initial_c": {
+      "pi-node-1": 50.7,
+      "pi-node-2": 54.53,
+      "pi-node-3": 56.97
+    },
+    "final_c": {
+      "pi-node-1": 46.85,
+      "pi-node-2": 55.02,
+      "pi-node-3": 55.99
+    },
+    "read_errors": {}
+  }
+}

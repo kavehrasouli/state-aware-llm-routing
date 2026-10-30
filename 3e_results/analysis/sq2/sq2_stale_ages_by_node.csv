@@ -1,0 +1,4 @@
+node,scope,n_stale_observations,median_age_ms,max_age_ms
+pi-node-1,clean,5247,2727.713458,20552.596583
+pi-node-2,clean,10205,7821.093125,76631.255917
+pi-node-3,clean,8784,8207.493625,77470.94124999999

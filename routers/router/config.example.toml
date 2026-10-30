@@ -1,0 +1,59 @@
+# Example router config. Copy to router.toml and edit. Weights are placeholders
+# (1.0) until calibrated from per-node throughput (see weights_results/).
+
+listen                 = "0.0.0.0:3000"
+policy                 = "state_aware"   # random | round_robin | least_connections | weighted_round_robin
+                                         # | weighted_least_connections | state_aware | cost_model | state_aware_v2
+                                         # | cost_predict_v3 (EXPERIMENTAL, request-aware predictive policy)
+poll_interval_ms       = 100             # ~matched to CPU decode-step time (see design chapter)
+upstream_timeout_ms    = 30000           # per-request connect / time-to-first-byte deadline
+stream_idle_timeout_ms = 30000           # max gap between streamed chunks before the request is failed
+poll_timeout_ms        = 80              # MUST be < poll_interval_ms so one dead node can't stall the poller
+# --- reachability vs. state-freshness (post-incident: /metrics slowness != node down) ---
+dispatch_eviction_threshold = 3          # consecutive CONNECTION-LEVEL dispatch failures (connect refused/
+                                         # unreachable/connect-timeout) on the request path before eviction.
+                                         # A /metrics poll failure does NOT evict — it only marks state stale.
+max_state_age_ms       = 1000            # state older than this = no-signal, excluded from argmin. ~poll_interval
+                                         # + poll_timeout headroom, below the ~2s /metrics prefill stall.
+connect_timeout_ms     = 1000            # forwarding connect deadline, separate from upstream_timeout_ms; makes
+                                         # "connect timeout" (evict) distinct from "slow prefill" (no evict). MUST be < upstream_timeout_ms.
+# log_path             = "routing_log.jsonl"   # omit -> structured records go to stdout
+
+# c (context_budget) is per-node on purpose: a heterogeneous-context deployment
+# must not be silently wrong. All nodes currently launch with `-c 4096`.
+#
+# Fitted cost coefficients: c1 (ms/in-flight-request), c2
+# (ms/resident-token), c0 (ms fixed intercept). `cost_model` scores current
+# state as c0+c1*B+c2*R; experimental `cost_predict_v3` scores this request as
+# c0+c1*(B+1)+c2*min(R+request_tokens, context_budget). Both ignore weight.
+# cost_predict_v3 requires all three values on every replica; startup fails if
+# any are absent or a replica is all-zero.
+[[replicas]]
+name           = "pi-node-1"             # Pi 5 (8GB)
+url            = "http://192.168.2.2:30001"
+weight         = 1.0
+context_budget = 4096
+# Pi 5 R-only fit: B was non-monotonic, making linear/capped-B prediction
+# hazardous. Source:
+# benchmarks/cost_model_results_pi-node-1_Pi5-8GB/pi5_cost_model_analysis.md.
+c0             = 87.5638
+c1             = 0.0
+c2             = 0.013507
+
+[[replicas]]
+name           = "pi-node-2"             # Pi 4B (4GB) — binding/worst-case node
+url            = "http://192.168.2.3:30002"
+weight         = 1.0
+context_budget = 4096
+c0             = 53.0
+c1             = 47.0
+c2             = 0.070
+
+[[replicas]]
+name           = "pi-node-3"             # Pi 4B (8GB)
+url            = "http://192.168.2.5:30003"
+weight         = 1.0
+context_budget = 4096
+c0             = 53.0
+c1             = 47.0
+c2             = 0.070

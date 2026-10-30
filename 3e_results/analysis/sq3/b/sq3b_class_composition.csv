@@ -1,0 +1,10 @@
+arm,cell,runs,clean_runs,short_completed,short_offered,long_completed,long_offered,median_position_short_runs,median_position_long_runs,median_position_mixed_runs
+state_aware,c4_bim,6,6,300,300,299,300,0,6,0
+state_aware,c8_bim,6,6,300,300,275,300,3,2,1
+state_aware,c12_bim,9,6,450,450,366,450,3,3,0
+weighted_least_connections,c4_bim,6,6,300,300,300,300,0,6,0
+weighted_least_connections,c8_bim,11,11,550,550,530,550,5,2,4
+weighted_least_connections,c12_bim,12,8,600,600,503,600,2,4,2
+weighted_round_robin,c4_bim,6,6,300,300,290,300,5,1,0
+weighted_round_robin,c8_bim,7,6,350,350,284,350,0,6,0
+weighted_round_robin,c12_bim,19,5,950,950,735,950,4,1,0

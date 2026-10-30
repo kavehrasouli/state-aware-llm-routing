@@ -1,0 +1,18 @@
+# Python and OS
+__pycache__/
+*.pyc
+.DS_Store
+
+# Rust build output
+routers/router/target/
+
+# Created by the experiment drivers
+runner.lock
+
+# Generated when the analysis is rerun
+3e_results/analysis/logs/
+3e_results/analysis/**/*.md
+
+# Credentials and model files (never commit)
+.pi_node*_ssh_pass
+*.gguf

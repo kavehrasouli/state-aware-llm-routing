@@ -1,0 +1,192 @@
+2026-10-23T17:36:17Z  RUN  state_aware c8_bimodal rep1
+2026-10-23T17:36:17Z    thermal gate: pi-node-1=45.8C, pi-node-2=42.4C, pi-node-3=40.9C (stable 1/2)
+2026-10-23T17:36:28Z    thermal gate: pi-node-1=44.1C, pi-node-2=40.9C, pi-node-3=41.4C (stable 2/2)
+2026-10-23T17:44:03Z  CLEAN   state_aware c8_bimodal rep1  chosen={'pi-node-1': 59, 'pi-node-3': 21, 'pi-node-2': 23}
+2026-10-23T17:45:03Z  RUN  weighted_least_connections c8_bimodal rep1
+2026-10-23T17:45:05Z    thermal gate: pi-node-1=46.3C, pi-node-2=51.6C, pi-node-3=46.2C (stable 1/2)
+2026-10-23T17:45:16Z    thermal gate: pi-node-1=46.9C, pi-node-2=50.1C, pi-node-3=45.3C (stable 2/2)
+2026-10-23T17:52:48Z  CLEAN   weighted_least_connections c8_bimodal rep1  chosen={'pi-node-1': 62, 'pi-node-3': 18, 'pi-node-2': 23}
+2026-10-23T17:53:48Z  RUN  wlc_tracked c8_bimodal rep1
+2026-10-23T17:53:50Z    thermal gate: pi-node-1=45.8C, pi-node-2=52.6C, pi-node-3=50.6C (stable 1/2)
+2026-10-23T17:54:01Z    thermal gate: pi-node-1=46.3C, pi-node-2=51.6C, pi-node-3=49.2C (stable 2/2)
+2026-10-23T18:00:49Z  CLEAN   wlc_tracked c8_bimodal rep1  chosen={'pi-node-1': 61, 'pi-node-2': 21, 'pi-node-3': 21}
+2026-10-23T18:01:49Z  RUN  state_aware_tracked c8_bimodal rep1
+2026-10-23T18:01:50Z    thermal gate: pi-node-1=45.8C, pi-node-2=53.6C, pi-node-3=50.6C (stable 1/2)
+2026-10-23T18:02:01Z    thermal gate: pi-node-1=45.2C, pi-node-2=53.1C, pi-node-3=49.7C (stable 2/2)
+2026-10-23T18:09:14Z  CLEAN   state_aware_tracked c8_bimodal rep1  chosen={'pi-node-1': 62, 'pi-node-2': 19, 'pi-node-3': 22}
+2026-10-23T18:10:14Z  RUN  weighted_least_connections c8_bimodal rep2
+2026-10-23T18:10:16Z    thermal gate: pi-node-1=46.9C, pi-node-2=53.1C, pi-node-3=51.1C (stable 1/2)
+2026-10-23T18:10:27Z    thermal gate: pi-node-1=46.3C, pi-node-2=52.1C, pi-node-3=51.1C (stable 2/2)
+2026-10-23T18:17:50Z  CLEAN   weighted_least_connections c8_bimodal rep2  chosen={'pi-node-1': 66, 'pi-node-3': 20, 'pi-node-2': 17}
+2026-10-23T18:18:50Z  RUN  state_aware_tracked c8_bimodal rep2
+2026-10-23T18:18:52Z    thermal gate: pi-node-1=49.0C, pi-node-2=54.0C, pi-node-3=51.6C (stable 1/2)
+2026-10-23T18:19:03Z    thermal gate: pi-node-1=47.4C, pi-node-2=53.1C, pi-node-3=50.1C (stable 2/2)
+2026-10-23T18:26:07Z  CLEAN   state_aware_tracked c8_bimodal rep2  chosen={'pi-node-1': 57, 'pi-node-2': 18, 'pi-node-3': 28}
+2026-10-23T18:27:07Z  RUN  state_aware c8_bimodal rep2
+2026-10-23T18:27:09Z    thermal gate: pi-node-1=47.4C, pi-node-2=54.0C, pi-node-3=51.1C (stable 1/2)
+2026-10-23T18:27:20Z    thermal gate: pi-node-1=48.0C, pi-node-2=53.1C, pi-node-3=51.1C (stable 2/2)
+2026-10-23T18:35:24Z  CLEAN   state_aware c8_bimodal rep2  chosen={'pi-node-1': 59, 'pi-node-3': 23, 'pi-node-2': 21}
+2026-10-23T18:36:24Z  RUN  wlc_tracked c8_bimodal rep2
+2026-10-23T18:36:26Z    thermal gate: pi-node-1=45.8C, pi-node-2=54.5C, pi-node-3=48.7C (stable 1/2)
+2026-10-23T18:36:37Z    thermal gate: pi-node-1=46.9C, pi-node-2=53.6C, pi-node-3=49.2C (stable 2/2)
+2026-10-23T18:43:16Z  CLEAN   wlc_tracked c8_bimodal rep2  chosen={'pi-node-1': 62, 'pi-node-3': 20, 'pi-node-2': 21}
+2026-10-23T18:44:16Z  RUN  state_aware_tracked c8_bimodal rep3
+2026-10-23T18:44:18Z    thermal gate: pi-node-1=48.5C, pi-node-2=54.0C, pi-node-3=52.1C (stable 1/2)
+2026-10-23T18:44:29Z    thermal gate: pi-node-1=46.9C, pi-node-2=54.0C, pi-node-3=52.6C (stable 2/2)
+2026-10-23T18:51:39Z  CLEAN   state_aware_tracked c8_bimodal rep3  chosen={'pi-node-1': 61, 'pi-node-2': 20, 'pi-node-3': 22}
+2026-10-23T18:52:39Z  RUN  wlc_tracked c8_bimodal rep3
+2026-10-23T18:52:41Z    thermal gate: pi-node-1=46.9C, pi-node-2=52.1C, pi-node-3=54.0C (stable 1/2)
+2026-10-23T18:52:52Z    thermal gate: pi-node-1=45.8C, pi-node-2=51.6C, pi-node-3=52.1C (stable 2/2)
+2026-10-23T18:59:49Z  CLEAN   wlc_tracked c8_bimodal rep3  chosen={'pi-node-1': 73, 'pi-node-3': 15, 'pi-node-2': 15}
+2026-10-23T19:00:49Z  RUN  weighted_least_connections c8_bimodal rep3
+2026-10-23T19:00:51Z    thermal gate: pi-node-1=46.9C, pi-node-2=55.0C, pi-node-3=51.1C (stable 1/2)
+2026-10-23T19:01:02Z    thermal gate: pi-node-1=47.4C, pi-node-2=54.0C, pi-node-3=50.6C (stable 2/2)
+2026-10-23T19:08:13Z  CLEAN   weighted_least_connections c8_bimodal rep3  chosen={'pi-node-1': 61, 'pi-node-3': 21, 'pi-node-2': 21}
+2026-10-23T19:09:13Z  RUN  state_aware c8_bimodal rep3
+2026-10-23T19:09:15Z    thermal gate: pi-node-1=47.4C, pi-node-2=54.0C, pi-node-3=51.6C (stable 1/2)
+2026-10-23T19:09:26Z    thermal gate: pi-node-1=48.5C, pi-node-2=53.6C, pi-node-3=51.6C (stable 2/2)
+2026-10-23T19:17:09Z  CLEAN   state_aware c8_bimodal rep3  chosen={'pi-node-1': 66, 'pi-node-3': 17, 'pi-node-2': 20}
+2026-10-23T19:18:09Z  RUN  wlc_tracked c8_bimodal rep4
+2026-10-23T19:18:11Z    thermal gate: pi-node-1=46.9C, pi-node-2=56.0C, pi-node-3=50.1C (stable 1/2)
+2026-10-23T19:18:21Z    thermal gate: pi-node-1=45.8C, pi-node-2=53.6C, pi-node-3=49.2C (stable 2/2)
+2026-10-23T19:25:31Z  CLEAN   wlc_tracked c8_bimodal rep4  chosen={'pi-node-1': 64, 'pi-node-2': 22, 'pi-node-3': 17}
+2026-10-23T19:26:31Z  RUN  state_aware c8_bimodal rep4
+2026-10-23T19:26:33Z    thermal gate: pi-node-1=45.8C, pi-node-2=56.0C, pi-node-3=51.1C (stable 1/2)
+2026-10-23T19:26:44Z    thermal gate: pi-node-1=46.3C, pi-node-2=53.6C, pi-node-3=50.1C (stable 2/2)
+2026-10-23T19:33:58Z  CLEAN   state_aware c8_bimodal rep4  chosen={'pi-node-1': 69, 'pi-node-3': 19, 'pi-node-2': 15}
+2026-10-23T19:34:58Z  RUN  state_aware_tracked c8_bimodal rep4
+2026-10-23T19:35:00Z    thermal gate: pi-node-1=47.4C, pi-node-2=55.0C, pi-node-3=52.6C (stable 1/2)
+2026-10-23T19:35:11Z    thermal gate: pi-node-1=46.9C, pi-node-2=53.1C, pi-node-3=52.1C (stable 2/2)
+2026-10-23T19:42:25Z  CLEAN   state_aware_tracked c8_bimodal rep4  chosen={'pi-node-1': 62, 'pi-node-2': 19, 'pi-node-3': 22}
+2026-10-23T19:43:25Z  RUN  weighted_least_connections c8_bimodal rep4
+2026-10-23T19:43:26Z    thermal gate: pi-node-1=45.8C, pi-node-2=54.0C, pi-node-3=52.1C (stable 1/2)
+2026-10-23T19:43:37Z    thermal gate: pi-node-1=45.8C, pi-node-2=54.0C, pi-node-3=52.6C (stable 2/2)
+2026-10-23T19:50:50Z  CLEAN   weighted_least_connections c8_bimodal rep4  chosen={'pi-node-1': 66, 'pi-node-3': 18, 'pi-node-2': 19}
+2026-10-23T19:51:50Z  RUN  state_aware c8_bimodal rep5
+2026-10-23T19:51:52Z    thermal gate: pi-node-1=46.9C, pi-node-2=53.6C, pi-node-3=52.1C (stable 1/2)
+2026-10-23T19:52:03Z    thermal gate: pi-node-1=47.4C, pi-node-2=52.1C, pi-node-3=51.6C (stable 2/2)
+2026-10-23T19:59:18Z  CLEAN   state_aware c8_bimodal rep5  chosen={'pi-node-1': 65, 'pi-node-3': 19, 'pi-node-2': 19}
+2026-10-23T20:00:18Z  RUN  weighted_least_connections c8_bimodal rep5
+2026-10-23T20:00:19Z    thermal gate: pi-node-1=46.3C, pi-node-2=54.5C, pi-node-3=51.6C (stable 1/2)
+2026-10-23T20:00:30Z    thermal gate: pi-node-1=45.8C, pi-node-2=53.1C, pi-node-3=52.6C (stable 2/2)
+2026-10-23T20:08:05Z  CLEAN   weighted_least_connections c8_bimodal rep5  chosen={'pi-node-1': 56, 'pi-node-3': 23, 'pi-node-2': 24}
+2026-10-23T20:09:05Z  RUN  wlc_tracked c8_bimodal rep5
+2026-10-23T20:09:06Z    thermal gate: pi-node-1=48.5C, pi-node-2=55.0C, pi-node-3=51.1C (stable 1/2)
+2026-10-23T20:09:17Z    thermal gate: pi-node-1=46.3C, pi-node-2=55.0C, pi-node-3=49.7C (stable 2/2)
+2026-10-23T20:16:36Z  CLEAN   wlc_tracked c8_bimodal rep5  chosen={'pi-node-1': 63, 'pi-node-3': 19, 'pi-node-2': 21}
+2026-10-23T20:17:36Z  RUN  state_aware_tracked c8_bimodal rep5
+2026-10-23T20:17:37Z    thermal gate: pi-node-1=45.8C, pi-node-2=54.0C, pi-node-3=49.7C (stable 1/2)
+2026-10-23T20:17:48Z    thermal gate: pi-node-1=46.3C, pi-node-2=53.6C, pi-node-3=49.7C (stable 2/2)
+2026-10-23T20:24:54Z  CLEAN   state_aware_tracked c8_bimodal rep5  chosen={'pi-node-1': 62, 'pi-node-3': 19, 'pi-node-2': 22}
+2026-10-23T20:25:54Z  RUN  weighted_least_connections c8_bimodal rep6
+2026-10-23T20:25:56Z    thermal gate: pi-node-1=45.8C, pi-node-2=54.0C, pi-node-3=52.1C (stable 1/2)
+2026-10-23T20:26:07Z    thermal gate: pi-node-1=46.3C, pi-node-2=54.0C, pi-node-3=51.6C (stable 2/2)
+2026-10-23T20:33:33Z  CLEAN   weighted_least_connections c8_bimodal rep6  chosen={'pi-node-1': 61, 'pi-node-3': 19, 'pi-node-2': 23}
+2026-10-23T20:34:33Z  RUN  state_aware_tracked c8_bimodal rep6
+2026-10-23T20:34:35Z    thermal gate: pi-node-1=47.4C, pi-node-2=55.5C, pi-node-3=51.6C (stable 1/2)
+2026-10-23T20:34:46Z    thermal gate: pi-node-1=45.8C, pi-node-2=53.6C, pi-node-3=50.6C (stable 2/2)
+2026-10-23T20:41:45Z  CLEAN   state_aware_tracked c8_bimodal rep6  chosen={'pi-node-1': 69, 'pi-node-3': 18, 'pi-node-2': 16}
+2026-10-23T20:42:45Z  RUN  state_aware c8_bimodal rep6
+2026-10-23T20:42:47Z    thermal gate: pi-node-1=47.4C, pi-node-2=54.5C, pi-node-3=52.1C (stable 1/2)
+2026-10-23T20:42:57Z    thermal gate: pi-node-1=46.9C, pi-node-2=54.0C, pi-node-3=50.6C (stable 2/2)
+2026-10-23T20:50:41Z  CLEAN   state_aware c8_bimodal rep6  chosen={'pi-node-1': 63, 'pi-node-3': 18, 'pi-node-2': 22}
+2026-10-23T20:51:41Z  RUN  wlc_tracked c8_bimodal rep6
+2026-10-23T20:51:42Z    thermal gate: pi-node-1=46.3C, pi-node-2=52.6C, pi-node-3=52.6C (stable 1/2)
+2026-10-23T20:51:53Z    thermal gate: pi-node-1=46.9C, pi-node-2=52.1C, pi-node-3=50.6C (stable 2/2)
+2026-10-23T20:58:57Z  CLEAN   wlc_tracked c8_bimodal rep6  chosen={'pi-node-1': 67, 'pi-node-2': 19, 'pi-node-3': 17}
+2026-10-23T20:59:57Z  RUN  state_aware_tracked c8_bimodal rep7
+2026-10-23T20:59:58Z    thermal gate: pi-node-1=45.2C, pi-node-2=53.1C, pi-node-3=51.6C (stable 1/2)
+2026-10-23T21:00:09Z    thermal gate: pi-node-1=44.6C, pi-node-2=51.6C, pi-node-3=50.6C (stable 2/2)
+2026-10-23T21:07:23Z  CLEAN   state_aware_tracked c8_bimodal rep7  chosen={'pi-node-1': 62, 'pi-node-3': 20, 'pi-node-2': 21}
+2026-10-23T21:08:23Z  RUN  wlc_tracked c8_bimodal rep7
+2026-10-23T21:08:24Z    thermal gate: pi-node-1=46.3C, pi-node-2=54.0C, pi-node-3=50.6C (stable 1/2)
+2026-10-23T21:08:35Z    thermal gate: pi-node-1=47.4C, pi-node-2=55.0C, pi-node-3=49.7C (stable 2/2)
+2026-10-23T21:15:34Z  CLEAN   wlc_tracked c8_bimodal rep7  chosen={'pi-node-1': 64, 'pi-node-3': 20, 'pi-node-2': 19}
+2026-10-23T21:16:34Z  RUN  weighted_least_connections c8_bimodal rep7
+2026-10-23T21:16:35Z    thermal gate: pi-node-1=48.5C, pi-node-2=54.5C, pi-node-3=50.6C (stable 1/2)
+2026-10-23T21:16:46Z    thermal gate: pi-node-1=47.4C, pi-node-2=53.6C, pi-node-3=50.6C (stable 2/2)
+2026-10-23T21:23:55Z  CLEAN   weighted_least_connections c8_bimodal rep7  chosen={'pi-node-1': 63, 'pi-node-3': 20, 'pi-node-2': 20}
+2026-10-23T21:24:55Z  RUN  state_aware c8_bimodal rep7
+2026-10-23T21:24:56Z    thermal gate: pi-node-1=46.3C, pi-node-2=55.0C, pi-node-3=51.6C (stable 1/2)
+2026-10-23T21:25:07Z    thermal gate: pi-node-1=48.0C, pi-node-2=53.6C, pi-node-3=50.6C (stable 2/2)
+2026-10-23T21:32:45Z  CLEAN   state_aware c8_bimodal rep7  chosen={'pi-node-1': 60, 'pi-node-3': 19, 'pi-node-2': 24}
+2026-10-23T21:33:45Z  RUN  wlc_tracked c8_bimodal rep8
+2026-10-23T21:33:46Z    thermal gate: pi-node-1=46.3C, pi-node-2=52.6C, pi-node-3=53.1C (stable 1/2)
+2026-10-23T21:33:57Z    thermal gate: pi-node-1=46.9C, pi-node-2=52.6C, pi-node-3=52.1C (stable 2/2)
+2026-10-23T21:41:03Z  CLEAN   wlc_tracked c8_bimodal rep8  chosen={'pi-node-1': 66, 'pi-node-3': 19, 'pi-node-2': 18}
+2026-10-23T21:42:03Z  RUN  state_aware c8_bimodal rep8
+2026-10-23T21:42:04Z    thermal gate: pi-node-1=46.9C, pi-node-2=52.6C, pi-node-3=52.1C (stable 1/2)
+2026-10-23T21:42:15Z    thermal gate: pi-node-1=46.3C, pi-node-2=53.1C, pi-node-3=51.1C (stable 2/2)
+2026-10-23T21:49:34Z  CLEAN   state_aware c8_bimodal rep8  chosen={'pi-node-1': 63, 'pi-node-3': 24, 'pi-node-2': 16}
+2026-10-23T21:50:34Z  RUN  state_aware_tracked c8_bimodal rep8
+2026-10-23T21:50:36Z    thermal gate: pi-node-1=47.4C, pi-node-2=53.6C, pi-node-3=52.1C (stable 1/2)
+2026-10-23T21:50:47Z    thermal gate: pi-node-1=46.3C, pi-node-2=53.6C, pi-node-3=50.6C (stable 2/2)
+2026-10-23T21:58:20Z  CLEAN   state_aware_tracked c8_bimodal rep8  chosen={'pi-node-1': 68, 'pi-node-3': 19, 'pi-node-2': 16}
+2026-10-23T21:59:20Z  RUN  weighted_least_connections c8_bimodal rep8
+2026-10-23T21:59:21Z    thermal gate: pi-node-1=47.4C, pi-node-2=55.5C, pi-node-3=49.2C (stable 1/2)
+2026-10-23T21:59:32Z    thermal gate: pi-node-1=45.2C, pi-node-2=53.6C, pi-node-3=49.2C (stable 2/2)
+2026-10-23T22:06:48Z  CLEAN   weighted_least_connections c8_bimodal rep8  chosen={'pi-node-1': 64, 'pi-node-3': 19, 'pi-node-2': 20}
+2026-10-23T22:07:48Z  RUN  state_aware c8_bimodal rep9
+2026-10-23T22:07:49Z    thermal gate: pi-node-1=46.3C, pi-node-2=53.6C, pi-node-3=52.1C (stable 1/2)
+2026-10-23T22:08:00Z    thermal gate: pi-node-1=45.8C, pi-node-2=53.1C, pi-node-3=50.6C (stable 2/2)
+2026-10-23T22:15:23Z  CLEAN   state_aware c8_bimodal rep9  chosen={'pi-node-1': 57, 'pi-node-3': 23, 'pi-node-2': 23}
+2026-10-23T22:16:23Z  RUN  weighted_least_connections c8_bimodal rep9
+2026-10-23T22:16:24Z    thermal gate: pi-node-1=47.4C, pi-node-2=54.5C, pi-node-3=52.1C (stable 1/2)
+2026-10-23T22:16:35Z    thermal gate: pi-node-1=46.9C, pi-node-2=54.0C, pi-node-3=50.6C (stable 2/2)
+2026-10-23T22:23:41Z  CLEAN   weighted_least_connections c8_bimodal rep9  chosen={'pi-node-1': 65, 'pi-node-3': 15, 'pi-node-2': 23}
+2026-10-23T22:24:41Z  RUN  wlc_tracked c8_bimodal rep9
+2026-10-23T22:24:43Z    thermal gate: pi-node-1=48.0C, pi-node-2=55.0C, pi-node-3=53.1C (stable 1/2)
+2026-10-23T22:24:54Z    thermal gate: pi-node-1=45.8C, pi-node-2=53.1C, pi-node-3=51.6C (stable 2/2)
+2026-10-23T22:31:51Z  CLEAN   wlc_tracked c8_bimodal rep9  chosen={'pi-node-1': 68, 'pi-node-3': 16, 'pi-node-2': 19}
+2026-10-23T22:32:51Z  RUN  state_aware_tracked c8_bimodal rep9
+2026-10-23T22:32:52Z    thermal gate: pi-node-1=46.3C, pi-node-2=54.5C, pi-node-3=53.1C (stable 1/2)
+2026-10-23T22:33:03Z    thermal gate: pi-node-1=45.2C, pi-node-2=53.6C, pi-node-3=52.1C (stable 2/2)
+2026-10-23T22:40:37Z  CLEAN   state_aware_tracked c8_bimodal rep9  chosen={'pi-node-1': 65, 'pi-node-3': 19, 'pi-node-2': 19}
+2026-10-23T22:41:37Z  RUN  weighted_least_connections c8_bimodal rep10
+2026-10-23T22:41:38Z    thermal gate: pi-node-1=47.4C, pi-node-2=53.6C, pi-node-3=52.6C (stable 1/2)
+2026-10-23T22:41:49Z    thermal gate: pi-node-1=45.2C, pi-node-2=53.6C, pi-node-3=52.1C (stable 2/2)
+2026-10-23T22:49:03Z  CLEAN   weighted_least_connections c8_bimodal rep10  chosen={'pi-node-1': 62, 'pi-node-3': 20, 'pi-node-2': 21}
+2026-10-23T22:50:03Z  RUN  state_aware_tracked c8_bimodal rep10
+2026-10-23T22:50:04Z    thermal gate: pi-node-1=48.5C, pi-node-2=55.0C, pi-node-3=52.6C (stable 1/2)
+2026-10-23T22:50:15Z    thermal gate: pi-node-1=47.4C, pi-node-2=55.0C, pi-node-3=50.6C (stable 2/2)
+2026-10-23T22:57:58Z  CLEAN   state_aware_tracked c8_bimodal rep10  chosen={'pi-node-1': 68, 'pi-node-2': 20, 'pi-node-3': 15}
+2026-10-23T22:58:58Z  RUN  state_aware c8_bimodal rep10
+2026-10-23T22:58:59Z    thermal gate: pi-node-1=46.3C, pi-node-2=52.6C, pi-node-3=52.6C (stable 1/2)
+2026-10-23T22:59:10Z    thermal gate: pi-node-1=46.9C, pi-node-2=53.1C, pi-node-3=53.1C (stable 2/2)
+2026-10-23T23:06:39Z  CLEAN   state_aware c8_bimodal rep10  chosen={'pi-node-1': 64, 'pi-node-3': 18, 'pi-node-2': 21}
+2026-10-23T23:07:39Z  RUN  wlc_tracked c8_bimodal rep10
+2026-10-23T23:07:40Z    thermal gate: pi-node-1=46.3C, pi-node-2=56.0C, pi-node-3=51.6C (stable 1/2)
+2026-10-23T23:07:51Z    thermal gate: pi-node-1=46.3C, pi-node-2=53.1C, pi-node-3=51.6C (stable 2/2)
+2026-10-23T23:14:53Z  CLEAN   wlc_tracked c8_bimodal rep10  chosen={'pi-node-1': 63, 'pi-node-3': 17, 'pi-node-2': 23}
+2026-10-23T23:15:53Z  RUN  state_aware_tracked c8_bimodal rep11
+2026-10-23T23:15:54Z    thermal gate: pi-node-1=46.9C, pi-node-2=55.0C, pi-node-3=53.6C (stable 1/2)
+2026-10-23T23:16:05Z    thermal gate: pi-node-1=46.3C, pi-node-2=55.0C, pi-node-3=53.6C (stable 2/2)
+2026-10-23T23:23:09Z  CLEAN   state_aware_tracked c8_bimodal rep11  chosen={'pi-node-1': 72, 'pi-node-2': 18, 'pi-node-3': 13}
+2026-10-23T23:24:09Z  RUN  wlc_tracked c8_bimodal rep11
+2026-10-23T23:24:10Z    thermal gate: pi-node-1=46.3C, pi-node-2=55.0C, pi-node-3=52.6C (stable 1/2)
+2026-10-23T23:24:21Z    thermal gate: pi-node-1=46.3C, pi-node-2=54.0C, pi-node-3=52.1C (stable 2/2)
+2026-10-23T23:31:27Z  CLEAN   wlc_tracked c8_bimodal rep11  chosen={'pi-node-1': 65, 'pi-node-3': 16, 'pi-node-2': 22}
+2026-10-23T23:32:27Z  RUN  weighted_least_connections c8_bimodal rep11
+2026-10-23T23:32:28Z    thermal gate: pi-node-1=46.3C, pi-node-2=55.0C, pi-node-3=51.6C (stable 1/2)
+2026-10-23T23:32:39Z    thermal gate: pi-node-1=45.8C, pi-node-2=54.5C, pi-node-3=51.6C (stable 2/2)
+2026-10-23T23:40:04Z  CLEAN   weighted_least_connections c8_bimodal rep11  chosen={'pi-node-1': 62, 'pi-node-3': 21, 'pi-node-2': 20}
+2026-10-23T23:41:04Z  RUN  state_aware c8_bimodal rep11
+2026-10-23T23:41:05Z    thermal gate: pi-node-1=47.4C, pi-node-2=54.0C, pi-node-3=54.0C (stable 1/2)
+2026-10-23T23:41:16Z    thermal gate: pi-node-1=48.0C, pi-node-2=53.6C, pi-node-3=52.1C (stable 2/2)
+2026-10-23T23:49:40Z  CLEAN   state_aware c8_bimodal rep11  chosen={'pi-node-1': 56, 'pi-node-3': 21, 'pi-node-2': 26}
+2026-10-23T23:50:40Z  RUN  wlc_tracked c8_bimodal rep12
+2026-10-23T23:50:41Z    thermal gate: pi-node-1=46.9C, pi-node-2=54.5C, pi-node-3=51.6C (stable 1/2)
+2026-10-23T23:50:52Z    thermal gate: pi-node-1=44.6C, pi-node-2=55.0C, pi-node-3=52.1C (stable 2/2)
+2026-10-23T23:57:41Z  CLEAN   wlc_tracked c8_bimodal rep12  chosen={'pi-node-1': 65, 'pi-node-3': 21, 'pi-node-2': 17}
+2026-10-23T23:58:41Z  RUN  state_aware c8_bimodal rep12
+2026-10-23T23:58:42Z    thermal gate: pi-node-1=48.5C, pi-node-2=55.5C, pi-node-3=53.1C (stable 1/2)
+2026-10-23T23:58:53Z    thermal gate: pi-node-1=47.4C, pi-node-2=56.0C, pi-node-3=53.1C (stable 2/2)
+2026-10-24T00:06:32Z  CLEAN   state_aware c8_bimodal rep12  chosen={'pi-node-1': 63, 'pi-node-3': 22, 'pi-node-2': 18}
+2026-10-24T00:07:32Z  RUN  state_aware_tracked c8_bimodal rep12
+2026-10-24T00:07:33Z    thermal gate: pi-node-1=49.0C, pi-node-2=55.0C, pi-node-3=51.6C (stable 1/2)
+2026-10-24T00:07:44Z    thermal gate: pi-node-1=47.4C, pi-node-2=53.1C, pi-node-3=52.6C (stable 2/2)
+2026-10-24T00:14:56Z  CLEAN   state_aware_tracked c8_bimodal rep12  chosen={'pi-node-1': 70, 'pi-node-3': 16, 'pi-node-2': 17}
+2026-10-24T00:15:56Z  RUN  weighted_least_connections c8_bimodal rep12
+2026-10-24T00:15:57Z    thermal gate: pi-node-1=48.0C, pi-node-2=53.1C, pi-node-3=52.1C (stable 1/2)
+2026-10-24T00:16:08Z    thermal gate: pi-node-1=46.3C, pi-node-2=52.6C, pi-node-3=52.6C (stable 2/2)
+2026-10-24T00:23:35Z  CLEAN   weighted_least_connections c8_bimodal rep12  chosen={'pi-node-1': 57, 'pi-node-3': 24, 'pi-node-2': 22}

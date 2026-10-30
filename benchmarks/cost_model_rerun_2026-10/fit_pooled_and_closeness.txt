@@ -1,0 +1,26 @@
+============================== NEW 2026-10
+M_A pi-node-2          n= 9 b0=  59.92 (SE 13.64) b1= 35.66 (SE  5.08) b2=0.05423 (SE 0.00690) R2=0.9696 adjR2=0.9595 df=6
+                       diff vs v3 (53/47/0.070): b0  +6.92 (+13.1%)  b1 -11.34 (-24.1%)  b2 -0.01577 (-22.5%)
+                       95% CI contains v3 value?  b0 True [26.5,93.3]  b1 True [23.2,48.1]  b2 True [0.0374,0.0711]
+                       RMSE of cell means: fitted  14.1 ms | using v3 constants  48.6 ms
+M_A pi-node-3          n= 9 b0=  66.93 (SE 16.66) b1= 29.70 (SE  6.20) b2=0.05652 (SE 0.00842) R2=0.9506 adjR2=0.9341 df=6
+                       diff vs v3 (53/47/0.070): b0 +13.93 (+26.3%)  b1 -17.30 (-36.8%)  b2 -0.01348 (-19.3%)
+                       95% CI contains v3 value?  b0 True [26.2,107.7]  b1 False [14.5,44.9]  b2 True [0.0359,0.0771]
+                       RMSE of cell means: fitted  17.2 ms | using v3 constants  57.3 ms
+M_A POOLED (2 nodes)   n=18 b0=  63.42 (SE 10.05) b1= 32.68 (SE  3.74) b2=0.05538 (SE 0.00508) R2=0.9571 adjR2=0.9513 df=15
+                       diff vs v3 (53/47/0.070): b0 +10.42 (+19.7%)  b1 -14.32 (-30.5%)  b2 -0.01462 (-20.9%)
+                       95% CI contains v3 value?  b0 True [42.0,84.8]  b1 False [24.7,40.6]  b2 False [0.0445,0.0662]
+                       RMSE of cell means: fitted  16.4 ms | using v3 constants  53.1 ms
+============================== JULY (copies)
+M_A pi-node-2          n= 9 b0=  77.51 (SE 30.65) b1= 41.77 (SE 11.40) b2=0.03291 (SE 0.01550) R2=0.8321 adjR2=0.7761 df=6
+                       diff vs v3 (53/47/0.070): b0 +24.51 (+46.2%)  b1  -5.23 (-11.1%)  b2 -0.03709 (-53.0%)
+                       95% CI contains v3 value?  b0 True [2.5,152.5]  b1 True [13.9,69.7]  b2 True [-0.0050,0.0708]
+                       RMSE of cell means: fitted  31.6 ms | using v3 constants  56.4 ms
+M_A pi-node-3          n= 9 b0=  78.75 (SE 29.03) b1= 35.99 (SE 10.80) b2=0.05175 (SE 0.01468) R2=0.8712 adjR2=0.8283 df=6
+                       diff vs v3 (53/47/0.070): b0 +25.75 (+48.6%)  b1 -11.01 (-23.4%)  b2 -0.01825 (-26.1%)
+                       95% CI contains v3 value?  b0 True [7.7,149.8]  b1 True [9.6,62.4]  b2 True [0.0158,0.0877]
+                       RMSE of cell means: fitted  29.9 ms | using v3 constants  45.5 ms
+M_A POOLED (2 nodes)   n=18 b0=  78.13 (SE 19.56) b1= 38.88 (SE  7.28) b2=0.04233 (SE 0.00989) R2=0.8427 adjR2=0.8217 df=15
+                       diff vs v3 (53/47/0.070): b0 +25.13 (+47.4%)  b1  -8.12 (-17.3%)  b2 -0.02767 (-39.5%)
+                       95% CI contains v3 value?  b0 True [36.4,119.8]  b1 True [23.4,54.4]  b2 False [0.0213,0.0634]
+                       RMSE of cell means: fitted  31.9 ms | using v3 constants  51.3 ms

@@ -1,0 +1,91 @@
+baseline,candidate,family,cell,metric,n,delta,ci_95,p,enum,min_p,verdict
+weighted_round_robin,state_aware,latency_clean_only,c4_uni,e2el_p50,6v6,+3884,"[+874, +14950]",0.013,exact,0.013,LOSE
+weighted_round_robin,state_aware,latency_clean_only,c4_uni,e2el_p95,6v6,+31740,"[+18157, +40993]",0.013,exact,0.013,LOSE
+weighted_round_robin,state_aware,latency_clean_only,c4_uni,tpot_p50,6v6,+5.7,"[-2.8, +34.1]",0.100,exact,0.013,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c4_uni,tpot_p95,6v6,+138.2,"[+83.8, +222.6]",0.013,exact,0.013,LOSE
+weighted_round_robin,state_aware,latency_clean_only,c8_uni,e2el_p50,6v6,-2603,"[-4038, +164]",0.061,exact,0.013,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c8_uni,e2el_p95,6v6,+9971,"[+6750, +14903]",0.013,exact,0.013,LOSE
+weighted_round_robin,state_aware,latency_clean_only,c8_uni,tpot_p50,6v6,-32.3,"[-36.6, -16.1]",0.013,exact,0.013,BEAT
+weighted_round_robin,state_aware,latency_clean_only,c8_uni,tpot_p95,6v6,+18.8,"[-88.0, +45.9]",0.654,exact,0.013,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c12_uni,e2el_p50,6v6,+10412,"[+5759, +13698]",0.013,exact,0.013,LOSE
+weighted_round_robin,state_aware,latency_clean_only,c12_uni,e2el_p95,6v6,+1880,"[-3686, +13820]",0.433,exact,0.013,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c12_uni,tpot_p50,6v6,-0.7,"[-8.3, +1.7]",0.589,exact,0.013,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c12_uni,tpot_p95,6v6,-54.0,"[-61.3, -24.5]",0.013,exact,0.013,BEAT
+weighted_round_robin,state_aware,latency_clean_only,c4_bim,e2el_p50,6v6,+3714,"[+1121, +7001]",0.013,exact,0.013,LOSE (fragile)
+weighted_round_robin,state_aware,latency_clean_only,c4_bim,e2el_p95,6v6,-13762,"[-28512, -700]",0.019,exact,0.013,BEAT (fragile)
+weighted_round_robin,state_aware,latency_clean_only,c4_bim,tpot_p50,6v6,-6.9,"[-17.8, -2.1]",0.013,exact,0.013,BEAT (fragile)
+weighted_round_robin,state_aware,latency_clean_only,c4_bim,tpot_p95,6v6,+41.2,"[-41.9, +578.2]",0.277,exact,0.013,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c8_bim,e2el_p50,6v6,+7582,"[-1487, +11931]",0.061,exact,0.013,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c8_bim,e2el_p95,6v6,+15876,"[+3935, +21922]",0.013,exact,0.013,LOSE
+weighted_round_robin,state_aware,latency_clean_only,c8_bim,tpot_p50,6v6,+51.9,"[+23.0, +57.9]",0.045,exact,0.013,LOSE (fragile)
+weighted_round_robin,state_aware,latency_clean_only,c8_bim,tpot_p95,6v6,+461.3,"[+288.0, +605.1]",0.013,exact,0.013,LOSE
+weighted_round_robin,state_aware,latency_clean_only,c12_bim,e2el_p50,5v6,+3247,"[-4309, +7698]",0.180,exact,0.026,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c12_bim,e2el_p95,5v6,-2727,"[-10764, +3447]",0.407,exact,0.026,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c12_bim,tpot_p50,5v6,+0.4,"[-24.9, +25.3]",0.998,exact,0.026,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c12_bim,tpot_p95,5v6,+2330.0,"[+1394.5, +2592.8]",0.032,exact,0.026,LOSE
+weighted_round_robin,state_aware,latency_clean_only,c4_sgpt,e2el_p50,6v6,-1501,"[-3675, +2424]",0.316,exact,0.013,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c4_sgpt,e2el_p95,6v6,+3817,"[-5209, +18694]",0.433,exact,0.013,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c4_sgpt,tpot_p50,6v6,+1.2,"[-1.7, +5.9]",0.489,exact,0.013,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c4_sgpt,tpot_p95,6v6,+22.6,"[-23.9, +50.9]",0.290,exact,0.013,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c8_sgpt,e2el_p50,6v6,+880,"[-1185, +1733]",0.190,exact,0.013,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c8_sgpt,e2el_p95,6v6,-4148,"[-15560, -614]",0.013,exact,0.013,BEAT
+weighted_round_robin,state_aware,latency_clean_only,c8_sgpt,tpot_p50,6v6,+1.6,"[-4.8, +11.0]",0.374,exact,0.013,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c8_sgpt,tpot_p95,6v6,-11.7,"[-28.7, +0.2]",0.087,exact,0.013,no run-level difference
+weighted_round_robin,state_aware,latency_clean_only,c12_sgpt,e2el_p50,6v6,+4637,"[+1233, +7072]",0.013,exact,0.013,LOSE
+weighted_round_robin,state_aware,latency_clean_only,c12_sgpt,e2el_p95,6v6,-4401,"[-7484, +1427]",0.050,exact,0.013,BEAT (fragile)
+weighted_round_robin,state_aware,latency_clean_only,c12_sgpt,tpot_p50,6v6,+4.0,"[-0.7, +12.6]",0.048,exact,0.013,LOSE (fragile)
+weighted_round_robin,state_aware,latency_clean_only,c12_sgpt,tpot_p95,6v6,+10.3,"[+3.7, +22.8]",0.013,exact,0.013,LOSE
+weighted_round_robin,state_aware,completion_all_runs,c4_uni,completion_rate,6v6,+0.0,"[+0.0, +0.0]",1.000,,0.013,no run-level difference
+weighted_round_robin,state_aware,completion_all_runs,c8_uni,completion_rate,6v6,+0.0,"[+0.0, +0.0]",1.000,,0.013,no run-level difference
+weighted_round_robin,state_aware,completion_all_runs,c12_uni,completion_rate,6v6,+0.0,"[-0.5, +0.0]",1.000,,0.013,no run-level difference
+weighted_round_robin,state_aware,completion_all_runs,c4_bim,completion_rate,6v6,+1.5,"[+1.0, +2.5]",0.074,,0.013,no run-level difference
+weighted_round_robin,state_aware,completion_all_runs,c8_bim,completion_rate,7v6,+5.0,"[+1.0, +9.0]",0.015,,0.012,BEAT (fragile)
+weighted_round_robin,state_aware,completion_all_runs,c12_bim,completion_rate,19v9,+2.0,"[-2.0, +5.0]",0.183,,0.000,no run-level difference
+weighted_round_robin,state_aware,completion_all_runs,c4_sgpt,completion_rate,6v6,+0.0,"[-0.5, +0.0]",1.000,,0.013,no run-level difference
+weighted_round_robin,state_aware,completion_all_runs,c8_sgpt,completion_rate,6v6,+1.0,"[+0.0, +1.0]",0.061,,0.013,no run-level difference
+weighted_round_robin,state_aware,completion_all_runs,c12_sgpt,completion_rate,6v6,+1.5,"[+0.5, +3.5]",0.139,,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c4_uni,e2el_p50,6v6,-503,"[-10852, +10678]",0.870,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c4_uni,e2el_p95,6v6,-8924,"[-22309, +4071]",0.314,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c4_uni,tpot_p50,6v6,-11.7,"[-41.7, +17.6]",0.450,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c4_uni,tpot_p95,6v6,+0.2,"[-101.7, +84.0]",0.922,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c8_uni,e2el_p50,6v6,-2237,"[-24300, +1467]",0.333,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c8_uni,e2el_p95,6v6,+88,"[-828, +3778]",0.861,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c8_uni,tpot_p50,6v6,-19.3,"[-74.1, +10.3]",0.126,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c8_uni,tpot_p95,6v6,+18.2,"[-87.6, +65.1]",0.740,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c12_uni,e2el_p50,6v6,-516,"[-5883, +4193]",0.797,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c12_uni,e2el_p95,6v6,+1352,"[-4608, +13511]",0.913,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c12_uni,tpot_p50,6v6,-0.6,"[-8.1, +23.4]",0.797,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c12_uni,tpot_p95,6v6,+5.3,"[-28.3, +32.0]",0.753,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c4_bim,e2el_p50,6v6,+153,"[-428, +918]",0.353,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c4_bim,e2el_p95,6v6,+13555,"[-17273, +27617]",0.489,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c4_bim,tpot_p50,6v6,-3.8,"[-11.9, +4.2]",0.193,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c4_bim,tpot_p95,6v6,-223.6,"[-538.9, +506.4]",0.942,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c8_bim,e2el_p50,11v6,-3052,"[-12209, +4720]",0.522,exact,0.003,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c8_bim,e2el_p95,11v6,+4475,"[-3142, +12210]",0.291,exact,0.003,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c8_bim,tpot_p50,11v6,-1.6,"[-29.9, +4.7]",0.660,exact,0.003,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c8_bim,tpot_p95,11v6,+352.5,"[-31.6, +469.0]",0.054,exact,0.003,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c12_bim,e2el_p50,8v6,+320,"[-6765, +3985]",0.831,exact,0.007,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c12_bim,e2el_p95,8v6,-9652,"[-15793, +580]",0.033,exact,0.007,BEAT (fragile)
+weighted_least_connections,state_aware,latency_clean_only,c12_bim,tpot_p50,8v6,-29.7,"[-57.2, +3.8]",0.148,exact,0.007,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c12_bim,tpot_p95,8v6,-239.1,"[-1078.6, +1516.4]",0.584,exact,0.007,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c4_sgpt,e2el_p50,6v6,-1465,"[-3166, +2528]",0.219,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c4_sgpt,e2el_p95,6v6,+16349,"[+7653, +30679]",0.013,exact,0.013,LOSE
+weighted_least_connections,state_aware,latency_clean_only,c4_sgpt,tpot_p50,6v6,+1.4,"[-0.4, +6.4]",0.056,exact,0.013,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c4_sgpt,tpot_p95,6v6,+80.6,"[+39.4, +87.4]",0.013,exact,0.013,LOSE
+weighted_least_connections,state_aware,latency_clean_only,c8_sgpt,e2el_p50,9v6,+2588,"[+470, +3553]",0.010,exact,0.006,LOSE
+weighted_least_connections,state_aware,latency_clean_only,c8_sgpt,e2el_p95,9v6,+6665,"[-3960, +17777]",0.127,exact,0.006,no run-level difference
+weighted_least_connections,state_aware,latency_clean_only,c8_sgpt,tpot_p50,9v6,+14.4,"[+6.8, +24.2]",0.003,exact,0.006,LOSE
+weighted_least_connections,state_aware,latency_clean_only,c8_sgpt,tpot_p95,9v6,+11.6,"[-1.0, +22.1]",0.032,exact,0.006,LOSE (fragile)
+weighted_least_connections,state_aware,latency_clean_only,c12_sgpt,e2el_p50,6v6,-5777,"[-9232, -3290]",0.013,exact,0.013,BEAT
+weighted_least_connections,state_aware,latency_clean_only,c12_sgpt,e2el_p95,6v6,+12354,"[+6523, +18771]",0.013,exact,0.013,LOSE
+weighted_least_connections,state_aware,latency_clean_only,c12_sgpt,tpot_p50,6v6,+7.9,"[+3.3, +16.5]",0.013,exact,0.013,LOSE
+weighted_least_connections,state_aware,latency_clean_only,c12_sgpt,tpot_p95,6v6,+33.9,"[+19.3, +46.8]",0.013,exact,0.013,LOSE
+weighted_least_connections,state_aware,completion_all_runs,c4_uni,completion_rate,6v6,+0.0,"[+0.0, +0.0]",1.000,,0.013,no run-level difference
+weighted_least_connections,state_aware,completion_all_runs,c8_uni,completion_rate,6v6,+0.0,"[+0.0, +0.0]",1.000,,0.013,no run-level difference
+weighted_least_connections,state_aware,completion_all_runs,c12_uni,completion_rate,6v6,+0.0,"[-0.5, +0.5]",1.000,,0.013,no run-level difference
+weighted_least_connections,state_aware,completion_all_runs,c4_bim,completion_rate,6v6,+0.0,"[-0.5, +0.0]",1.000,,0.013,no run-level difference
+weighted_least_connections,state_aware,completion_all_runs,c8_bim,completion_rate,11v6,-3.0,"[-8.0, +0.5]",0.158,,0.003,no run-level difference
+weighted_least_connections,state_aware,completion_all_runs,c12_bim,completion_rate,12v9,-2.0,"[-6.0, +3.0]",0.295,,0.000,no run-level difference
+weighted_least_connections,state_aware,completion_all_runs,c4_sgpt,completion_rate,6v6,+0.0,"[-0.5, +0.0]",1.000,,0.013,no run-level difference
+weighted_least_connections,state_aware,completion_all_runs,c8_sgpt,completion_rate,9v6,+0.0,"[+0.0, +0.0]",1.000,,0.006,no run-level difference
+weighted_least_connections,state_aware,completion_all_runs,c12_sgpt,completion_rate,6v6,-1.5,"[-2.5, +0.0]",0.106,,0.013,no run-level difference

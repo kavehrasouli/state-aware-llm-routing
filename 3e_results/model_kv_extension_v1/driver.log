@@ -1,0 +1,543 @@
+2026-10-22T01:00:32Z    pi-node-1: switching to qwen_p4096 (running server differs: --model=None (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); --ctx-size=None (want '4096'); -np=None (want '4'); KV flag (want --no-kv-unified))
+2026-10-22T01:00:32Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T01:00:42Z      restart pi-node-1: /health ok
+2026-10-22T01:00:43Z    pi-node-2: switching to qwen_p4096 (running server differs: --model=None (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); --ctx-size=None (want '4096'); -np=None (want '4'); KV flag (want --no-kv-unified))
+2026-10-22T01:00:43Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T01:00:52Z      restart pi-node-2: /health ok
+2026-10-22T01:00:53Z    pi-node-3: switching to qwen_p4096 (running server differs: --model=None (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); --ctx-size=None (want '4096'); -np=None (want '4'); KV flag (want --no-kv-unified))
+2026-10-22T01:00:53Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T01:01:02Z      restart pi-node-3: /health ok
+2026-10-22T01:02:23Z  RUN  state_aware c8_bimodal rep1
+2026-10-22T01:02:24Z    thermal gate: pi-node-1=47.4C, pi-node-2=42.8C, pi-node-3=42.8C (stable 1/2)
+2026-10-22T01:02:35Z    thermal gate: pi-node-1=46.9C, pi-node-2=41.9C, pi-node-3=44.3C (stable 2/2)
+2026-10-22T01:09:49Z  CLEAN   state_aware c8_bimodal rep1  chosen={'pi-node-1': 66, 'pi-node-3': 18, 'pi-node-2': 19}
+2026-10-22T01:10:49Z  RUN  weighted_least_connections c8_bimodal rep1
+2026-10-22T01:10:51Z    thermal gate: pi-node-1=48.5C, pi-node-2=49.2C, pi-node-3=51.1C (stable 1/2)
+2026-10-22T01:11:02Z    thermal gate: pi-node-1=47.4C, pi-node-2=48.7C, pi-node-3=49.7C (stable 2/2)
+2026-10-22T01:18:38Z  CLEAN   weighted_least_connections c8_bimodal rep1  chosen={'pi-node-1': 68, 'pi-node-3': 18, 'pi-node-2': 17}
+2026-10-22T01:19:38Z  RUN  state_aware c12_sharegpt rep1
+2026-10-22T01:19:39Z    thermal gate: pi-node-1=48.5C, pi-node-2=50.6C, pi-node-3=50.1C (stable 1/2)
+2026-10-22T01:19:50Z    thermal gate: pi-node-1=47.4C, pi-node-2=50.6C, pi-node-3=51.6C (stable 2/2)
+2026-10-22T01:27:30Z  CLEAN   state_aware c12_sharegpt rep1  chosen={'pi-node-1': 67, 'pi-node-3': 18, 'pi-node-2': 18}
+2026-10-22T01:28:30Z  RUN  weighted_least_connections c12_sharegpt rep1
+2026-10-22T01:28:32Z    thermal gate: pi-node-1=50.1C, pi-node-2=47.7C, pi-node-3=48.7C (stable 1/2)
+2026-10-22T01:28:43Z    thermal gate: pi-node-1=49.0C, pi-node-2=47.7C, pi-node-3=47.7C (stable 2/2)
+2026-10-22T01:36:06Z  CLEAN   weighted_least_connections c12_sharegpt rep1  chosen={'pi-node-1': 69, 'pi-node-3': 15, 'pi-node-2': 19}
+2026-10-22T01:37:07Z    pi-node-1: switching to lfm2_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'))
+2026-10-22T01:37:07Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T01:37:16Z      restart pi-node-1: /health ok
+2026-10-22T01:37:17Z    pi-node-2: switching to lfm2_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'))
+2026-10-22T01:37:17Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T01:37:27Z      restart pi-node-2: /health ok
+2026-10-22T01:37:27Z    pi-node-3: switching to lfm2_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'))
+2026-10-22T01:37:27Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T01:37:37Z      restart pi-node-3: /health ok
+2026-10-22T01:37:37Z  RUN  state_aware c8_bimodal rep1
+2026-10-22T01:37:38Z    thermal gate: pi-node-1=49.6C, pi-node-2=47.2C, pi-node-3=49.2C (stable 1/2)
+2026-10-22T01:37:49Z    thermal gate: pi-node-1=47.4C, pi-node-2=47.2C, pi-node-3=48.7C (stable 2/2)
+2026-10-22T01:42:16Z  CLEAN   state_aware c8_bimodal rep1  chosen={'pi-node-1': 73, 'pi-node-2': 15, 'pi-node-3': 15}
+2026-10-22T01:43:16Z  RUN  weighted_least_connections c8_bimodal rep1
+2026-10-22T01:43:17Z    thermal gate: pi-node-1=46.9C, pi-node-2=45.8C, pi-node-3=51.6C (stable 1/2)
+2026-10-22T01:43:28Z    thermal gate: pi-node-1=47.4C, pi-node-2=45.8C, pi-node-3=50.6C (stable 2/2)
+2026-10-22T01:47:19Z  CLEAN   weighted_least_connections c8_bimodal rep1  chosen={'pi-node-1': 72, 'pi-node-3': 14, 'pi-node-2': 17}
+2026-10-22T01:48:19Z  RUN  state_aware c12_sharegpt rep1
+2026-10-22T01:48:20Z    thermal gate: pi-node-1=48.5C, pi-node-2=48.7C, pi-node-3=51.1C (stable 1/2)
+2026-10-22T01:48:31Z    thermal gate: pi-node-1=48.0C, pi-node-2=47.2C, pi-node-3=50.6C (stable 2/2)
+2026-10-22T01:52:47Z  CLEAN   state_aware c12_sharegpt rep1  chosen={'pi-node-1': 68, 'pi-node-2': 16, 'pi-node-3': 19}
+2026-10-22T01:53:47Z  RUN  weighted_least_connections c12_sharegpt rep1
+2026-10-22T01:53:49Z    thermal gate: pi-node-1=48.5C, pi-node-2=47.7C, pi-node-3=50.6C (stable 1/2)
+2026-10-22T01:54:00Z    thermal gate: pi-node-1=48.5C, pi-node-2=46.7C, pi-node-3=50.1C (stable 2/2)
+2026-10-22T01:58:34Z  CLEAN   weighted_least_connections c12_sharegpt rep1  chosen={'pi-node-1': 79, 'pi-node-3': 11, 'pi-node-2': 13}
+2026-10-22T01:59:35Z    pi-node-1: switching to openelm_p4096 (running server differs: --model='/home/admin/models/lfm2-350m-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'))
+2026-10-22T01:59:35Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T01:59:45Z      restart pi-node-1: /health ok
+2026-10-22T01:59:46Z    pi-node-2: switching to openelm_p4096 (running server differs: --model='/home/admin/models/lfm2-350m-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'))
+2026-10-22T01:59:46Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T01:59:56Z      restart pi-node-2: /health ok
+2026-10-22T01:59:56Z    pi-node-3: switching to openelm_p4096 (running server differs: --model='/home/admin/models/lfm2-350m-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'))
+2026-10-22T01:59:56Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T02:00:06Z      restart pi-node-3: /health ok
+2026-10-22T02:00:06Z  RUN  state_aware c8_bimodal rep1
+2026-10-22T02:00:07Z    thermal gate: pi-node-1=48.0C, pi-node-2=45.8C, pi-node-3=47.2C (stable 1/2)
+2026-10-22T02:00:18Z    thermal gate: pi-node-1=45.8C, pi-node-2=45.8C, pi-node-3=47.2C (stable 2/2)
+2026-10-22T02:05:29Z  CLEAN   state_aware c8_bimodal rep1  chosen={'pi-node-1': 68, 'pi-node-3': 15, 'pi-node-2': 20}
+2026-10-22T02:06:29Z  RUN  weighted_least_connections c8_bimodal rep1
+2026-10-22T02:06:30Z    thermal gate: pi-node-1=50.1C, pi-node-2=49.2C, pi-node-3=50.6C (stable 1/2)
+2026-10-22T02:06:41Z    thermal gate: pi-node-1=49.0C, pi-node-2=49.2C, pi-node-3=48.7C (stable 2/2)
+2026-10-22T02:11:41Z  CLEAN   weighted_least_connections c8_bimodal rep1  chosen={'pi-node-1': 71, 'pi-node-2': 20, 'pi-node-3': 12}
+2026-10-22T02:12:41Z  RUN  state_aware c12_sharegpt rep1
+2026-10-22T02:12:42Z    thermal gate: pi-node-1=49.0C, pi-node-2=50.1C, pi-node-3=52.6C (stable 1/2)
+2026-10-22T02:12:53Z    thermal gate: pi-node-1=48.5C, pi-node-2=49.7C, pi-node-3=50.1C (stable 2/2)
+2026-10-22T02:18:37Z  CLEAN   state_aware c12_sharegpt rep1  chosen={'pi-node-1': 70, 'pi-node-2': 19, 'pi-node-3': 14}
+2026-10-22T02:19:37Z  RUN  weighted_least_connections c12_sharegpt rep1
+2026-10-22T02:19:38Z    thermal gate: pi-node-1=49.6C, pi-node-2=52.1C, pi-node-3=48.7C (stable 1/2)
+2026-10-22T02:19:49Z    thermal gate: pi-node-1=46.9C, pi-node-2=50.1C, pi-node-3=47.2C (stable 2/2)
+2026-10-22T02:25:21Z  CLEAN   weighted_least_connections c12_sharegpt rep1  chosen={'pi-node-1': 78, 'pi-node-3': 12, 'pi-node-2': 13}
+2026-10-22T02:26:22Z    pi-node-1: switching to qwen_u4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); KV flag (want --kv-unified))
+2026-10-22T02:26:22Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T02:26:32Z      restart pi-node-1: /health ok
+2026-10-22T02:26:33Z    pi-node-2: switching to qwen_u4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); KV flag (want --kv-unified))
+2026-10-22T02:26:33Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T02:26:42Z      restart pi-node-2: /health ok
+2026-10-22T02:26:43Z    pi-node-3: switching to qwen_u4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); KV flag (want --kv-unified))
+2026-10-22T02:26:43Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T02:26:53Z      restart pi-node-3: /health ok
+2026-10-22T02:26:53Z  RUN  state_aware c8_bimodal rep1
+2026-10-22T02:26:54Z    thermal gate: pi-node-1=48.0C, pi-node-2=47.2C, pi-node-3=48.2C (stable 1/2)
+2026-10-22T02:27:05Z    thermal gate: pi-node-1=47.4C, pi-node-2=46.7C, pi-node-3=46.7C (stable 2/2)
+2026-10-22T02:34:36Z  CLEAN   state_aware c8_bimodal rep1  chosen={'pi-node-1': 61, 'pi-node-3': 17, 'pi-node-2': 25}
+2026-10-22T02:35:36Z  RUN  weighted_least_connections c8_bimodal rep1
+2026-10-22T02:35:38Z    thermal gate: pi-node-1=48.5C, pi-node-2=51.6C, pi-node-3=50.6C (stable 1/2)
+2026-10-22T02:35:49Z    thermal gate: pi-node-1=48.0C, pi-node-2=49.7C, pi-node-3=50.6C (stable 2/2)
+2026-10-22T02:43:19Z  CLEAN   weighted_least_connections c8_bimodal rep1  chosen={'pi-node-1': 58, 'pi-node-3': 22, 'pi-node-2': 23}
+2026-10-22T02:44:19Z    pi-node-1: switching to lfm2_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'); KV flag (want --no-kv-unified))
+2026-10-22T02:44:19Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T02:44:29Z      restart pi-node-1: /health ok
+2026-10-22T02:44:30Z    pi-node-2: switching to lfm2_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'); KV flag (want --no-kv-unified))
+2026-10-22T02:44:30Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T02:44:40Z      restart pi-node-2: /health ok
+2026-10-22T02:44:40Z    pi-node-3: switching to lfm2_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'); KV flag (want --no-kv-unified))
+2026-10-22T02:44:40Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T02:44:50Z      restart pi-node-3: /health ok
+2026-10-22T02:44:50Z  RUN  weighted_least_connections c12_sharegpt rep2
+2026-10-22T02:44:51Z    thermal gate: pi-node-1=47.4C, pi-node-2=50.1C, pi-node-3=50.1C (stable 1/2)
+2026-10-22T02:45:02Z    thermal gate: pi-node-1=46.3C, pi-node-2=47.7C, pi-node-3=49.2C (stable 2/2)
+2026-10-22T02:49:38Z  CLEAN   weighted_least_connections c12_sharegpt rep2  chosen={'pi-node-1': 79, 'pi-node-2': 13, 'pi-node-3': 11}
+2026-10-22T02:50:38Z  RUN  state_aware c12_sharegpt rep2
+2026-10-22T02:50:39Z    thermal gate: pi-node-1=49.0C, pi-node-2=48.7C, pi-node-3=48.2C (stable 1/2)
+2026-10-22T02:50:50Z    thermal gate: pi-node-1=47.4C, pi-node-2=49.2C, pi-node-3=48.7C (stable 2/2)
+2026-10-22T02:55:01Z  CLEAN   state_aware c12_sharegpt rep2  chosen={'pi-node-1': 69, 'pi-node-2': 16, 'pi-node-3': 18}
+2026-10-22T02:56:01Z  RUN  weighted_least_connections c8_bimodal rep2
+2026-10-22T02:56:02Z    thermal gate: pi-node-1=49.0C, pi-node-2=49.2C, pi-node-3=49.2C (stable 1/2)
+2026-10-22T02:56:13Z    thermal gate: pi-node-1=49.0C, pi-node-2=47.7C, pi-node-3=49.7C (stable 2/2)
+2026-10-22T03:00:35Z  CLEAN   weighted_least_connections c8_bimodal rep2  chosen={'pi-node-1': 69, 'pi-node-2': 16, 'pi-node-3': 18}
+2026-10-22T03:01:35Z  RUN  state_aware c8_bimodal rep2
+2026-10-22T03:01:36Z    thermal gate: pi-node-1=46.3C, pi-node-2=51.1C, pi-node-3=46.2C (stable 1/2)
+2026-10-22T03:01:47Z    thermal gate: pi-node-1=46.9C, pi-node-2=50.6C, pi-node-3=46.2C (stable 2/2)
+2026-10-22T03:05:41Z  CLEAN   state_aware c8_bimodal rep2  chosen={'pi-node-1': 69, 'pi-node-2': 12, 'pi-node-3': 22}
+2026-10-22T03:06:42Z    pi-node-1: switching to openelm_p4096 (running server differs: --model='/home/admin/models/lfm2-350m-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'))
+2026-10-22T03:06:42Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T03:06:52Z      restart pi-node-1: /health ok
+2026-10-22T03:06:53Z    pi-node-2: switching to openelm_p4096 (running server differs: --model='/home/admin/models/lfm2-350m-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'))
+2026-10-22T03:06:53Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T03:07:02Z      restart pi-node-2: /health ok
+2026-10-22T03:07:03Z    pi-node-3: switching to openelm_p4096 (running server differs: --model='/home/admin/models/lfm2-350m-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'))
+2026-10-22T03:07:03Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T03:07:13Z      restart pi-node-3: /health ok
+2026-10-22T03:07:13Z  RUN  weighted_least_connections c12_sharegpt rep2
+2026-10-22T03:07:14Z    thermal gate: pi-node-1=48.0C, pi-node-2=49.2C, pi-node-3=47.7C (stable 1/2)
+2026-10-22T03:07:25Z    thermal gate: pi-node-1=48.0C, pi-node-2=48.7C, pi-node-3=46.2C (stable 2/2)
+2026-10-22T03:12:54Z  CLEAN   weighted_least_connections c12_sharegpt rep2  chosen={'pi-node-1': 77, 'pi-node-3': 11, 'pi-node-2': 15}
+2026-10-22T03:13:54Z  RUN  state_aware c12_sharegpt rep2
+2026-10-22T03:13:56Z    thermal gate: pi-node-1=49.6C, pi-node-2=47.2C, pi-node-3=48.7C (stable 1/2)
+2026-10-22T03:14:07Z    thermal gate: pi-node-1=48.5C, pi-node-2=47.2C, pi-node-3=48.7C (stable 2/2)
+2026-10-22T03:19:46Z  CLEAN   state_aware c12_sharegpt rep2  chosen={'pi-node-1': 72, 'pi-node-3': 16, 'pi-node-2': 15}
+2026-10-22T03:20:46Z  RUN  weighted_least_connections c8_bimodal rep2
+2026-10-22T03:20:47Z    thermal gate: pi-node-1=48.0C, pi-node-2=48.7C, pi-node-3=47.7C (stable 1/2)
+2026-10-22T03:20:58Z    thermal gate: pi-node-1=46.9C, pi-node-2=49.2C, pi-node-3=47.2C (stable 2/2)
+2026-10-22T03:26:02Z  CLEAN   weighted_least_connections c8_bimodal rep2  chosen={'pi-node-1': 76, 'pi-node-3': 14, 'pi-node-2': 13}
+2026-10-22T03:27:02Z  RUN  state_aware c8_bimodal rep2
+2026-10-22T03:27:03Z    thermal gate: pi-node-1=49.0C, pi-node-2=48.7C, pi-node-3=52.1C (stable 1/2)
+2026-10-22T03:27:14Z    thermal gate: pi-node-1=48.5C, pi-node-2=48.2C, pi-node-3=50.1C (stable 2/2)
+2026-10-22T03:32:46Z  CLEAN   state_aware c8_bimodal rep2  chosen={'pi-node-1': 76, 'pi-node-2': 15, 'pi-node-3': 12}
+2026-10-22T03:33:47Z    pi-node-1: switching to qwen_u4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); KV flag (want --kv-unified))
+2026-10-22T03:33:47Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T03:33:57Z      restart pi-node-1: /health ok
+2026-10-22T03:33:58Z    pi-node-2: switching to qwen_u4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); KV flag (want --kv-unified))
+2026-10-22T03:33:58Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T03:34:07Z      restart pi-node-2: /health ok
+2026-10-22T03:34:08Z    pi-node-3: switching to qwen_u4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); KV flag (want --kv-unified))
+2026-10-22T03:34:08Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T03:34:17Z      restart pi-node-3: /health ok
+2026-10-22T03:34:18Z  RUN  weighted_least_connections c8_bimodal rep2
+2026-10-22T03:34:19Z    thermal gate: pi-node-1=46.9C, pi-node-2=48.2C, pi-node-3=50.6C (stable 1/2)
+2026-10-22T03:34:30Z    thermal gate: pi-node-1=47.4C, pi-node-2=46.7C, pi-node-3=49.7C (stable 2/2)
+2026-10-22T03:42:06Z  CLEAN   weighted_least_connections c8_bimodal rep2  chosen={'pi-node-1': 65, 'pi-node-3': 20, 'pi-node-2': 18}
+2026-10-22T03:43:06Z  RUN  state_aware c8_bimodal rep2
+2026-10-22T03:43:07Z    thermal gate: pi-node-1=48.0C, pi-node-2=51.1C, pi-node-3=50.6C (stable 1/2)
+2026-10-22T03:43:18Z    thermal gate: pi-node-1=49.0C, pi-node-2=50.1C, pi-node-3=48.7C (stable 2/2)
+2026-10-22T03:50:17Z  CLEAN   state_aware c8_bimodal rep2  chosen={'pi-node-1': 57, 'pi-node-3': 27, 'pi-node-2': 19}
+2026-10-22T03:51:18Z    pi-node-1: switching to qwen_p4096 (running server differs: KV flag (want --no-kv-unified))
+2026-10-22T03:51:18Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T03:51:27Z      restart pi-node-1: /health ok
+2026-10-22T03:51:28Z    pi-node-2: switching to qwen_p4096 (running server differs: KV flag (want --no-kv-unified))
+2026-10-22T03:51:28Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T03:51:38Z      restart pi-node-2: /health ok
+2026-10-22T03:51:38Z    pi-node-3: switching to qwen_p4096 (running server differs: KV flag (want --no-kv-unified))
+2026-10-22T03:51:38Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T03:51:48Z      restart pi-node-3: /health ok
+2026-10-22T03:51:48Z  RUN  weighted_least_connections c12_sharegpt rep2
+2026-10-22T03:51:49Z    thermal gate: pi-node-1=48.0C, pi-node-2=49.7C, pi-node-3=51.6C (stable 1/2)
+2026-10-22T03:52:00Z    thermal gate: pi-node-1=46.9C, pi-node-2=49.2C, pi-node-3=50.1C (stable 2/2)
+2026-10-22T03:59:39Z  CLEAN   weighted_least_connections c12_sharegpt rep2  chosen={'pi-node-1': 68, 'pi-node-3': 18, 'pi-node-2': 17}
+2026-10-22T04:00:39Z  RUN  state_aware c12_sharegpt rep2
+2026-10-22T04:00:41Z    thermal gate: pi-node-1=48.0C, pi-node-2=49.2C, pi-node-3=53.1C (stable 1/2)
+2026-10-22T04:00:52Z    thermal gate: pi-node-1=47.4C, pi-node-2=48.7C, pi-node-3=51.6C (stable 2/2)
+2026-10-22T04:08:22Z  CLEAN   state_aware c12_sharegpt rep2  chosen={'pi-node-1': 70, 'pi-node-3': 17, 'pi-node-2': 16}
+2026-10-22T04:09:22Z  RUN  weighted_least_connections c8_bimodal rep2
+2026-10-22T04:09:23Z    thermal gate: pi-node-1=49.0C, pi-node-2=49.7C, pi-node-3=50.6C (stable 1/2)
+2026-10-22T04:09:34Z    thermal gate: pi-node-1=47.4C, pi-node-2=49.2C, pi-node-3=50.1C (stable 2/2)
+2026-10-22T04:18:03Z  CLEAN   weighted_least_connections c8_bimodal rep2  chosen={'pi-node-1': 63, 'pi-node-3': 19, 'pi-node-2': 21}
+2026-10-22T04:19:03Z  RUN  state_aware c8_bimodal rep2
+2026-10-22T04:19:04Z    thermal gate: pi-node-1=46.9C, pi-node-2=51.6C, pi-node-3=48.2C (stable 1/2)
+2026-10-22T04:19:15Z    thermal gate: pi-node-1=46.9C, pi-node-2=51.1C, pi-node-3=48.2C (stable 2/2)
+2026-10-22T04:27:12Z  CLEAN   state_aware c8_bimodal rep2  chosen={'pi-node-1': 63, 'pi-node-3': 23, 'pi-node-2': 17}
+2026-10-22T04:28:13Z    pi-node-1: switching to openelm_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'))
+2026-10-22T04:28:13Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T04:28:22Z      restart pi-node-1: /health ok
+2026-10-22T04:28:23Z    pi-node-2: switching to openelm_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'))
+2026-10-22T04:28:23Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T04:28:33Z      restart pi-node-2: /health ok
+2026-10-22T04:28:33Z    pi-node-3: switching to openelm_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'))
+2026-10-22T04:28:33Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T04:28:43Z      restart pi-node-3: /health ok
+2026-10-22T04:28:43Z  RUN  state_aware c8_bimodal rep3
+2026-10-22T04:28:44Z    thermal gate: pi-node-1=48.0C, pi-node-2=50.6C, pi-node-3=51.1C (stable 1/2)
+2026-10-22T04:28:55Z    thermal gate: pi-node-1=48.0C, pi-node-2=50.6C, pi-node-3=50.6C (stable 2/2)
+2026-10-22T04:34:05Z  CLEAN   state_aware c8_bimodal rep3  chosen={'pi-node-1': 77, 'pi-node-3': 13, 'pi-node-2': 13}
+2026-10-22T04:35:05Z  RUN  weighted_least_connections c8_bimodal rep3
+2026-10-22T04:35:06Z    thermal gate: pi-node-1=50.7C, pi-node-2=50.6C, pi-node-3=50.6C (stable 1/2)
+2026-10-22T04:35:17Z    thermal gate: pi-node-1=49.6C, pi-node-2=50.1C, pi-node-3=49.7C (stable 2/2)
+2026-10-22T04:40:46Z  CLEAN   weighted_least_connections c8_bimodal rep3  chosen={'pi-node-1': 73, 'pi-node-2': 18, 'pi-node-3': 12}
+2026-10-22T04:41:46Z  RUN  state_aware c12_sharegpt rep3
+2026-10-22T04:41:47Z    thermal gate: pi-node-1=48.5C, pi-node-2=51.1C, pi-node-3=48.2C (stable 1/2)
+2026-10-22T04:41:58Z    thermal gate: pi-node-1=47.4C, pi-node-2=50.6C, pi-node-3=48.2C (stable 2/2)
+2026-10-22T04:47:29Z  CLEAN   state_aware c12_sharegpt rep3  chosen={'pi-node-1': 68, 'pi-node-3': 17, 'pi-node-2': 18}
+2026-10-22T04:48:29Z  RUN  weighted_least_connections c12_sharegpt rep3
+2026-10-22T04:48:30Z    thermal gate: pi-node-1=48.5C, pi-node-2=51.1C, pi-node-3=50.6C (stable 1/2)
+2026-10-22T04:48:41Z    thermal gate: pi-node-1=48.0C, pi-node-2=51.1C, pi-node-3=51.1C (stable 2/2)
+2026-10-22T04:54:12Z  CLEAN   weighted_least_connections c12_sharegpt rep3  chosen={'pi-node-1': 79, 'pi-node-2': 11, 'pi-node-3': 13}
+2026-10-22T04:55:13Z    pi-node-1: switching to qwen_u4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); KV flag (want --kv-unified))
+2026-10-22T04:55:13Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T04:55:22Z      restart pi-node-1: /health ok
+2026-10-22T04:55:23Z    pi-node-2: switching to qwen_u4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); KV flag (want --kv-unified))
+2026-10-22T04:55:23Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T04:55:33Z      restart pi-node-2: /health ok
+2026-10-22T04:55:33Z    pi-node-3: switching to qwen_u4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); KV flag (want --kv-unified))
+2026-10-22T04:55:33Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T04:55:43Z      restart pi-node-3: /health ok
+2026-10-22T04:55:43Z  RUN  state_aware c8_bimodal rep3
+2026-10-22T04:55:44Z    thermal gate: pi-node-1=47.4C, pi-node-2=47.2C, pi-node-3=50.6C (stable 1/2)
+2026-10-22T04:55:55Z    thermal gate: pi-node-1=46.9C, pi-node-2=47.2C, pi-node-3=48.7C (stable 2/2)
+2026-10-22T05:03:07Z  CLEAN   state_aware c8_bimodal rep3  chosen={'pi-node-1': 61, 'pi-node-3': 25, 'pi-node-2': 17}
+2026-10-22T05:04:07Z  RUN  weighted_least_connections c8_bimodal rep3
+2026-10-22T05:04:08Z    thermal gate: pi-node-1=50.1C, pi-node-2=49.7C, pi-node-3=52.1C (stable 1/2)
+2026-10-22T05:04:19Z    thermal gate: pi-node-1=48.0C, pi-node-2=49.7C, pi-node-3=51.1C (stable 2/2)
+2026-10-22T05:12:09Z  CLEAN   weighted_least_connections c8_bimodal rep3  chosen={'pi-node-1': 63, 'pi-node-3': 20, 'pi-node-2': 20}
+2026-10-22T05:13:10Z    pi-node-1: switching to qwen_p4096 (running server differs: KV flag (want --no-kv-unified))
+2026-10-22T05:13:10Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T05:13:19Z      restart pi-node-1: /health ok
+2026-10-22T05:13:20Z    pi-node-2: switching to qwen_p4096 (running server differs: KV flag (want --no-kv-unified))
+2026-10-22T05:13:20Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T05:13:30Z      restart pi-node-2: /health ok
+2026-10-22T05:13:30Z    pi-node-3: switching to qwen_p4096 (running server differs: KV flag (want --no-kv-unified))
+2026-10-22T05:13:30Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T05:13:40Z      restart pi-node-3: /health ok
+2026-10-22T05:13:40Z  RUN  state_aware c8_bimodal rep3
+2026-10-22T05:13:41Z    thermal gate: pi-node-1=46.3C, pi-node-2=51.1C, pi-node-3=52.1C (stable 1/2)
+2026-10-22T05:13:52Z    thermal gate: pi-node-1=46.9C, pi-node-2=50.6C, pi-node-3=50.6C (stable 2/2)
+2026-10-22T05:21:25Z  CLEAN   state_aware c8_bimodal rep3  chosen={'pi-node-1': 62, 'pi-node-3': 24, 'pi-node-2': 17}
+2026-10-22T05:22:25Z  RUN  weighted_least_connections c8_bimodal rep3
+2026-10-22T05:22:27Z    thermal gate: pi-node-1=48.5C, pi-node-2=51.6C, pi-node-3=52.6C (stable 1/2)
+2026-10-22T05:22:38Z    thermal gate: pi-node-1=47.4C, pi-node-2=49.7C, pi-node-3=52.6C (stable 2/2)
+2026-10-22T05:29:42Z  CLEAN   weighted_least_connections c8_bimodal rep3  chosen={'pi-node-1': 66, 'pi-node-2': 16, 'pi-node-3': 21}
+2026-10-22T05:30:42Z  RUN  state_aware c12_sharegpt rep3
+2026-10-22T05:30:44Z    thermal gate: pi-node-1=50.1C, pi-node-2=51.6C, pi-node-3=53.6C (stable 1/2)
+2026-10-22T05:30:54Z    thermal gate: pi-node-1=49.0C, pi-node-2=51.1C, pi-node-3=53.1C (stable 2/2)
+2026-10-22T05:38:05Z  CLEAN   state_aware c12_sharegpt rep3  chosen={'pi-node-1': 70, 'pi-node-3': 19, 'pi-node-2': 14}
+2026-10-22T05:39:05Z  RUN  weighted_least_connections c12_sharegpt rep3
+2026-10-22T05:39:07Z    thermal gate: pi-node-1=49.6C, pi-node-2=49.2C, pi-node-3=53.1C (stable 1/2)
+2026-10-22T05:39:17Z    thermal gate: pi-node-1=48.5C, pi-node-2=49.7C, pi-node-3=51.1C (stable 2/2)
+2026-10-22T05:46:41Z  CLEAN   weighted_least_connections c12_sharegpt rep3  chosen={'pi-node-1': 70, 'pi-node-2': 15, 'pi-node-3': 18}
+2026-10-22T05:47:41Z    pi-node-1: switching to lfm2_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'))
+2026-10-22T05:47:41Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T05:47:51Z      restart pi-node-1: /health ok
+2026-10-22T05:47:52Z    pi-node-2: switching to lfm2_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'))
+2026-10-22T05:47:52Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T05:48:02Z      restart pi-node-2: /health ok
+2026-10-22T05:48:02Z    pi-node-3: switching to lfm2_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'))
+2026-10-22T05:48:02Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T05:48:12Z      restart pi-node-3: /health ok
+2026-10-22T05:48:12Z  RUN  state_aware c8_bimodal rep3
+2026-10-22T05:48:13Z    thermal gate: pi-node-1=48.5C, pi-node-2=47.7C, pi-node-3=51.6C (stable 1/2)
+2026-10-22T05:48:24Z    thermal gate: pi-node-1=48.5C, pi-node-2=47.2C, pi-node-3=49.7C (stable 2/2)
+2026-10-22T05:52:18Z  CLEAN   state_aware c8_bimodal rep3  chosen={'pi-node-1': 66, 'pi-node-2': 17, 'pi-node-3': 20}
+2026-10-22T05:53:18Z  RUN  weighted_least_connections c8_bimodal rep3
+2026-10-22T05:53:19Z    thermal gate: pi-node-1=50.7C, pi-node-2=49.7C, pi-node-3=51.6C (stable 1/2)
+2026-10-22T05:53:30Z    thermal gate: pi-node-1=49.6C, pi-node-2=49.2C, pi-node-3=50.1C (stable 2/2)
+2026-10-22T05:57:10Z  CLEAN   weighted_least_connections c8_bimodal rep3  chosen={'pi-node-1': 80, 'pi-node-3': 11, 'pi-node-2': 12}
+2026-10-22T05:58:10Z  RUN  state_aware c12_sharegpt rep3
+2026-10-22T05:58:12Z    thermal gate: pi-node-1=49.0C, pi-node-2=48.7C, pi-node-3=50.1C (stable 1/2)
+2026-10-22T05:58:23Z    thermal gate: pi-node-1=49.6C, pi-node-2=47.7C, pi-node-3=49.7C (stable 2/2)
+2026-10-22T06:02:44Z  CLEAN   state_aware c12_sharegpt rep3  chosen={'pi-node-1': 67, 'pi-node-2': 15, 'pi-node-3': 21}
+2026-10-22T06:03:44Z  RUN  weighted_least_connections c12_sharegpt rep3
+2026-10-22T06:03:45Z    thermal gate: pi-node-1=50.1C, pi-node-2=48.2C, pi-node-3=51.6C (stable 1/2)
+2026-10-22T06:03:56Z    thermal gate: pi-node-1=48.5C, pi-node-2=49.2C, pi-node-3=50.1C (stable 2/2)
+2026-10-22T06:08:36Z  CLEAN   weighted_least_connections c12_sharegpt rep3  chosen={'pi-node-1': 75, 'pi-node-2': 13, 'pi-node-3': 15}
+2026-10-22T06:09:37Z    pi-node-1: switching to qwen_u4096 (running server differs: --model='/home/admin/models/lfm2-350m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); KV flag (want --kv-unified))
+2026-10-22T06:09:37Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T06:09:47Z      restart pi-node-1: /health ok
+2026-10-22T06:09:47Z    pi-node-2: switching to qwen_u4096 (running server differs: --model='/home/admin/models/lfm2-350m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); KV flag (want --kv-unified))
+2026-10-22T06:09:47Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T06:09:57Z      restart pi-node-2: /health ok
+2026-10-22T06:09:58Z    pi-node-3: switching to qwen_u4096 (running server differs: --model='/home/admin/models/lfm2-350m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); KV flag (want --kv-unified))
+2026-10-22T06:09:58Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T06:10:07Z      restart pi-node-3: /health ok
+2026-10-22T06:10:08Z  RUN  weighted_least_connections c8_bimodal rep4
+2026-10-22T06:10:09Z    thermal gate: pi-node-1=47.4C, pi-node-2=45.8C, pi-node-3=48.2C (stable 1/2)
+2026-10-22T06:10:20Z    thermal gate: pi-node-1=45.8C, pi-node-2=46.7C, pi-node-3=48.2C (stable 2/2)
+2026-10-22T06:17:35Z  CLEAN   weighted_least_connections c8_bimodal rep4  chosen={'pi-node-1': 69, 'pi-node-3': 17, 'pi-node-2': 17}
+2026-10-22T06:18:35Z  RUN  state_aware c8_bimodal rep4
+2026-10-22T06:18:37Z    thermal gate: pi-node-1=49.6C, pi-node-2=50.1C, pi-node-3=52.1C (stable 1/2)
+2026-10-22T06:18:48Z    thermal gate: pi-node-1=49.0C, pi-node-2=49.2C, pi-node-3=51.1C (stable 2/2)
+2026-10-22T06:26:05Z  CLEAN   state_aware c8_bimodal rep4  chosen={'pi-node-1': 58, 'pi-node-3': 16, 'pi-node-2': 29}
+2026-10-22T06:27:05Z    pi-node-1: switching to qwen_p4096 (running server differs: KV flag (want --no-kv-unified))
+2026-10-22T06:27:05Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T06:27:15Z      restart pi-node-1: /health ok
+2026-10-22T06:27:16Z    pi-node-2: switching to qwen_p4096 (running server differs: KV flag (want --no-kv-unified))
+2026-10-22T06:27:16Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T06:27:26Z      restart pi-node-2: /health ok
+2026-10-22T06:27:26Z    pi-node-3: switching to qwen_p4096 (running server differs: KV flag (want --no-kv-unified))
+2026-10-22T06:27:26Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T06:27:36Z      restart pi-node-3: /health ok
+2026-10-22T06:27:36Z  RUN  weighted_least_connections c12_sharegpt rep4
+2026-10-22T06:27:37Z    thermal gate: pi-node-1=46.9C, pi-node-2=48.7C, pi-node-3=53.1C (stable 1/2)
+2026-10-22T06:27:48Z    thermal gate: pi-node-1=48.0C, pi-node-2=47.7C, pi-node-3=52.1C (stable 2/2)
+2026-10-22T06:35:27Z  CLEAN   weighted_least_connections c12_sharegpt rep4  chosen={'pi-node-1': 72, 'pi-node-3': 16, 'pi-node-2': 15}
+2026-10-22T06:36:27Z  RUN  state_aware c12_sharegpt rep4
+2026-10-22T06:36:28Z    thermal gate: pi-node-1=49.0C, pi-node-2=47.7C, pi-node-3=49.7C (stable 1/2)
+2026-10-22T06:36:39Z    thermal gate: pi-node-1=48.5C, pi-node-2=47.7C, pi-node-3=49.7C (stable 2/2)
+2026-10-22T06:44:40Z  CLEAN   state_aware c12_sharegpt rep4  chosen={'pi-node-1': 54, 'pi-node-3': 27, 'pi-node-2': 22}
+2026-10-22T06:45:40Z  RUN  weighted_least_connections c8_bimodal rep4
+2026-10-22T06:45:41Z    thermal gate: pi-node-1=47.4C, pi-node-2=49.7C, pi-node-3=52.6C (stable 1/2)
+2026-10-22T06:45:52Z    thermal gate: pi-node-1=46.9C, pi-node-2=49.2C, pi-node-3=51.1C (stable 2/2)
+2026-10-22T06:53:22Z  CLEAN   weighted_least_connections c8_bimodal rep4  chosen={'pi-node-1': 62, 'pi-node-3': 21, 'pi-node-2': 20}
+2026-10-22T06:54:22Z  RUN  state_aware c8_bimodal rep4
+2026-10-22T06:54:23Z    thermal gate: pi-node-1=47.4C, pi-node-2=51.1C, pi-node-3=52.1C (stable 1/2)
+2026-10-22T06:54:34Z    thermal gate: pi-node-1=46.9C, pi-node-2=51.1C, pi-node-3=52.1C (stable 2/2)
+2026-10-22T07:02:22Z  CLEAN   state_aware c8_bimodal rep4  chosen={'pi-node-1': 67, 'pi-node-3': 18, 'pi-node-2': 18}
+2026-10-22T07:03:22Z    pi-node-1: switching to lfm2_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'))
+2026-10-22T07:03:22Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T07:03:32Z      restart pi-node-1: /health ok
+2026-10-22T07:03:33Z    pi-node-2: switching to lfm2_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'))
+2026-10-22T07:03:33Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T07:03:42Z      restart pi-node-2: /health ok
+2026-10-22T07:03:43Z    pi-node-3: switching to lfm2_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'))
+2026-10-22T07:03:43Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T07:03:53Z      restart pi-node-3: /health ok
+2026-10-22T07:03:53Z  RUN  weighted_least_connections c12_sharegpt rep4
+2026-10-22T07:03:54Z    thermal gate: pi-node-1=46.9C, pi-node-2=50.1C, pi-node-3=52.6C (stable 1/2)
+2026-10-22T07:04:05Z    thermal gate: pi-node-1=46.3C, pi-node-2=49.2C, pi-node-3=51.1C (stable 2/2)
+2026-10-22T07:08:34Z  CLEAN   weighted_least_connections c12_sharegpt rep4  chosen={'pi-node-1': 80, 'pi-node-2': 10, 'pi-node-3': 13}
+2026-10-22T07:09:34Z  RUN  state_aware c12_sharegpt rep4
+2026-10-22T07:09:35Z    thermal gate: pi-node-1=49.0C, pi-node-2=47.7C, pi-node-3=49.2C (stable 1/2)
+2026-10-22T07:09:46Z    thermal gate: pi-node-1=49.0C, pi-node-2=47.7C, pi-node-3=50.6C (stable 2/2)
+2026-10-22T07:14:19Z  CLEAN   state_aware c12_sharegpt rep4  chosen={'pi-node-1': 65, 'pi-node-2': 20, 'pi-node-3': 18}
+2026-10-22T07:15:19Z  RUN  weighted_least_connections c8_bimodal rep4
+2026-10-22T07:15:20Z    thermal gate: pi-node-1=49.0C, pi-node-2=49.7C, pi-node-3=51.1C (stable 1/2)
+2026-10-22T07:15:31Z    thermal gate: pi-node-1=48.5C, pi-node-2=49.7C, pi-node-3=49.2C (stable 2/2)
+2026-10-22T07:19:07Z  CLEAN   weighted_least_connections c8_bimodal rep4  chosen={'pi-node-1': 77, 'pi-node-2': 13, 'pi-node-3': 13}
+2026-10-22T07:20:07Z  RUN  state_aware c8_bimodal rep4
+2026-10-22T07:20:09Z    thermal gate: pi-node-1=49.0C, pi-node-2=49.2C, pi-node-3=50.1C (stable 1/2)
+2026-10-22T07:20:20Z    thermal gate: pi-node-1=49.6C, pi-node-2=48.7C, pi-node-3=49.2C (stable 2/2)
+2026-10-22T07:25:04Z  CLEAN   state_aware c8_bimodal rep4  chosen={'pi-node-1': 66, 'pi-node-2': 18, 'pi-node-3': 19}
+2026-10-22T07:26:05Z    pi-node-1: switching to openelm_p4096 (running server differs: --model='/home/admin/models/lfm2-350m-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'))
+2026-10-22T07:26:05Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T07:26:15Z      restart pi-node-1: /health ok
+2026-10-22T07:26:16Z    pi-node-2: switching to openelm_p4096 (running server differs: --model='/home/admin/models/lfm2-350m-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'))
+2026-10-22T07:26:16Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T07:26:25Z      restart pi-node-2: /health ok
+2026-10-22T07:26:26Z    pi-node-3: switching to openelm_p4096 (running server differs: --model='/home/admin/models/lfm2-350m-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'))
+2026-10-22T07:26:26Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T07:26:35Z      restart pi-node-3: /health ok
+2026-10-22T07:26:36Z  RUN  weighted_least_connections c12_sharegpt rep4
+2026-10-22T07:26:37Z    thermal gate: pi-node-1=46.3C, pi-node-2=47.7C, pi-node-3=50.6C (stable 1/2)
+2026-10-22T07:26:48Z    thermal gate: pi-node-1=46.3C, pi-node-2=48.7C, pi-node-3=50.1C (stable 2/2)
+2026-10-22T07:32:19Z  CLEAN   weighted_least_connections c12_sharegpt rep4  chosen={'pi-node-1': 77, 'pi-node-2': 12, 'pi-node-3': 14}
+2026-10-22T07:33:19Z  RUN  state_aware c12_sharegpt rep4
+2026-10-22T07:33:21Z    thermal gate: pi-node-1=50.7C, pi-node-2=49.2C, pi-node-3=48.2C (stable 1/2)
+2026-10-22T07:33:32Z    thermal gate: pi-node-1=49.6C, pi-node-2=48.2C, pi-node-3=48.7C (stable 2/2)
+2026-10-22T07:38:45Z  CLEAN   state_aware c12_sharegpt rep4  chosen={'pi-node-1': 73, 'pi-node-3': 18, 'pi-node-2': 12}
+2026-10-22T07:39:45Z  RUN  weighted_least_connections c8_bimodal rep4
+2026-10-22T07:39:46Z    thermal gate: pi-node-1=50.1C, pi-node-2=49.2C, pi-node-3=49.2C (stable 1/2)
+2026-10-22T07:39:57Z    thermal gate: pi-node-1=49.6C, pi-node-2=47.7C, pi-node-3=48.7C (stable 2/2)
+2026-10-22T07:45:52Z  CLEAN   weighted_least_connections c8_bimodal rep4  chosen={'pi-node-1': 70, 'pi-node-3': 16, 'pi-node-2': 17}
+2026-10-22T07:46:52Z  RUN  state_aware c8_bimodal rep4
+2026-10-22T07:46:53Z    thermal gate: pi-node-1=46.3C, pi-node-2=52.1C, pi-node-3=47.2C (stable 1/2)
+2026-10-22T07:47:04Z    thermal gate: pi-node-1=46.9C, pi-node-2=49.7C, pi-node-3=47.2C (stable 2/2)
+2026-10-22T07:51:53Z  CLEAN   state_aware c8_bimodal rep4  chosen={'pi-node-1': 70, 'pi-node-2': 16, 'pi-node-3': 17}
+2026-10-22T07:52:54Z    pi-node-1: switching to qwen_u4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); KV flag (want --kv-unified))
+2026-10-22T07:52:54Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T07:53:04Z      restart pi-node-1: /health ok
+2026-10-22T07:53:04Z    pi-node-2: switching to qwen_u4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); KV flag (want --kv-unified))
+2026-10-22T07:53:04Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T07:53:14Z      restart pi-node-2: /health ok
+2026-10-22T07:53:14Z    pi-node-3: switching to qwen_u4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'); KV flag (want --kv-unified))
+2026-10-22T07:53:14Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T07:53:24Z      restart pi-node-3: /health ok
+2026-10-22T07:53:24Z  RUN  state_aware c8_bimodal rep5
+2026-10-22T07:53:25Z    thermal gate: pi-node-1=48.0C, pi-node-2=50.6C, pi-node-3=51.1C (stable 1/2)
+2026-10-22T07:53:36Z    thermal gate: pi-node-1=48.5C, pi-node-2=49.7C, pi-node-3=50.1C (stable 2/2)
+2026-10-22T08:01:11Z  CLEAN   state_aware c8_bimodal rep5  chosen={'pi-node-1': 65, 'pi-node-3': 24, 'pi-node-2': 14}
+2026-10-22T08:02:11Z  RUN  weighted_least_connections c8_bimodal rep5
+2026-10-22T08:02:12Z    thermal gate: pi-node-1=48.5C, pi-node-2=48.7C, pi-node-3=52.1C (stable 1/2)
+2026-10-22T08:02:23Z    thermal gate: pi-node-1=46.9C, pi-node-2=47.7C, pi-node-3=52.1C (stable 2/2)
+2026-10-22T08:09:58Z  CLEAN   weighted_least_connections c8_bimodal rep5  chosen={'pi-node-1': 63, 'pi-node-3': 23, 'pi-node-2': 17}
+2026-10-22T08:10:59Z    pi-node-1: switching to openelm_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'); KV flag (want --no-kv-unified))
+2026-10-22T08:10:59Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T08:11:08Z      restart pi-node-1: /health ok
+2026-10-22T08:11:09Z    pi-node-2: switching to openelm_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'); KV flag (want --no-kv-unified))
+2026-10-22T08:11:09Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T08:11:19Z      restart pi-node-2: /health ok
+2026-10-22T08:11:19Z    pi-node-3: switching to openelm_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'); KV flag (want --no-kv-unified))
+2026-10-22T08:11:19Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T08:11:29Z      restart pi-node-3: /health ok
+2026-10-22T08:11:29Z  RUN  state_aware c8_bimodal rep5
+2026-10-22T08:11:30Z    thermal gate: pi-node-1=46.3C, pi-node-2=50.6C, pi-node-3=49.7C (stable 1/2)
+2026-10-22T08:11:41Z    thermal gate: pi-node-1=47.4C, pi-node-2=48.7C, pi-node-3=48.7C (stable 2/2)
+2026-10-22T08:17:17Z  CLEAN   state_aware c8_bimodal rep5  chosen={'pi-node-1': 71, 'pi-node-3': 15, 'pi-node-2': 17}
+2026-10-22T08:18:17Z  RUN  weighted_least_connections c8_bimodal rep5
+2026-10-22T08:18:18Z    thermal gate: pi-node-1=49.0C, pi-node-2=51.6C, pi-node-3=50.6C (stable 1/2)
+2026-10-22T08:18:29Z    thermal gate: pi-node-1=48.5C, pi-node-2=51.6C, pi-node-3=50.6C (stable 2/2)
+2026-10-22T08:23:29Z  CLEAN   weighted_least_connections c8_bimodal rep5  chosen={'pi-node-1': 79, 'pi-node-2': 12, 'pi-node-3': 12}
+2026-10-22T08:24:29Z  RUN  state_aware c12_sharegpt rep5
+2026-10-22T08:24:30Z    thermal gate: pi-node-1=49.0C, pi-node-2=50.1C, pi-node-3=52.6C (stable 1/2)
+2026-10-22T08:24:41Z    thermal gate: pi-node-1=50.1C, pi-node-2=49.7C, pi-node-3=52.6C (stable 2/2)
+2026-10-22T08:30:25Z  CLEAN   state_aware c12_sharegpt rep5  chosen={'pi-node-1': 70, 'pi-node-2': 18, 'pi-node-3': 15}
+2026-10-22T08:31:25Z  RUN  weighted_least_connections c12_sharegpt rep5
+2026-10-22T08:31:26Z    thermal gate: pi-node-1=48.0C, pi-node-2=52.1C, pi-node-3=51.1C (stable 1/2)
+2026-10-22T08:31:37Z    thermal gate: pi-node-1=47.4C, pi-node-2=50.6C, pi-node-3=50.1C (stable 2/2)
+2026-10-22T08:37:11Z  CLEAN   weighted_least_connections c12_sharegpt rep5  chosen={'pi-node-1': 78, 'pi-node-3': 12, 'pi-node-2': 13}
+2026-10-22T08:38:12Z    pi-node-1: switching to lfm2_p4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'))
+2026-10-22T08:38:12Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T08:38:22Z      restart pi-node-1: /health ok
+2026-10-22T08:38:23Z    pi-node-2: switching to lfm2_p4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'))
+2026-10-22T08:38:23Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T08:38:32Z      restart pi-node-2: /health ok
+2026-10-22T08:38:33Z    pi-node-3: switching to lfm2_p4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'))
+2026-10-22T08:38:33Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T08:38:43Z      restart pi-node-3: /health ok
+2026-10-22T08:38:43Z  RUN  state_aware c8_bimodal rep5
+2026-10-22T08:38:44Z    thermal gate: pi-node-1=49.0C, pi-node-2=48.7C, pi-node-3=50.6C (stable 1/2)
+2026-10-22T08:38:55Z    thermal gate: pi-node-1=48.0C, pi-node-2=47.7C, pi-node-3=49.2C (stable 2/2)
+2026-10-22T08:43:03Z  CLEAN   state_aware c8_bimodal rep5  chosen={'pi-node-1': 60, 'pi-node-3': 20, 'pi-node-2': 23}
+2026-10-22T08:44:03Z  RUN  weighted_least_connections c8_bimodal rep5
+2026-10-22T08:44:05Z    thermal gate: pi-node-1=48.0C, pi-node-2=49.2C, pi-node-3=52.1C (stable 1/2)
+2026-10-22T08:44:16Z    thermal gate: pi-node-1=48.0C, pi-node-2=49.7C, pi-node-3=51.1C (stable 2/2)
+2026-10-22T08:48:02Z  CLEAN   weighted_least_connections c8_bimodal rep5  chosen={'pi-node-1': 79, 'pi-node-2': 13, 'pi-node-3': 11}
+2026-10-22T08:49:02Z  RUN  state_aware c12_sharegpt rep5
+2026-10-22T08:49:03Z    thermal gate: pi-node-1=48.5C, pi-node-2=50.6C, pi-node-3=49.7C (stable 1/2)
+2026-10-22T08:49:14Z    thermal gate: pi-node-1=48.0C, pi-node-2=50.1C, pi-node-3=49.7C (stable 2/2)
+2026-10-22T08:53:31Z  CLEAN   state_aware c12_sharegpt rep5  chosen={'pi-node-1': 72, 'pi-node-2': 15, 'pi-node-3': 16}
+2026-10-22T08:54:31Z  RUN  weighted_least_connections c12_sharegpt rep5
+2026-10-22T08:54:33Z    thermal gate: pi-node-1=49.6C, pi-node-2=49.2C, pi-node-3=49.7C (stable 1/2)
+2026-10-22T08:54:44Z    thermal gate: pi-node-1=48.0C, pi-node-2=48.7C, pi-node-3=48.7C (stable 2/2)
+2026-10-22T08:59:18Z  CLEAN   weighted_least_connections c12_sharegpt rep5  chosen={'pi-node-1': 80, 'pi-node-2': 12, 'pi-node-3': 11}
+2026-10-22T09:00:19Z    pi-node-1: switching to qwen_p4096 (running server differs: --model='/home/admin/models/lfm2-350m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'))
+2026-10-22T09:00:19Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T09:00:29Z      restart pi-node-1: /health ok
+2026-10-22T09:00:29Z    pi-node-2: switching to qwen_p4096 (running server differs: --model='/home/admin/models/lfm2-350m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'))
+2026-10-22T09:00:29Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T09:00:39Z      restart pi-node-2: /health ok
+2026-10-22T09:00:40Z    pi-node-3: switching to qwen_p4096 (running server differs: --model='/home/admin/models/lfm2-350m-q4_k_m.gguf' (want '/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf'))
+2026-10-22T09:00:40Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T09:00:49Z      restart pi-node-3: /health ok
+2026-10-22T09:00:50Z  RUN  state_aware c8_bimodal rep5
+2026-10-22T09:00:50Z    thermal gate: pi-node-1=47.4C, pi-node-2=46.7C, pi-node-3=49.2C (stable 1/2)
+2026-10-22T09:01:01Z    thermal gate: pi-node-1=46.9C, pi-node-2=46.7C, pi-node-3=47.7C (stable 2/2)
+2026-10-22T09:08:28Z  CLEAN   state_aware c8_bimodal rep5  chosen={'pi-node-1': 65, 'pi-node-3': 21, 'pi-node-2': 17}
+2026-10-22T09:09:28Z  RUN  weighted_least_connections c8_bimodal rep5
+2026-10-22T09:09:29Z    thermal gate: pi-node-1=50.7C, pi-node-2=52.6C, pi-node-3=53.1C (stable 1/2)
+2026-10-22T09:09:40Z    thermal gate: pi-node-1=48.5C, pi-node-2=49.7C, pi-node-3=52.1C (stable 2/2)
+2026-10-22T09:17:50Z  CLEAN   weighted_least_connections c8_bimodal rep5  chosen={'pi-node-1': 68, 'pi-node-3': 18, 'pi-node-2': 17}
+2026-10-22T09:18:50Z  RUN  state_aware c12_sharegpt rep5
+2026-10-22T09:18:52Z    thermal gate: pi-node-1=47.4C, pi-node-2=48.2C, pi-node-3=54.0C (stable 1/2)
+2026-10-22T09:19:03Z    thermal gate: pi-node-1=45.8C, pi-node-2=48.7C, pi-node-3=52.6C (stable 2/2)
+2026-10-22T09:26:24Z  CLEAN   state_aware c12_sharegpt rep5  chosen={'pi-node-1': 66, 'pi-node-3': 20, 'pi-node-2': 17}
+2026-10-22T09:27:24Z  RUN  weighted_least_connections c12_sharegpt rep5
+2026-10-22T09:27:25Z    thermal gate: pi-node-1=51.2C, pi-node-2=49.7C, pi-node-3=50.6C (stable 1/2)
+2026-10-22T09:27:36Z    thermal gate: pi-node-1=50.1C, pi-node-2=49.2C, pi-node-3=51.1C (stable 2/2)
+2026-10-22T09:35:40Z  CLEAN   weighted_least_connections c12_sharegpt rep5  chosen={'pi-node-1': 69, 'pi-node-3': 15, 'pi-node-2': 19}
+2026-10-22T09:36:40Z  RUN  weighted_least_connections c12_sharegpt rep6
+2026-10-22T09:36:41Z    thermal gate: pi-node-1=49.6C, pi-node-2=50.6C, pi-node-3=49.2C (stable 1/2)
+2026-10-22T09:36:52Z    thermal gate: pi-node-1=49.0C, pi-node-2=49.2C, pi-node-3=48.7C (stable 2/2)
+2026-10-22T09:44:11Z  CLEAN   weighted_least_connections c12_sharegpt rep6  chosen={'pi-node-1': 73, 'pi-node-3': 12, 'pi-node-2': 18}
+2026-10-22T09:45:11Z  RUN  state_aware c12_sharegpt rep6
+2026-10-22T09:45:12Z    thermal gate: pi-node-1=50.1C, pi-node-2=50.6C, pi-node-3=52.6C (stable 1/2)
+2026-10-22T09:45:23Z    thermal gate: pi-node-1=50.1C, pi-node-2=50.6C, pi-node-3=50.1C (stable 2/2)
+2026-10-22T09:52:47Z  CLEAN   state_aware c12_sharegpt rep6  chosen={'pi-node-1': 66, 'pi-node-3': 19, 'pi-node-2': 18}
+2026-10-22T09:53:47Z  RUN  weighted_least_connections c8_bimodal rep6
+2026-10-22T09:53:49Z    thermal gate: pi-node-1=51.8C, pi-node-2=52.1C, pi-node-3=51.6C (stable 1/2)
+2026-10-22T09:54:00Z    thermal gate: pi-node-1=50.7C, pi-node-2=50.6C, pi-node-3=51.6C (stable 2/2)
+2026-10-22T10:01:51Z  CLEAN   weighted_least_connections c8_bimodal rep6  chosen={'pi-node-1': 64, 'pi-node-3': 16, 'pi-node-2': 23}
+2026-10-22T10:02:51Z  RUN  state_aware c8_bimodal rep6
+2026-10-22T10:02:52Z    thermal gate: pi-node-1=47.4C, pi-node-2=51.6C, pi-node-3=51.1C (stable 1/2)
+2026-10-22T10:03:03Z    thermal gate: pi-node-1=47.4C, pi-node-2=51.6C, pi-node-3=52.1C (stable 2/2)
+2026-10-22T10:10:30Z  CLEAN   state_aware c8_bimodal rep6  chosen={'pi-node-1': 63, 'pi-node-3': 21, 'pi-node-2': 19}
+2026-10-22T10:11:30Z    pi-node-1: switching to qwen_u4096 (running server differs: KV flag (want --kv-unified))
+2026-10-22T10:11:30Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T10:11:40Z      restart pi-node-1: /health ok
+2026-10-22T10:11:41Z    pi-node-2: switching to qwen_u4096 (running server differs: KV flag (want --kv-unified))
+2026-10-22T10:11:41Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T10:11:51Z      restart pi-node-2: /health ok
+2026-10-22T10:11:51Z    pi-node-3: switching to qwen_u4096 (running server differs: KV flag (want --kv-unified))
+2026-10-22T10:11:51Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T10:12:01Z      restart pi-node-3: /health ok
+2026-10-22T10:12:01Z  RUN  weighted_least_connections c8_bimodal rep6
+2026-10-22T10:12:02Z    thermal gate: pi-node-1=48.5C, pi-node-2=51.1C, pi-node-3=53.6C (stable 1/2)
+2026-10-22T10:12:13Z    thermal gate: pi-node-1=48.5C, pi-node-2=49.7C, pi-node-3=50.1C (stable 2/2)
+2026-10-22T10:19:46Z  CLEAN   weighted_least_connections c8_bimodal rep6  chosen={'pi-node-1': 60, 'pi-node-3': 23, 'pi-node-2': 20}
+2026-10-22T10:20:46Z  RUN  state_aware c8_bimodal rep6
+2026-10-22T10:20:48Z    thermal gate: pi-node-1=49.0C, pi-node-2=51.1C, pi-node-3=53.1C (stable 1/2)
+2026-10-22T10:20:59Z    thermal gate: pi-node-1=49.0C, pi-node-2=50.1C, pi-node-3=54.0C (stable 2/2)
+2026-10-22T10:28:21Z  CLEAN   state_aware c8_bimodal rep6  chosen={'pi-node-1': 57, 'pi-node-3': 26, 'pi-node-2': 20}
+2026-10-22T10:29:22Z    pi-node-1: switching to openelm_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'); KV flag (want --no-kv-unified))
+2026-10-22T10:29:22Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T10:29:32Z      restart pi-node-1: /health ok
+2026-10-22T10:29:33Z    pi-node-2: switching to openelm_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'); KV flag (want --no-kv-unified))
+2026-10-22T10:29:33Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T10:29:42Z      restart pi-node-2: /health ok
+2026-10-22T10:29:43Z    pi-node-3: switching to openelm_p4096 (running server differs: --model='/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf' (want '/home/admin/models/openelm-450m-q4_k_m.gguf'); KV flag (want --no-kv-unified))
+2026-10-22T10:29:43Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T10:29:53Z      restart pi-node-3: /health ok
+2026-10-22T10:29:53Z  RUN  weighted_least_connections c12_sharegpt rep6
+2026-10-22T10:29:54Z    thermal gate: pi-node-1=47.4C, pi-node-2=50.6C, pi-node-3=52.6C (stable 1/2)
+2026-10-22T10:30:05Z    thermal gate: pi-node-1=46.3C, pi-node-2=50.6C, pi-node-3=52.1C (stable 2/2)
+2026-10-22T10:35:32Z  CLEAN   weighted_least_connections c12_sharegpt rep6  chosen={'pi-node-1': 79, 'pi-node-3': 12, 'pi-node-2': 12}
+2026-10-22T10:36:32Z  RUN  state_aware c12_sharegpt rep6
+2026-10-22T10:36:34Z    thermal gate: pi-node-1=52.4C, pi-node-2=48.7C, pi-node-3=51.6C (stable 1/2)
+2026-10-22T10:36:45Z    thermal gate: pi-node-1=49.6C, pi-node-2=49.2C, pi-node-3=50.6C (stable 2/2)
+2026-10-22T10:42:04Z  CLEAN   state_aware c12_sharegpt rep6  chosen={'pi-node-1': 79, 'pi-node-2': 14, 'pi-node-3': 10}
+2026-10-22T10:43:04Z  RUN  weighted_least_connections c8_bimodal rep6
+2026-10-22T10:43:05Z    thermal gate: pi-node-1=49.6C, pi-node-2=48.7C, pi-node-3=48.7C (stable 1/2)
+2026-10-22T10:43:16Z    thermal gate: pi-node-1=50.1C, pi-node-2=48.7C, pi-node-3=49.2C (stable 2/2)
+2026-10-22T10:48:28Z  CLEAN   weighted_least_connections c8_bimodal rep6  chosen={'pi-node-1': 72, 'pi-node-2': 13, 'pi-node-3': 18}
+2026-10-22T10:49:28Z  RUN  state_aware c8_bimodal rep6
+2026-10-22T10:49:30Z    thermal gate: pi-node-1=49.6C, pi-node-2=52.1C, pi-node-3=51.1C (stable 1/2)
+2026-10-22T10:49:41Z    thermal gate: pi-node-1=48.5C, pi-node-2=51.1C, pi-node-3=49.2C (stable 2/2)
+2026-10-22T10:55:11Z  CLEAN   state_aware c8_bimodal rep6  chosen={'pi-node-1': 76, 'pi-node-3': 15, 'pi-node-2': 12}
+2026-10-22T10:56:11Z    pi-node-1: switching to lfm2_p4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'))
+2026-10-22T10:56:11Z      restart pi-node-1 (192.168.2.2): killing :8080 and relaunching
+2026-10-22T10:56:21Z      restart pi-node-1: /health ok
+2026-10-22T10:56:22Z    pi-node-2: switching to lfm2_p4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'))
+2026-10-22T10:56:22Z      restart pi-node-2 (192.168.2.3): killing :8080 and relaunching
+2026-10-22T10:56:32Z      restart pi-node-2: /health ok
+2026-10-22T10:56:32Z    pi-node-3: switching to lfm2_p4096 (running server differs: --model='/home/admin/models/openelm-450m-q4_k_m.gguf' (want '/home/admin/models/lfm2-350m-q4_k_m.gguf'))
+2026-10-22T10:56:32Z      restart pi-node-3 (192.168.2.5): killing :8080 and relaunching
+2026-10-22T10:56:42Z      restart pi-node-3: /health ok
+2026-10-22T10:56:42Z  RUN  weighted_least_connections c12_sharegpt rep6
+2026-10-22T10:56:43Z    thermal gate: pi-node-1=48.0C, pi-node-2=48.2C, pi-node-3=52.1C (stable 1/2)
+2026-10-22T10:56:54Z    thermal gate: pi-node-1=47.4C, pi-node-2=49.2C, pi-node-3=51.1C (stable 2/2)
+2026-10-22T11:01:29Z  CLEAN   weighted_least_connections c12_sharegpt rep6  chosen={'pi-node-1': 78, 'pi-node-2': 12, 'pi-node-3': 13}
+2026-10-22T11:02:29Z  RUN  state_aware c12_sharegpt rep6
+2026-10-22T11:02:30Z    thermal gate: pi-node-1=50.1C, pi-node-2=47.7C, pi-node-3=50.1C (stable 1/2)
+2026-10-22T11:02:41Z    thermal gate: pi-node-1=49.0C, pi-node-2=47.2C, pi-node-3=48.7C (stable 2/2)
+2026-10-22T11:07:23Z  CLEAN   state_aware c12_sharegpt rep6  chosen={'pi-node-1': 64, 'pi-node-2': 19, 'pi-node-3': 20}
+2026-10-22T11:08:23Z  RUN  weighted_least_connections c8_bimodal rep6
+2026-10-22T11:08:24Z    thermal gate: pi-node-1=48.5C, pi-node-2=49.7C, pi-node-3=51.1C (stable 1/2)
+2026-10-22T11:08:35Z    thermal gate: pi-node-1=49.0C, pi-node-2=48.7C, pi-node-3=50.1C (stable 2/2)
+2026-10-22T11:12:31Z  CLEAN   weighted_least_connections c8_bimodal rep6  chosen={'pi-node-1': 72, 'pi-node-3': 19, 'pi-node-2': 12}
+2026-10-22T11:13:31Z  RUN  state_aware c8_bimodal rep6
+2026-10-22T11:13:32Z    thermal gate: pi-node-1=48.5C, pi-node-2=49.2C, pi-node-3=51.6C (stable 1/2)
+2026-10-22T11:13:43Z    thermal gate: pi-node-1=48.0C, pi-node-2=48.7C, pi-node-3=51.6C (stable 2/2)
+2026-10-22T11:17:33Z  CLEAN   state_aware c8_bimodal rep6  chosen={'pi-node-1': 60, 'pi-node-2': 16, 'pi-node-3': 27}

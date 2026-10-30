@@ -1,0 +1,31 @@
+{
+  "group": "freshness_extension_v1",
+  "repetitions": 12,
+  "arms": [
+    "state_aware",
+    "weighted_least_connections",
+    "state_aware_tracked",
+    "wlc_tracked"
+  ],
+  "cell": [
+    "bimodal",
+    8
+  ],
+  "router_config": "router_3nodes.toml",
+  "weights": [
+    3.1,
+    1.0,
+    1.0
+  ],
+  "dataset": "local_datasets/bimodal_50short_50long_qwen_tokens.json",
+  "counting_rule": "measured clean and suspect runs both count",
+  "order": "balanced Latin-square blocks",
+  "source_sha256": {
+    "3e_results/run_freshness_extension.py": "b0ea0cc2dc8d9fbd75242d8cb9fa856b161b2eafe2b3001d960dca4da276a033",
+    "3e_results/run_3e.py": "0a0d311ae525fdc436fa7c896fdfc270e8ecefa32e15c3770d2532a94090d1ec",
+    "benchmarks/bench.py": "d47aef70397a9d117ea8cce1123251ec4d08b28a2e8f7a6dc5d8351c69e83438",
+    "routers/router/target/release/router": "520737f9544ff057478511629347bc04bd35fc230276bd847dee5e9b7347487a",
+    "routers/router/router_3nodes.toml": "d554c18df0c2c5cd06c08106d79f8cd8fd99a9d60b593a079f33339ea6503b61",
+    "benchmarks/local_datasets/bimodal_50short_50long_qwen_tokens.json": "a7c22fb6b790af38ac88f87c3cdc34be4c400c59357b33b4fd8427c2e44d075b"
+  }
+}

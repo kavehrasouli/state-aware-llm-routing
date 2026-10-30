@@ -1,0 +1,52 @@
+{
+  "group": "model_kv_extension_v1",
+  "repetitions": 6,
+  "policies": [
+    "state_aware",
+    "weighted_least_connections"
+  ],
+  "rows": [
+    [
+      "qwen_p4096",
+      "bimodal",
+      8
+    ],
+    [
+      "qwen_p4096",
+      "sharegpt",
+      12
+    ],
+    [
+      "lfm2_p4096",
+      "bimodal",
+      8
+    ],
+    [
+      "lfm2_p4096",
+      "sharegpt",
+      12
+    ],
+    [
+      "openelm_p4096",
+      "bimodal",
+      8
+    ],
+    [
+      "openelm_p4096",
+      "sharegpt",
+      12
+    ],
+    [
+      "qwen_u4096",
+      "bimodal",
+      8
+    ]
+  ],
+  "counting_rule": "measured clean and suspect runs both count",
+  "source_sha256": {
+    "3e_results/run_model_kv_extension.py": "ed6c3fad81226edc41a6dd5bef3348f542cd435076b6ee806cb19896cf6ae8e1",
+    "3e_results/run_3e.py": "0a0d311ae525fdc436fa7c896fdfc270e8ecefa32e15c3770d2532a94090d1ec",
+    "benchmarks/bench.py": "65209dbc0ff51f0a146a016a155bdb772053a156af3b368f45e7d25112f95c42",
+    "routers/router/target/release/router": "484a482ea28ab088b6903748794212837b2a3b13e05e68d38b44593618904777"
+  }
+}

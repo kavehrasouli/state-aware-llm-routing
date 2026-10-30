@@ -1,0 +1,34 @@
+block,cell_label,rep,B,R_target,R_actual,tpot_mean,ttft_mean,note,temp_peak,throttled,run_timestamp,json_file
+backbone,R200_B1,1,1,200,200,113.659,6355.947,,54.5,0,2026-07-18T00:50:00+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c1_20260718_005025.json
+backbone,R200_B1,2,1,200,200,115.931,6366.916,,58.4,0,2026-07-18T00:50:26+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c1_20260718_005051.json
+backbone,R200_B1,3,1,200,200,116.638,6342.069,,59.4,0,2026-07-18T00:50:52+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c1_20260718_005118.json
+backbone,R200_B2,1,2,200,200,228.076,6418.508,,61.3,0,2026-07-18T00:51:19+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c2_20260718_005144.json
+backbone,R200_B2,2,2,200,200,230.019,6421.211,,61.8,0,2026-07-18T00:51:45+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c2_20260718_005206.json
+backbone,R200_B2,3,2,200,200,228.657,6399.979,,62.8,0,2026-07-18T00:52:07+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c2_20260718_005227.json
+backbone,R200_B4,1,4,200,200,358.189,5166.707,"LOW_ITL_GAPS: only ~9 ITL gaps/rep -- noisiest cell by design, do not drop",63.7,0,2026-07-18T00:52:28+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_005249.json
+backbone,R200_B4,2,4,200,200,229.104,6274.904,"LOW_ITL_GAPS: only ~9 ITL gaps/rep -- noisiest cell by design, do not drop",63.3,0,2026-07-18T00:53:00+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_005318.json
+backbone,R200_B4,3,4,200,200,230.161,6272.868,"LOW_ITL_GAPS: only ~9 ITL gaps/rep -- noisiest cell by design, do not drop",65.2,0,2026-07-18T00:53:19+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_005337.json
+backbone,R800_B1,1,1,800,800,129.431,26049.837,,65.7,0,2026-07-18T00:53:48+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c1_20260718_005450.json
+backbone,R800_B1,2,1,800,800,130.728,26067.275,,67.2,0,2026-07-18T00:54:50+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c1_20260718_005552.json
+backbone,R800_B1,3,1,800,800,129.51,26059.153,,68.1,0,2026-07-18T00:55:53+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c1_20260718_005654.json
+backbone,R800_B2,1,2,800,800,148.829,25425.548,,67.6,0,2026-07-18T00:57:06+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c2_20260718_005750.json
+backbone,R800_B2,2,2,800,800,149.186,25371.136,,68.1,0,2026-07-18T00:58:01+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c2_20260718_005846.json
+backbone,R800_B2,3,2,800,800,250.021,25629.306,,68.6,0,2026-07-18T00:58:57+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c2_20260718_005954.json
+backbone,R800_B4,1,4,800,800,241.667,25329.142,,70.1,0,2026-07-18T01:00:06+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_010050.json
+backbone,R800_B4,2,4,800,800,239.372,25310.388,,70.6,0,2026-07-18T01:01:01+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_010146.json
+backbone,R800_B4,3,4,800,800,240.844,25287.115,,70.6,0,2026-07-18T01:01:57+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_010241.json
+backbone,R1600_B2,1,2,1600,1600,163.23,51775.239,,72.5,0,2026-07-18T01:02:53+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c2_20260718_010418.json
+backbone,R1600_B2,2,2,1600,1600,165.511,51737.136,,73.5,0,2026-07-18T01:04:29+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c2_20260718_010554.json
+backbone,R1600_B2,3,2,1600,1600,260.36,52155.735,,73.5,0,2026-07-18T01:06:06+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c2_20260718_010751.json
+backbone,R1600_B4,1,4,1600,1600,254.474,50574.121,,74.0,0,2026-07-18T01:08:03+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_010923.json
+backbone,R1600_B4,2,4,1600,1600,256.894,50638.627,,74.0,0,2026-07-18T01:09:35+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_011055.json
+backbone,R1600_B4,3,4,1600,1600,254.66,50626.052,,74.5,0,2026-07-18T01:11:07+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_011227.json
+backbone,R3200_B4,1,4,3200,3200,386.692,88707.33,,76.4,0,2026-07-18T01:12:39+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_011519.json
+backbone,R3200_B4,2,4,3200,3200,387.895,88797.302,,76.4,0,2026-07-18T01:15:41+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_011821.json
+backbone,R3200_B4,3,4,3200,3200,388.506,88802.681,,76.9,0,2026-07-18T01:18:33+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_012113.json
+asymmetric,onebig,1,4,800,800,214.686,25556.923,,74.5,0,2026-07-18T01:21:35+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_012225.json
+asymmetric,onebig,2,4,800,800,217.309,25583.378,,74.5,0,2026-07-18T01:22:36+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_012328.json
+asymmetric,onebig,3,4,800,800,215.972,25619.454,,74.0,0,2026-07-18T01:23:40+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_012430.json
+asymmetric,extreme,1,4,800,800,2591.688,9374.767,,74.0,0,2026-07-18T01:24:41+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_012538.json
+asymmetric,extreme,2,4,800,800,211.498,25751.089,,75.0,0,2026-07-18T01:25:49+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_012643.json
+asymmetric,extreme,3,4,800,800,213.565,25785.549,,74.5,0,2026-07-18T01:26:55+0200,cost_model_results_pi-node-2_4B-4g/raw_results/local_rateinf_c4_20260718_012751.json

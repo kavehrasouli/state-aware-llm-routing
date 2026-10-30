@@ -1,0 +1,46 @@
+# model_kv_extension_v1: Qwen2.5-0.5B, UNIFIED KV, shared 4096-token budget.
+# Identical to router_3nodes.toml except kv_mode. Weights stay at the frozen
+# 3.1/1.0/1.0 because the total budget and model are unchanged.
+# c0/c1/c2 are copied only to satisfy the driver's frozen-config gate; SA and
+# WLC never read them.
+kv_mode = "unified"
+listen = "0.0.0.0:3000"
+policy = "least_connections"
+poll_interval_ms = 350
+upstream_timeout_ms = 120000
+stream_idle_timeout_ms = 120000
+poll_timeout_ms = 300
+dispatch_eviction_threshold = 3
+max_state_age_ms = 1000
+connect_timeout_ms = 1000
+
+[[replicas]]
+name = "pi-node-1"
+url  = "http://192.168.2.2:8080"
+weight = 3.1
+context_budget = 4096
+# cost_predict_v3: Pi 5 R-only fit. The measured B response was
+# non-monotonic, so linear/capped-B fits could invert the true B=2 vs B=4
+# ordering. Source:
+# benchmarks/cost_model_results_pi-node-1_Pi5-8GB/pi5_cost_model_analysis.md.
+c0 = 87.5638
+c1 = 0.0
+c2 = 0.013507
+
+[[replicas]]
+name = "pi-node-2"
+url = "http://192.168.2.3:8080"
+weight = 1.0
+context_budget = 4096
+c0 = 53.0
+c1 = 47.0
+c2 = 0.070
+
+[[replicas]]
+name = "pi-node-3"
+url = "http://192.168.2.5:8080"
+weight = 1.0
+context_budget = 4096
+c0 = 53.0
+c1 = 47.0
+c2 = 0.070

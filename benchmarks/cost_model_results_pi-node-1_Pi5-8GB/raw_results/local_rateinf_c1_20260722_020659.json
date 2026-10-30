@@ -1,0 +1,119 @@
+{
+  "benchmark_version": "bench.py/2.0",
+  "prompt_len_note": "actual_prompt_len is the real tokenized input length (usage.prompt_tokens from server); use it for analysis, not prompt_len (word-count estimate)",
+  "date": "2026-07-22T02:06:59.156429",
+  "base_url": "http://192.168.2.2:8080",
+  "model": "qwen2.5-0.5b",
+  "dataset_name": "local",
+  "random_input_len": 128,
+  "random_output_len": 128,
+  "num_prompts": 1,
+  "num_warmup": 3,
+  "request_rate": Infinity,
+  "max_concurrency": 1,
+  "seed": 42,
+  "duration_s": 4.321,
+  "completed": 1,
+  "failed": 0,
+  "outcome_counts": {
+    "success": 1
+  },
+  "finish_reason_breakdown": {
+    "stop_normal": 0,
+    "length_expected": 1,
+    "kv_slot_truncated": 0
+  },
+  "throughput_req_s": 0.2314,
+  "throughput_tok_s": 9.2568,
+  "ttft": {
+    "mean_ms": 1879.294,
+    "p50_ms": 1879.294,
+    "p95_ms": 1879.294
+  },
+  "tpot": {
+    "mean_ms": 62.563,
+    "p50_ms": 62.563,
+    "p95_ms": 62.563
+  },
+  "itl": {
+    "mean_ms": 62.556,
+    "p50_ms": 58.64,
+    "p95_ms": 74.743
+  },
+  "e2el": {
+    "mean_ms": 4319.239,
+    "p50_ms": 4319.239,
+    "p95_ms": 4319.239
+  },
+  "queue_delay": {
+    "mean_ms": 0.092,
+    "p50_ms": 0.092,
+    "p95_ms": 0.092
+  },
+  "actual_prompt_len": {
+    "min": 160,
+    "mean": 160.0,
+    "max": 160,
+    "n_missing": 0
+  },
+  "raw": [
+    {
+      "ttft_ms": 1879.2941250139847,
+      "tpot_ms": 62.562678434635295,
+      "itl_ms": [
+        57.736291957553476,
+        60.45241700485349,
+        71.65320799686015,
+        57.664417021442205,
+        60.76345802284777,
+        58.54462500428781,
+        58.15316695952788,
+        69.16808302048594,
+        80.66458301618695,
+        61.520333983935416,
+        56.391249992884696,
+        73.63629102474079,
+        58.987583965063095,
+        74.59908298915252,
+        59.766917023807764,
+        56.62475002463907,
+        56.8107909639366,
+        57.863834023009986,
+        65.09591598296538,
+        57.53291700966656,
+        71.26854197122157,
+        58.45045804744586,
+        69.9202079558745,
+        75.25933400029317,
+        57.62520799180493,
+        61.26058305380866,
+        74.68591694487259,
+        60.60216703917831,
+        58.407625008840114,
+        64.665415964555,
+        56.786208995617926,
+        57.6819580164738,
+        58.290041983127594,
+        57.55050003062934,
+        57.91416601277888,
+        58.51908394834027,
+        57.55116604268551,
+        58.640291972551495,
+        70.97237498965114
+      ],
+      "e2el_ms": 4319.238583964761,
+      "queue_delay_ms": 0.09175000013783574,
+      "prompt_len": 160,
+      "actual_prompt_len": 160,
+      "input_tokens": 160,
+      "output_len": 40,
+      "requested_output_tokens": 40,
+      "generated_output_tokens": 40,
+      "finish_reason": "length",
+      "truncated": 0,
+      "outcome": "success",
+      "success": true,
+      "error": ""
+    }
+  ]
+}

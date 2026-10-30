@@ -1,0 +1,23 @@
+[package]
+name = "router"
+version = "0.1.0"
+edition = "2021"
+
+# The consolidated thesis router: one binary, nine switchable policy variants behind a
+# single shared forwarding path (built on the proven proxy in
+# routers/router_roundrobin). Only the replica-selection function differs
+# between policies so per-decision overhead is a like-for-like comparison.
+
+[dependencies]
+axum = "0.8"
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["stream", "json"] }
+arc-swap = "1"                                    # lock-free, wait-free snapshot reads on the hot path
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+clap = { version = "4", features = ["derive"] }
+rand = { version = "0.8", features = ["small_rng"] }
+futures = "0.3"
+async-stream = "0.3"                              # ergonomic instrumented response stream
+bytes = "1"

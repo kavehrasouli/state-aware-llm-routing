@@ -1,0 +1,73 @@
+Analysis plan: freshness_extension_v1 (router-tracked vs polled state)
+
+Written 2026-10-24, while runs 41-48 were still being collected, BEFORE any
+outcome data (latency, completion, dispatch share) of this campaign had been
+viewed. Only the run journal's counts and timestamps had been read.
+
+Design (fixed in run_freshness_extension.py and settings.json; unchanged):
+  arms   state_aware, weighted_least_connections (polled engine state)
+         state_aware_tracked, wlc_tracked (router-tracked outstanding load,
+         health-only eligibility)
+  cell   bimodal concurrency 8, Qwen2.5-0.5B, partitioned KV 4 x 1,024,
+         weights 3.1/1.0/1.0
+  runs   12 per arm, 48 in total; every measured run counts, clean or suspect
+  order  12 blocks of four runs (block k = repetition k of every arm), arm
+         order within each block from a balanced Latin square
+
+Primary comparison
+  state_aware_tracked vs wlc_tracked, median end-to-end latency.
+  Estimand: median over runs of each run's p50 end-to-end latency
+  (successful requests), state_aware_tracked minus wlc_tracked.
+
+Secondary comparisons (same metrics)
+  state_aware_tracked vs state_aware
+  wlc_tracked vs weighted_least_connections
+  state_aware vs weighted_least_connections (contemporary replication of the
+  main experiment's bimodal c8 comparison)
+
+Metrics
+  p50 end-to-end latency (primary metric for the primary comparison)
+  p95 end-to-end latency
+  p50 TTFT
+  completion: mean over runs of the run's completed fraction of 100 measured
+  requests; effect = difference of arm means
+  The four metrics are treated as separate questions; "better" is judged per
+  metric, and a median gain with worse p95 or completion is reported as a
+  trade-off, not as an improvement.
+
+Latency inclusion
+  Run-level statistics over successful, non-truncated measured requests, as in
+  the paper. Sensitivity: recompute p50/p95 end-to-end latency with deadline
+  failures counted at 120 s. Other failures are excluded from latency and
+  counted in completion. A run with no successful request would be excluded
+  from latency and reported (none expected).
+
+Inference (block-aware)
+  Permutation test: for a pairwise comparison, swap the two arms' run values
+  within each block; all 2^12 = 4,096 assignments enumerated; two-sided, on
+  the estimand above.
+  Confidence interval: percentile bootstrap resampling whole blocks with
+  replacement, 20,000 resamples, fixed seed.
+  Multiple comparisons: Benjamini-Hochberg across the four comparisons,
+  separately for each metric. Significant = adjusted p < 0.05.
+  Power note: the planned 12 runs per arm gave about 8.9 s as the median
+  latency difference detectable with 80% power, from an unblocked
+  normal-approximation simulation at unadjusted alpha = 0.05 using the main
+  experiment's bimodal c8 run-to-run variation. It is not a detection
+  guarantee for the other metrics or after adjustment.
+
+Descriptive, not tested
+  Pi 5 dispatch share per arm; staleness of the two polled arms; agreement of
+  router-tracked counts with engine usage over all 48 runs
+  (validate_tracking.py), reported with coverage.
+
+Interpretation (claims scoped to this configuration)
+  Tracked state-aware significantly better than tracked WLC on median latency,
+  without worse p95 or completion: outstanding-context accounting adds value
+  beyond outstanding-request counts here.
+  No significant difference: no advantage detected; the confidence interval
+  bounds the benefits compatible with the data.
+  Tracked WLC better: token accounting can worsen service relative to request
+  counts even without polled-age exclusions.
+  Tracked vs polled differences: the combined accounting-and-eligibility
+  mechanism changes performance; this does not isolate freshness.

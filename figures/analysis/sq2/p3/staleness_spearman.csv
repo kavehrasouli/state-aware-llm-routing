@@ -1,0 +1,11 @@
+predictor,n_cells,spearman_rho
+prompt_tok_s,9,0.9833333333333333
+inflight_mean,9,0.058825606477121255
+idle_share,9,-0.03333333333333333
+prompt_p50,9,0.5270462766947299
+output_tok_s,9,-0.6166666666666667
+resident_mean,9,0.7666666666666667
+prompt_tok_per_req,9,0.7166666666666667
+prompt_over_output,9,0.7916685736056362
+prefill_duty,9,0.7833333333333333
+prompt_tok_s_wallclock,9,0.9833333333333333

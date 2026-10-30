@@ -1,0 +1,62 @@
+{
+  "qwen_p4096": {
+    "model_path": "/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "model_name": "qwen2.5-0.5b",
+    "kv_mode": "partitioned",
+    "ctx_size": 4096,
+    "slots": 4,
+    "router_config": "router_3nodes.toml",
+    "weights": [
+      3.1,
+      1.0,
+      1.0
+    ],
+    "router_config_sha256": "d554c18df0c2c5cd06c08106d79f8cd8fd99a9d60b593a079f33339ea6503b61"
+  },
+  "lfm2_p4096": {
+    "model_path": "/home/admin/models/lfm2-350m-q4_k_m.gguf",
+    "model_sha256": "1dba011ab355721529b3588a3d583da5329c8552be60f8ac26558053f3747410",
+    "model_source": "LiquidAI/LFM2-350M @ f37d3f5c8c5484bc01dad379a595cf4c68c4e70e, converted and quantized (Q4_K_M) with llama.cpp a935fbffe",
+    "model_name": "lfm2-350m",
+    "kv_mode": "partitioned",
+    "ctx_size": 4096,
+    "slots": 4,
+    "router_config": "router_3nodes_lfm2.toml",
+    "weights": [
+      4.2,
+      1.0,
+      1.0
+    ],
+    "router_config_sha256": "302feba2d120061564b0c36116303458c972c35d3712d92e5df88412d191af16"
+  },
+  "openelm_p4096": {
+    "model_path": "/home/admin/models/openelm-450m-q4_k_m.gguf",
+    "model_sha256": "dd9f3da299105d9d910f43676840b98ad423ca369a42616b4db2b58b47a99415",
+    "model_source": "apple/OpenELM-450M-Instruct @ d81e0fec8c7361a215272c9505bb44d1622a491b, converted and quantized (Q4_K_M) with llama.cpp a935fbffe",
+    "model_name": "openelm-450m",
+    "kv_mode": "partitioned",
+    "ctx_size": 4096,
+    "slots": 4,
+    "router_config": "router_3nodes_openelm450m.toml",
+    "weights": [
+      4.6,
+      1.0,
+      1.0
+    ],
+    "router_config_sha256": "15f084953875af3b3dcb635eda8bb28b3f084124a054a2c5cb020dd107bc634f"
+  },
+  "qwen_u4096": {
+    "model_path": "/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "model_name": "qwen2.5-0.5b",
+    "kv_mode": "unified",
+    "ctx_size": 4096,
+    "slots": 4,
+    "router_config": "router_3nodes_unified4096.toml",
+    "weights": [
+      3.1,
+      1.0,
+      1.0
+    ],
+    "router_config_sha256": "7e04316e0174e78e8e60bad6f3f9145d2fc7a33c5d90e5053b112bf49bfe71dc"
+  }
+}

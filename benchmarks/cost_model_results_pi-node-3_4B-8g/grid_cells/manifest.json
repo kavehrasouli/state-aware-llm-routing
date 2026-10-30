@@ -1,0 +1,240 @@
+[
+  {
+    "block": "backbone",
+    "label": "R200_B1",
+    "B": 1,
+    "R_target": 200,
+    "slots": [
+      [
+        160,
+        40
+      ]
+    ],
+    "path": "<repo>/benchmarks/grid_cells/backbone_R200_B1.json",
+    "note": ""
+  },
+  {
+    "block": "backbone",
+    "label": "R200_B2",
+    "B": 2,
+    "R_target": 200,
+    "slots": [
+      [
+        80,
+        20
+      ],
+      [
+        80,
+        20
+      ]
+    ],
+    "path": "<repo>/benchmarks/grid_cells/backbone_R200_B2.json",
+    "note": ""
+  },
+  {
+    "block": "backbone",
+    "label": "R200_B4",
+    "B": 4,
+    "R_target": 200,
+    "slots": [
+      [
+        40,
+        10
+      ],
+      [
+        40,
+        10
+      ],
+      [
+        40,
+        10
+      ],
+      [
+        40,
+        10
+      ]
+    ],
+    "path": "<repo>/benchmarks/grid_cells/backbone_R200_B4.json",
+    "note": "LOW_ITL_GAPS: only ~9 ITL gaps/rep -- noisiest cell by design, do not drop"
+  },
+  {
+    "block": "backbone",
+    "label": "R800_B1",
+    "B": 1,
+    "R_target": 800,
+    "slots": [
+      [
+        640,
+        160
+      ]
+    ],
+    "path": "<repo>/benchmarks/grid_cells/backbone_R800_B1.json",
+    "note": ""
+  },
+  {
+    "block": "backbone",
+    "label": "R800_B2",
+    "B": 2,
+    "R_target": 800,
+    "slots": [
+      [
+        320,
+        80
+      ],
+      [
+        320,
+        80
+      ]
+    ],
+    "path": "<repo>/benchmarks/grid_cells/backbone_R800_B2.json",
+    "note": ""
+  },
+  {
+    "block": "backbone",
+    "label": "R800_B4",
+    "B": 4,
+    "R_target": 800,
+    "slots": [
+      [
+        160,
+        40
+      ],
+      [
+        160,
+        40
+      ],
+      [
+        160,
+        40
+      ],
+      [
+        160,
+        40
+      ]
+    ],
+    "path": "<repo>/benchmarks/grid_cells/backbone_R800_B4.json",
+    "note": ""
+  },
+  {
+    "block": "backbone",
+    "label": "R1600_B2",
+    "B": 2,
+    "R_target": 1600,
+    "slots": [
+      [
+        640,
+        160
+      ],
+      [
+        640,
+        160
+      ]
+    ],
+    "path": "<repo>/benchmarks/grid_cells/backbone_R1600_B2.json",
+    "note": ""
+  },
+  {
+    "block": "backbone",
+    "label": "R1600_B4",
+    "B": 4,
+    "R_target": 1600,
+    "slots": [
+      [
+        320,
+        80
+      ],
+      [
+        320,
+        80
+      ],
+      [
+        320,
+        80
+      ],
+      [
+        320,
+        80
+      ]
+    ],
+    "path": "<repo>/benchmarks/grid_cells/backbone_R1600_B4.json",
+    "note": ""
+  },
+  {
+    "block": "backbone",
+    "label": "R3200_B4",
+    "B": 4,
+    "R_target": 3200,
+    "slots": [
+      [
+        640,
+        160
+      ],
+      [
+        640,
+        160
+      ],
+      [
+        640,
+        160
+      ],
+      [
+        640,
+        160
+      ]
+    ],
+    "path": "<repo>/benchmarks/grid_cells/backbone_R3200_B4.json",
+    "note": ""
+  },
+  {
+    "block": "asymmetric",
+    "label": "onebig",
+    "B": 4,
+    "R_target": 800,
+    "slots": [
+      [
+        400,
+        100
+      ],
+      [
+        80,
+        20
+      ],
+      [
+        80,
+        20
+      ],
+      [
+        80,
+        20
+      ]
+    ],
+    "path": "<repo>/benchmarks/grid_cells/asymmetric_onebig.json",
+    "note": ""
+  },
+  {
+    "block": "asymmetric",
+    "label": "extreme",
+    "B": 4,
+    "R_target": 800,
+    "slots": [
+      [
+        544,
+        136
+      ],
+      [
+        32,
+        8
+      ],
+      [
+        32,
+        8
+      ],
+      [
+        32,
+        8
+      ]
+    ],
+    "path": "<repo>/benchmarks/grid_cells/asymmetric_extreme.json",
+    "note": ""
+  }
+]

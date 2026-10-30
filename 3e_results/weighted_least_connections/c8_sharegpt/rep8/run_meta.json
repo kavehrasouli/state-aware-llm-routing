@@ -1,0 +1,114 @@
+{
+  "policy": "weighted_least_connections",
+  "arm": "weighted_least_connections",
+  "arm_note": null,
+  "concurrency": 8,
+  "workload": "sharegpt",
+  "rep": 8,
+  "extension_group": "manual_smoke",
+  "policy_metadata": {
+    "experimental": false,
+    "predictive": false,
+    "request_aware": false
+  },
+  "experimental_predictive_policy": false,
+  "start_ts": "2026-07-29T19:33:33Z",
+  "end_ts": "2026-07-29T19:43:12Z",
+  "router_git_commit": "9fae1d9",
+  "frozen_config": {
+    "weights": [
+      3.1,
+      1.0,
+      1.0
+    ],
+    "poll_interval_ms": 350,
+    "poll_timeout_ms": 300,
+    "dispatch_eviction_threshold": 3,
+    "max_state_age_ms": 1000,
+    "connect_timeout_ms": 1000,
+    "upstream_timeout_ms": 120000,
+    "stream_idle_timeout_ms": 120000,
+    "llama_build": "9960 / a935fbffe",
+    "model": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "num_prompts": 100,
+    "request_rate": 2,
+    "seed": 42,
+    "cost_coefficients": {
+      "pi-node-1": {
+        "c0": 87.5638,
+        "c1": 0.0,
+        "c2": 0.013507
+      },
+      "pi-node-2": {
+        "c0": 53.0,
+        "c1": 47.0,
+        "c2": 0.07
+      },
+      "pi-node-3": {
+        "c0": 53.0,
+        "c1": 47.0,
+        "c2": 0.07
+      }
+    },
+    "bench_timeout_s": 2400,
+    "minimum_cooldown_s": 60,
+    "thermal_start_max_c": 60.0,
+    "thermal_stable_readings": 2,
+    "thermal_poll_s": 10,
+    "thermal_wait_timeout_s": 1200,
+    "router_config_file": "router_3nodes.toml"
+  },
+  "bench_result_file": "sharegpt_rate2.0_c8_20260729_214312.json",
+  "router_log_file": "router_log.jsonl",
+  "verdict": "clean",
+  "verdict_reason": null,
+  "router_metrics": {
+    "run_ids": [
+      "1785353680408563000-51472"
+    ],
+    "router_request_records": 103,
+    "no_healthy_replica": 0,
+    "failure_rate": 0.0,
+    "eviction_events": 0,
+    "stale_mode_distribution": {
+      "live": 89,
+      "some_stale_excluded": 14
+    },
+    "chosen_replica_counts": {
+      "pi-node-1": 70,
+      "pi-node-3": 21,
+      "pi-node-2": 12
+    }
+  },
+  "bench_summary": {
+    "num_prompts": 100,
+    "num_warmup": 3,
+    "completed": 100,
+    "failed": 0,
+    "outcome_counts": {
+      "success": 100
+    },
+    "throughput_req_s": 0.2069,
+    "duration_s": 483.245
+  },
+  "reachability_events": [],
+  "thermal_gate": {
+    "threshold_c": 60.0,
+    "stable_readings_required": 2,
+    "poll_interval_s": 10,
+    "timeout_s": 1200,
+    "wait_s": 66.764,
+    "samples": 7,
+    "initial_c": {
+      "pi-node-1": 61.7,
+      "pi-node-2": 58.91,
+      "pi-node-3": 65.24
+    },
+    "final_c": {
+      "pi-node-1": 53.45,
+      "pi-node-2": 55.5,
+      "pi-node-3": 57.94
+    },
+    "read_errors": {}
+  }
+}

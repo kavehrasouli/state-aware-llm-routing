@@ -1,0 +1,7 @@
+arm,cell,node,n_runs,requests,share,sent_to_full_node,median_e2el_s,median_ttft_s,tail_requests,tail_total,tail_share
+weighted_least_connections,c12_sgpt,pi-node-1,6,401,0.668333,0.902743,49.589,24.706,2,30,0.066667
+weighted_least_connections,c12_sgpt,pi-node-2,6,105,0.175,0.0,56.306,1.125,12,30,0.4
+weighted_least_connections,c12_sgpt,pi-node-3,6,94,0.156667,0.0,51.179,1.2,16,30,0.533333
+state_aware,c12_sgpt,pi-node-1,6,357,0.595,0.868347,41.622,13.363,0,30,0.0
+state_aware,c12_sgpt,pi-node-2,6,114,0.19,0.061404,60.399,1.555,9,30,0.3
+state_aware,c12_sgpt,pi-node-3,6,129,0.215,0.108527,50.691,1.802,21,30,0.7

@@ -1,0 +1,68 @@
+# Concentration-control config for the §3e ShareGPT arm (`--arm wlc_conc`).
+#
+# IDENTICAL to router_3nodes.toml in every respect except the pi-node-1 weight.
+# It exists to test whether cost_predict_v3's ShareGPT tail-latency advantage is
+# explained by its routing share (79.8% to the Pi 5) rather than by prediction:
+# weighted_least_connections is re-weighted here to reach a comparable share.
+#
+# Weight 6.0: weighted_least_connections picks argmin b/w, so once the Pi 5
+# holds all 4 of its llama.cpp slots, b1/w exceeds b2/1 regardless of how large
+# w grows -- the achievable share plateaus. Simulated Pi-5 share over 15 seeds
+# (simulator/run_sim.py, c8_sharegpt):
+#
+#     w    = 3.1   4.0   4.5   5.0   6.0   8.0   10.0  16.0
+#     share= 67.7  66.6  66.6  72.8  75.6  75.6  75.6  75.6   (%)
+#
+# The plateau starts at 6.0 and is identical through 16.0, so 6.0 is the
+# smallest weight that reaches it -- chosen to deviate from the frozen 3.1 by
+# the minimum amount that still achieves the concentration.
+#
+# NOTE: 75.6% undershoots cost_predict_v3's observed 79.8%. WLC cannot reach
+# that share because it is load-reactive; a stateless WRR at 8/1/1 hits
+# 80/10/10 exactly but changes both the share AND the load-reactivity, so it is
+# a worse control. The weight was selected on routing SHARE, which is a robust
+# distribution property -- not on simulated latency, whose policy ranking in
+# this simulator is weak (see simulator/README.md "How good is it?").
+#
+# Everything below the weight line must stay in sync with router_3nodes.toml;
+# the driver's pre-flight gate checks the scalars and c0/c1/c2 against FROZEN.
+listen = "0.0.0.0:3000"
+policy = "least_connections"
+poll_interval_ms = 350
+upstream_timeout_ms = 120000
+stream_idle_timeout_ms = 120000
+poll_timeout_ms = 300
+dispatch_eviction_threshold = 3
+max_state_age_ms = 1000
+connect_timeout_ms = 1000
+
+[[replicas]]
+name = "pi-node-1"
+url  = "http://192.168.2.2:8080"
+weight = 6.0
+context_budget = 4096
+# cost_predict_v3: Pi 5 R-only fit. The measured B response was
+# non-monotonic, so linear/capped-B fits could invert the true B=2 vs B=4
+# ordering. Source:
+# benchmarks/cost_model_results_pi-node-1_Pi5-8GB/pi5_cost_model_analysis.md.
+c0 = 87.5638
+c1 = 0.0
+c2 = 0.013507
+
+[[replicas]]
+name = "pi-node-2"
+url = "http://192.168.2.3:8080"
+weight = 1.0
+context_budget = 4096
+c0 = 53.0
+c1 = 47.0
+c2 = 0.070
+
+[[replicas]]
+name = "pi-node-3"
+url = "http://192.168.2.5:8080"
+weight = 1.0
+context_budget = 4096
+c0 = 53.0
+c1 = 47.0
+c2 = 0.070

@@ -1,0 +1,141 @@
+==========================================================================
+M_A (additive) added to the M1/M2/M3 cost-model comparison
+Backbone cells only, cell means (n=9), R_actual not R_target.
+==========================================================================
+
+##########################################################################
+# pi-node-2_4B-4g
+##########################################################################
+
+VERIFICATION: 40/40 checks passed -- M1, M2 and M3 coefficients,
+  SEs, R², adj-R², RSS, df and both existing F-tests reproduce the output of
+  analyze_cost_model_sweep.py exactly (compared at its own printed precision).
+
+Data: 33 rows, 0 throttled dropped, 27 backbone runs -> n=9 cell means.
+
+cell            B  R_actual(mean)    tpot_mean
+R1600_B2        2          1600.0       214.96
+R1600_B4        4          1600.0       296.85
+R200_B1         1           200.0       109.15
+R200_B2         2           200.0       130.48
+R200_B4         4           200.0       218.35
+R3200_B4        4          3200.0       373.59
+R800_B1         1           800.0       124.20
+R800_B2         2           800.0       207.27
+R800_B4         4           800.0       229.88
+
+M1 : tpot ~ b0 + b1*B
+  b0           =   71.79613   SE= 42.19585   95% CI=[ -27.98121,  171.57346]
+  b1(B)        =   52.44017   SE= 14.33322   95% CI=[  18.54750,   86.33285]
+  R²=0.6566  adj-R²=0.6076  RSS=20133.23  df=7
+
+M2 : tpot ~ b0 + b1*R_actual
+  b0           =  133.71558   SE= 24.46433   95% CI=[  75.86662,  191.56453]
+  b1(R)        =    0.07461   SE=  0.01759   95% CI=[   0.03300,    0.11621]
+  R²=0.7198  adj-R²=0.6797  RSS=16430.64  df=7
+
+M_A: tpot ~ b0 + b1*B + b2*R_actual   [additive, no interaction]
+  b0           =   59.91767   SE= 13.63872   95% CI=[  26.54492,   93.29043]
+  b1(B)        =   35.65540   SE=  5.07505   95% CI=[  23.23720,   48.07360]
+  b2(R)        =    0.05423   SE=  0.00690   95% CI=[   0.03735,    0.07110]
+  R²=0.9696  adj-R²=0.9595  RSS=1780.80  df=6
+
+M3 : tpot ~ b0 + b1*B + b2*R_actual + b3*(B*R_actual)
+  b0           =   58.06055   SE= 24.71576   95% CI=[  -5.47333,  121.59442]
+  b1(B)        =   36.21446   SE=  8.12512   95% CI=[  15.32817,   57.10074]
+  b2(R)        =    0.05697   SE=  0.03000   95% CI=[  -0.02016,    0.13409]
+  b3(B:R)      =   -0.00076   SE=  0.00810   95% CI=[  -0.02157,    0.02005]
+  R²=0.9697  adj-R²=0.9515  RSS=1777.64  df=5
+
+--------------------------------------------------------------------------
+NESTED F-TESTS
+comparison   question                                  df        F  p
+M1 vs M_A    does R add beyond B                     1,6    61.834  p=0.0002
+M2 vs M_A    does B add beyond R                     1,6    49.359  p=0.0004
+M_A vs M3    is the interaction needed               1,5     0.009  p=0.9286
+M1 vs M3     existing test, R+interaction jointly    2,5    25.815  p=0.0023
+M2 vs M3     existing test, B+interaction jointly    2,5    20.607  p=0.0039
+
+Consistency: t²(b2(R) in M_A)=61.834 vs F(M1 vs M_A)=61.834; t²(b1(B) in M_A)=49.359 vs F(M2 vs M_A)=49.359
+
+##########################################################################
+# pi-node-3_4B-8g
+##########################################################################
+
+VERIFICATION: 40/40 checks passed -- M1, M2 and M3 coefficients,
+  SEs, R², adj-R², RSS, df and both existing F-tests reproduce the output of
+  analyze_cost_model_sweep.py exactly (compared at its own printed precision).
+
+Data: 33 rows, 0 throttled dropped, 27 backbone runs -> n=9 cell means.
+
+cell            B  R_actual(mean)    tpot_mean
+R1600_B2        2          1600.0       245.48
+R1600_B4        4          1600.0       244.75
+R200_B1         1           200.0       110.34
+R200_B2         2           200.0       129.74
+R200_B4         4           200.0       217.65
+R3200_B4        4          3200.0       371.28
+R800_B1         1           800.0       123.92
+R800_B2         2           800.0       173.97
+R800_B4         4           800.0       229.29
+
+M1 : tpot ~ b0 + b1*B
+  b0           =   79.30679   SE= 44.70126   95% CI=[ -26.39490,  185.00848]
+  b1(B)        =   47.19440   SE= 15.18426   95% CI=[  11.28932,   83.09948]
+  R²=0.5798  adj-R²=0.5198  RSS=22595.06  df=7
+
+M2 : tpot ~ b0 + b1*R_actual
+  b0           =  128.39542   SE= 21.60991   95% CI=[  77.29611,  179.49472]
+  b1(R)        =    0.07350   SE=  0.01554   95% CI=[   0.03675,    0.11025]
+  R²=0.7616  adj-R²=0.7276  RSS=12820.16  df=7
+
+M_A: tpot ~ b0 + b1*B + b2*R_actual   [additive, no interaction]
+  b0           =   66.92553   SE= 16.65651   95% CI=[  26.16852,  107.68254]
+  b1(B)        =   29.69913   SE=  6.19799   95% CI=[  14.53321,   44.86505]
+  b2(R)        =    0.05652   SE=  0.00842   95% CI=[   0.03592,    0.07713]
+  R²=0.9506  adj-R²=0.9341  RSS=2656.04  df=6
+
+M3 : tpot ~ b0 + b1*B + b2*R_actual + b3*(B*R_actual)
+  b0           =   44.01759   SE= 27.34051   95% CI=[ -26.26342,  114.29860]
+  b1(B)        =   36.59517   SE=  8.98799   95% CI=[  13.49081,   59.69952]
+  b2(R)        =    0.09029   SE=  0.03319   95% CI=[   0.00497,    0.17561]
+  b3(B:R)      =   -0.00941   SE=  0.00895   95% CI=[  -0.03243,    0.01361]
+  R²=0.9596  adj-R²=0.9353  RSS=2175.25  df=5
+
+--------------------------------------------------------------------------
+NESTED F-TESTS
+comparison   question                                  df        F  p
+M1 vs M_A    does R add beyond B                     1,6    45.042  p=0.0005
+M2 vs M_A    does B add beyond R                     1,6    22.961  p=0.0030
+M_A vs M3    is the interaction needed               1,5     1.105  p=0.3413
+M1 vs M3     existing test, R+interaction jointly    2,5    23.468  p=0.0029
+M2 vs M3     existing test, B+interaction jointly    2,5    12.234  p=0.0119
+
+Consistency: t²(b2(R) in M_A)=45.042 vs F(M1 vs M_A)=45.042; t²(b1(B) in M_A)=22.961 vs F(M2 vs M_A)=22.961
+
+==========================================================================
+CROSS-NODE SUMMARY
+==========================================================================
+
+node                       M1       M2      M_A       M3   (adj-R²)
+pi-node-2_4B-4g        0.6076   0.6797   0.9595   0.9515
+pi-node-3_4B-8g        0.5198   0.7276   0.9341   0.9353
+
+node                         M1         M2        M_A         M3   (RSS)
+pi-node-2_4B-4g        20133.23   16430.64    1780.80    1777.64
+pi-node-3_4B-8g        22595.06   12820.16    2656.04    2175.25
+
+node                    M1 vs M_A    M2 vs M_A    M_A vs M3     M1 vs M3     M2 vs M3   (p-values)
+pi-node-2_4B-4g            0.0002       0.0004       0.9286       0.0023       0.0039
+pi-node-3_4B-8g            0.0005       0.0030       0.3413       0.0029       0.0119
+
+node                    M1 vs M_A    M2 vs M_A    M_A vs M3     M1 vs M3     M2 vs M3   (F)
+pi-node-2_4B-4g            61.834       49.359        0.009       25.815       20.607
+pi-node-3_4B-8g            45.042       22.961        1.105       23.468       12.234
+
+M_A coefficients across nodes:
+node                           b0        b1(B)        b2(R)
+pi-node-2_4B-4g          59.91767     35.65540      0.05423
+  (SE)                   13.63872      5.07505      0.00690
+pi-node-3_4B-8g          66.92553     29.69913      0.05652
+  (SE)                   16.65651      6.19799      0.00842

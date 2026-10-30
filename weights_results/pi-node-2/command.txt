@@ -1,0 +1,43 @@
+(.venv) user@host benchmarks % python3 bench.py --base-url http://192.168.2.3:8080 --model qwen2.5-0.5b \
+  --dataset-name local --dataset-path local_datasets/bimodal_50short_50long.json \
+  --num-prompts 40 --max-concurrency 4 --request-rate 2 --seed 42 --save-result
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 40 requests → http://192.168.2.3:8080
+rate=2.0 req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=2.0 req/s  concurrency=4  mode=open-loop
+  completed=37/40  failed=3  duration=816.1s
+  failure breakdown: connection_error=3
+  throughput: 0.045 req/s  4.3 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            22088.6    26027.7    53526.0
+  tpot             1126.4      621.2     3254.7
+  itl               687.4      279.9      304.3
+  e2el            86802.0   100750.2   152413.8
+  queue_delay    346617.6   356810.3   698282.5  *** CLIENT BOTTLENECK
+  actual_input_len: min=40  mean=380.5  max=640  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=37  KV-SLOT-TRUNCATED=0
+──────────────────────────────────────────────────────────────
+  per-class success metrics
+  class            done   fail  metric       mean        p50        p95  (ms)
+  ──────────────────────────────────────────────────────────────────
+  long            21/24      3  ttft      31286.4    26157.9    53510.6
+                                tpot        641.0      622.2      786.1
+                                e2el     133213.2   147276.9   152514.9
+  short           16/16      0  ttft      10016.5     2103.5    34144.9
+                                tpot       1763.4      430.0     3963.7
+                                e2el      25887.3    29859.6    56476.0
+==============================================================
+
+WARNING: mean queue_delay > 50 ms — the client semaphore is the bottleneck.
+         TTFT/E2EL are measured after dispatch and do not include queue_delay.
+         Interpret this as capped-arrival load, not a pure open-loop rate run.
+         Lower --request-rate or raise --max-concurrency to remove client backpressure.
+
+Saved → <repo>/benchmarks/results/local_rate2.0_c4_20260724_015035.json
+(.venv) user@host benchmarks % 

@@ -1,0 +1,87 @@
+{
+  "policy": "round_robin",
+  "concurrency": 12,
+  "workload": "bimodal",
+  "rep": 1,
+  "start_ts": "2026-07-25T13:45:24Z",
+  "end_ts": "2026-07-25T13:54:44Z",
+  "router_git_commit": "a8feeef",
+  "frozen_config": {
+    "weights": [
+      3.1,
+      1.0,
+      1.0
+    ],
+    "poll_interval_ms": 350,
+    "poll_timeout_ms": 300,
+    "dispatch_eviction_threshold": 3,
+    "max_state_age_ms": 1000,
+    "connect_timeout_ms": 1000,
+    "upstream_timeout_ms": 120000,
+    "stream_idle_timeout_ms": 120000,
+    "llama_build": "9960 / a935fbffe",
+    "model": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "num_prompts": 100,
+    "request_rate": 2,
+    "seed": 42,
+    "bench_timeout_s": 2400,
+    "minimum_cooldown_s": 60,
+    "thermal_start_max_c": 60.0,
+    "thermal_stable_readings": 2,
+    "thermal_poll_s": 10,
+    "thermal_wait_timeout_s": 1200
+  },
+  "bench_result_file": "local_rate2.0_c12_20260725_155443.json",
+  "router_log_file": "router_log.jsonl",
+  "verdict": "suspect",
+  "verdict_reason": "failure_rate=29.1% > 10%",
+  "router_metrics": {
+    "run_ids": [
+      "1784987136455854000-85523"
+    ],
+    "router_request_records": 103,
+    "no_healthy_replica": 0,
+    "failure_rate": 0.2913,
+    "eviction_events": 0,
+    "stale_mode_distribution": {
+      "stateless": 103
+    },
+    "chosen_replica_counts": {
+      "pi-node-1": 35,
+      "pi-node-2": 34,
+      "pi-node-3": 34
+    }
+  },
+  "bench_summary": {
+    "num_prompts": 100,
+    "num_warmup": 3,
+    "completed": 70,
+    "failed": 30,
+    "outcome_counts": {
+      "success": 70,
+      "connection_error": 30
+    },
+    "throughput_req_s": 0.1293,
+    "duration_s": 541.522
+  },
+  "reachability_events": [],
+  "thermal_gate": {
+    "threshold_c": 60.0,
+    "stable_readings_required": 2,
+    "poll_interval_s": 10,
+    "timeout_s": 1200,
+    "wait_s": 12.235,
+    "samples": 2,
+    "initial_c": {
+      "pi-node-1": 45.75,
+      "pi-node-2": 53.56,
+      "pi-node-3": 55.5
+    },
+    "final_c": {
+      "pi-node-1": 47.4,
+      "pi-node-2": 52.58,
+      "pi-node-3": 55.02
+    },
+    "read_errors": {}
+  }
+}

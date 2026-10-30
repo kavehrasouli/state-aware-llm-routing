@@ -1,0 +1,18 @@
+{
+  "runs": 508,
+  "measured_requests": 50800,
+  "clean_runs": 416,
+  "excluded_pilot_runs": 1,
+  "clean_nonempty_arm_cells": 67,
+  "clean_measured_decisions": 41600,
+  "strict_filter_excluded_decisions": 17611,
+  "freshness_filter_mean_absolute_divergence_shift": 0.04231978899617031,
+  "freshness_filter_max_absolute_divergence_shift": 0.1793436848009562,
+  "clean_b_observations": 124800,
+  "max_b_observed": 4.0,
+  "sq3b_tests": 337,
+  "bh_definition_B_families": 16,
+  "ladder_rows": 45,
+  "ladder_tested": 37,
+  "ladder_raw_p_below_005": 10
+}

@@ -1,0 +1,11 @@
+backbone	R200_B1	1	200	<repo>/benchmarks/grid_cells/backbone_R200_B1.json	
+backbone	R200_B2	2	200	<repo>/benchmarks/grid_cells/backbone_R200_B2.json	
+backbone	R200_B4	4	200	<repo>/benchmarks/grid_cells/backbone_R200_B4.json	LOW_ITL_GAPS: only ~9 ITL gaps/rep -- noisiest cell by design, do not drop
+backbone	R800_B1	1	800	<repo>/benchmarks/grid_cells/backbone_R800_B1.json	
+backbone	R800_B2	2	800	<repo>/benchmarks/grid_cells/backbone_R800_B2.json	
+backbone	R800_B4	4	800	<repo>/benchmarks/grid_cells/backbone_R800_B4.json	
+backbone	R1600_B2	2	1600	<repo>/benchmarks/grid_cells/backbone_R1600_B2.json	
+backbone	R1600_B4	4	1600	<repo>/benchmarks/grid_cells/backbone_R1600_B4.json	
+backbone	R3200_B4	4	3200	<repo>/benchmarks/grid_cells/backbone_R3200_B4.json	
+asymmetric	onebig	4	800	<repo>/benchmarks/grid_cells/asymmetric_onebig.json	
+asymmetric	extreme	4	800	<repo>/benchmarks/grid_cells/asymmetric_extreme.json	

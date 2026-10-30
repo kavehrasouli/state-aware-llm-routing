@@ -1,0 +1,21 @@
+definition,definition_label,family,n_tests,n_cleared_raw,n_cleared_bh,n_lost,alpha
+A,one family per block,block2,211,83,68,15,0.05
+A,one family per block,block3,54,25,18,7,0.05
+A,one family per block,block4,72,26,20,6,0.05
+B,"one family per (block, metric)",block2|completion_rate_pp,36,1,0,1,0.05
+B,"one family per (block, metric)",block2|e2el_p50,35,13,13,0,0.05
+B,"one family per (block, metric)",block2|e2el_p95,35,19,16,3,0.05
+B,"one family per (block, metric)",block2|throughput_req_s,35,17,16,1,0.05
+B,"one family per (block, metric)",block2|tpot_p50,35,16,12,4,0.05
+B,"one family per (block, metric)",block2|tpot_p95,35,17,13,4,0.05
+B,"one family per (block, metric)",block3|completion_rate_pp,9,1,0,1,0.05
+B,"one family per (block, metric)",block3|e2el_p50,9,4,4,0,0.05
+B,"one family per (block, metric)",block3|e2el_p95,9,6,5,1,0.05
+B,"one family per (block, metric)",block3|throughput_req_s,9,5,5,0,0.05
+B,"one family per (block, metric)",block3|tpot_p50,9,4,0,4,0.05
+B,"one family per (block, metric)",block3|tpot_p95,9,5,4,1,0.05
+B,"one family per (block, metric)",block4|decode_p50,18,4,0,4,0.05
+B,"one family per (block, metric)",block4|decode_p95,18,7,6,1,0.05
+B,"one family per (block, metric)",block4|ttft_p50,18,8,7,1,0.05
+B,"one family per (block, metric)",block4|ttft_p95,18,7,0,7,0.05
+C,one family across everything,all,337,134,106,28,0.05

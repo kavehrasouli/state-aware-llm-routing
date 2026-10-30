@@ -1,0 +1,140 @@
+{
+  "benchmark_version": "bench.py/2.0",
+  "prompt_len_note": "actual_prompt_len is the real tokenized input length (usage.prompt_tokens from server); use it for analysis, not prompt_len (word-count estimate)",
+  "date": "2026-10-25T10:59:57.367757",
+  "base_url": "http://192.168.2.5:8080",
+  "model": "qwen2.5-0.5b",
+  "dataset_name": "local",
+  "random_input_len": 128,
+  "random_output_len": 128,
+  "num_prompts": 2,
+  "num_warmup": 3,
+  "request_rate": Infinity,
+  "max_concurrency": 2,
+  "load_mode": "open-loop",
+  "seed": 42,
+  "duration_s": 8.57,
+  "completed": 2,
+  "failed": 0,
+  "outcome_counts": {
+    "success": 2
+  },
+  "finish_reason_breakdown": {
+    "stop_normal": 0,
+    "length_expected": 2,
+    "kv_slot_truncated": 0
+  },
+  "throughput_req_s": 0.2334,
+  "throughput_tok_s": 4.6672,
+  "ttft": {
+    "mean_ms": 6094.691,
+    "p50_ms": 6094.691,
+    "p95_ms": 6095.389
+  },
+  "tpot": {
+    "mean_ms": 130.25,
+    "p50_ms": 130.25,
+    "p95_ms": 130.25
+  },
+  "itl": {
+    "mean_ms": 130.233,
+    "p50_ms": 128.28,
+    "p95_ms": 135.558
+  },
+  "e2el": {
+    "mean_ms": 8569.438,
+    "p50_ms": 8569.438,
+    "p95_ms": 8570.133
+  },
+  "queue_delay": {
+    "mean_ms": 0.352,
+    "p50_ms": 0.352,
+    "p95_ms": 0.592
+  },
+  "actual_prompt_len": {
+    "min": 80,
+    "mean": 80.0,
+    "max": 80,
+    "n_missing": 0
+  },
+  "raw": [
+    {
+      "ttft_ms": 6095.466833910905,
+      "tpot_ms": 130.24962937312299,
+      "itl_ms": [
+        128.94262501504272,
+        127.51825002487749,
+        127.91512499097735,
+        127.80766596551985,
+        161.40112502034754,
+        128.1295419903472,
+        128.22312500793487,
+        128.25312500353903,
+        128.16516705788672,
+        128.30854090861976,
+        128.0933340312913,
+        128.43266606796533,
+        129.9982089549303,
+        130.65229100175202,
+        128.38020897470415,
+        128.3014160580933,
+        128.4704999998212,
+        128.45612491946667,
+        129.01741708628833
+      ],
+      "e2el_ms": 8570.209792000242,
+      "queue_delay_ms": 0.08641602471470833,
+      "class": null,
+      "prompt_len": 80,
+      "actual_prompt_len": 80,
+      "input_tokens": 80,
+      "output_len": 20,
+      "requested_output_tokens": 20,
+      "generated_output_tokens": 20,
+      "finish_reason": "length",
+      "truncated": 0,
+      "outcome": "success",
+      "success": true,
+      "error": ""
+    },
+    {
+      "ttft_ms": 6093.914167024195,
+      "tpot_ms": 130.250125002165,
+      "itl_ms": [
+        129.69920807518065,
+        127.30312498752028,
+        128.02812492009252,
+        127.76883307378739,
+        161.4115840056911,
+        128.27137496788055,
+        128.09254101011902,
+        128.2836670288816,
+        128.22583294473588,
+        128.24241700582206,
+        127.98483297228813,
+        128.14687506761402,
+        130.10733400005847,
+        130.99687499925494,
+        128.29824991058558,
+        128.27533308882266,
+        128.49320797249675,
+        127.90054199285805,
+        128.85400000959635
+      ],
+      "e2el_ms": 8568.66654206533,
+      "queue_delay_ms": 0.6181249627843499,
+      "class": null,
+      "prompt_len": 80,
+      "actual_prompt_len": 80,
+      "input_tokens": 80,
+      "output_len": 20,
+      "requested_output_tokens": 20,
+      "generated_output_tokens": 20,
+      "finish_reason": "length",
+      "truncated": 0,
+      "outcome": "success",
+      "success": true,
+      "error": ""
+    }
+  ]
+}

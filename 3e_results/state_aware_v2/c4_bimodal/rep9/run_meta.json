@@ -1,0 +1,115 @@
+{
+  "policy": "state_aware_v2",
+  "arm": "state_aware_v2",
+  "arm_note": null,
+  "concurrency": 4,
+  "workload": "bimodal",
+  "rep": 9,
+  "extension_group": "power_infill_v1",
+  "policy_metadata": {
+    "experimental": true,
+    "predictive": false,
+    "request_aware": false,
+    "description": "experimental staged observed-state policy"
+  },
+  "experimental_predictive_policy": false,
+  "start_ts": "2026-08-05T07:53:22Z",
+  "end_ts": "2026-08-05T08:04:26Z",
+  "router_git_commit": "d803b61",
+  "frozen_config": {
+    "weights": [
+      3.1,
+      1.0,
+      1.0
+    ],
+    "poll_interval_ms": 350,
+    "poll_timeout_ms": 300,
+    "dispatch_eviction_threshold": 3,
+    "max_state_age_ms": 1000,
+    "connect_timeout_ms": 1000,
+    "upstream_timeout_ms": 120000,
+    "stream_idle_timeout_ms": 120000,
+    "llama_build": "9960 / a935fbffe",
+    "model": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "num_prompts": 100,
+    "request_rate": 2,
+    "seed": 42,
+    "cost_coefficients": {
+      "pi-node-1": {
+        "c0": 87.5638,
+        "c1": 0.0,
+        "c2": 0.013507
+      },
+      "pi-node-2": {
+        "c0": 53.0,
+        "c1": 47.0,
+        "c2": 0.07
+      },
+      "pi-node-3": {
+        "c0": 53.0,
+        "c1": 47.0,
+        "c2": 0.07
+      }
+    },
+    "bench_timeout_s": 2400,
+    "minimum_cooldown_s": 60,
+    "thermal_start_max_c": 60.0,
+    "thermal_stable_readings": 2,
+    "thermal_poll_s": 10,
+    "thermal_wait_timeout_s": 1200,
+    "router_config_file": "router_3nodes.toml"
+  },
+  "bench_result_file": "local_rate2.0_c4_20260805_100426.json",
+  "router_log_file": "router_log.jsonl",
+  "verdict": "clean",
+  "verdict_reason": null,
+  "router_metrics": {
+    "run_ids": [
+      "1785916414847865000-18655"
+    ],
+    "router_request_records": 103,
+    "no_healthy_replica": 0,
+    "failure_rate": 0.0,
+    "eviction_events": 0,
+    "stale_mode_distribution": {
+      "live": 32,
+      "some_stale_excluded": 71
+    },
+    "chosen_replica_counts": {
+      "pi-node-1": 53,
+      "pi-node-3": 25,
+      "pi-node-2": 25
+    }
+  },
+  "bench_summary": {
+    "num_prompts": 100,
+    "num_warmup": 3,
+    "completed": 100,
+    "failed": 0,
+    "outcome_counts": {
+      "success": 100
+    },
+    "throughput_req_s": 0.1548,
+    "duration_s": 645.85
+  },
+  "reachability_events": [],
+  "thermal_gate": {
+    "threshold_c": 60.0,
+    "stable_readings_required": 2,
+    "poll_interval_s": 10,
+    "timeout_s": 1200,
+    "wait_s": 12.231,
+    "samples": 2,
+    "initial_c": {
+      "pi-node-1": 50.15,
+      "pi-node-2": 56.97,
+      "pi-node-3": 56.48
+    },
+    "final_c": {
+      "pi-node-1": 49.6,
+      "pi-node-2": 55.99,
+      "pi-node-3": 55.99
+    },
+    "read_errors": {}
+  }
+}

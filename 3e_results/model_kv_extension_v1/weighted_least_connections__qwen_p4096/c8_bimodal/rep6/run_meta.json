@@ -1,0 +1,123 @@
+{
+  "policy": "weighted_least_connections",
+  "arm": "weighted_least_connections__qwen_p4096",
+  "arm_note": "model_kv_extension_v1: qwen_p4096 (partitioned KV, ctx 4096, qwen2.5-0.5b-instruct-q4_k_m.gguf)",
+  "concurrency": 8,
+  "workload": "bimodal",
+  "rep": 6,
+  "extension_group": "model_kv_extension_v1",
+  "policy_metadata": {
+    "experimental": false,
+    "predictive": false,
+    "request_aware": false
+  },
+  "experimental_predictive_policy": false,
+  "start_ts": "2026-10-22T09:53:47Z",
+  "end_ts": "2026-10-22T10:01:51Z",
+  "router_git_commit": "fa6a9d2",
+  "frozen_config": {
+    "weights": [
+      3.1,
+      1.0,
+      1.0
+    ],
+    "poll_interval_ms": 350,
+    "poll_timeout_ms": 300,
+    "dispatch_eviction_threshold": 3,
+    "max_state_age_ms": 1000,
+    "connect_timeout_ms": 1000,
+    "upstream_timeout_ms": 120000,
+    "stream_idle_timeout_ms": 120000,
+    "llama_build": "9960 / a935fbffe",
+    "model": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "num_prompts": 100,
+    "request_rate": 2,
+    "seed": 42,
+    "cost_coefficients": {
+      "pi-node-1": {
+        "c0": 87.5638,
+        "c1": 0.0,
+        "c2": 0.013507
+      },
+      "pi-node-2": {
+        "c0": 53.0,
+        "c1": 47.0,
+        "c2": 0.07
+      },
+      "pi-node-3": {
+        "c0": 53.0,
+        "c1": 47.0,
+        "c2": 0.07
+      }
+    },
+    "bench_timeout_s": 2400,
+    "minimum_cooldown_s": 60,
+    "thermal_start_max_c": 60.0,
+    "thermal_stable_readings": 2,
+    "thermal_poll_s": 10,
+    "thermal_wait_timeout_s": 1200,
+    "router_config_file": "router_3nodes.toml"
+  },
+  "bench_result_file": "local_rate2.0_c8_20261022_120151.json",
+  "router_log_file": "router_log.jsonl",
+  "verdict": "clean",
+  "verdict_reason": null,
+  "router_metrics": {
+    "run_ids": [
+      "1792662840222663000-61859"
+    ],
+    "router_request_records": 103,
+    "no_healthy_replica": 0,
+    "failure_rate": 0.0,
+    "eviction_events": 0,
+    "stale_mode_distribution": {
+      "live": 26,
+      "some_stale_excluded": 74,
+      "all_stale_rr": 3
+    },
+    "chosen_replica_counts": {
+      "pi-node-1": 64,
+      "pi-node-3": 16,
+      "pi-node-2": 23
+    }
+  },
+  "bench_summary": {
+    "num_prompts": 100,
+    "num_warmup": 3,
+    "completed": 100,
+    "failed": 0,
+    "outcome_counts": {
+      "success": 100
+    },
+    "throughput_req_s": 0.2154,
+    "duration_s": 464.35
+  },
+  "reachability_events": [],
+  "thermal_gate": {
+    "threshold_c": 60.0,
+    "stable_readings_required": 2,
+    "poll_interval_s": 10,
+    "timeout_s": 1200,
+    "wait_s": 12.233,
+    "samples": 2,
+    "initial_c": {
+      "pi-node-1": 51.8,
+      "pi-node-2": 52.09,
+      "pi-node-3": 51.61
+    },
+    "final_c": {
+      "pi-node-1": 50.7,
+      "pi-node-2": 50.63,
+      "pi-node-3": 51.61
+    },
+    "read_errors": {}
+  },
+  "server_config": {
+    "name": "qwen_p4096",
+    "model_path": "/opt/models/qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "model_name": "qwen2.5-0.5b",
+    "kv_mode": "partitioned",
+    "ctx_size": 4096,
+    "slots": 4
+  }
+}

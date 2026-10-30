@@ -1,0 +1,382 @@
+block,policy,workload,concurrency,category,outcome,http_status,first_token_seen,counted_as_bench_failure,count,median_total_ms,n_runs,bench_offered,bench_failed,pct_of_bench_failures,pct_of_offered
+cell,random,uniform,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,3,300,0,,0.0
+cell,random,uniform,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,3,300,0,,0.0
+cell,random,uniform,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,3,300,0,,0.0
+cell,random,uniform,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,3,300,0,,0.0
+cell,random,uniform,4,client disconnect,client_disconnect,200,True,False,0,,3,300,0,,0.0
+cell,random,uniform,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,11,120002.422083,3,300,11,100.0,3.666667
+cell,random,uniform,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,3,300,11,0.0,0.0
+cell,random,uniform,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,3,300,11,0.0,0.0
+cell,random,uniform,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,3,300,11,0.0,0.0
+cell,random,uniform,8,client disconnect,client_disconnect,200,True,False,0,,3,300,11,,0.0
+cell,random,uniform,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,66,120002.098041,3,300,66,100.0,22.0
+cell,random,uniform,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,3,300,66,0.0,0.0
+cell,random,uniform,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,3,300,66,0.0,0.0
+cell,random,uniform,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,3,300,66,0.0,0.0
+cell,random,uniform,12,client disconnect,client_disconnect,200,True,False,0,,3,300,66,,0.0
+cell,random,bimodal,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,38,120002.499896,3,300,38,100.0,12.666667
+cell,random,bimodal,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,3,300,38,0.0,0.0
+cell,random,bimodal,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,3,300,38,0.0,0.0
+cell,random,bimodal,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,3,300,38,0.0,0.0
+cell,random,bimodal,4,client disconnect,client_disconnect,200,True,False,0,,3,300,38,,0.0
+cell,random,bimodal,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,235,120002.6515,11,1100,315,74.603175,21.363636
+cell,random,bimodal,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,79,120002.69875,11,1100,315,25.079365,7.181818
+cell,random,bimodal,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,1,120002.033791,11,1100,315,0.31746,0.090909
+cell,random,bimodal,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,11,1100,315,0.0,0.0
+cell,random,bimodal,8,client disconnect,client_disconnect,200,True,False,1,62680.596708,11,1100,315,,0.090909
+cell,random,bimodal,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,179,120002.575375,11,1100,355,50.422535,16.272727
+cell,random,bimodal,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,125,120002.3465,11,1100,355,35.211268,11.363636
+cell,random,bimodal,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,51,120002.351042,11,1100,355,14.366197,4.636364
+cell,random,bimodal,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,11,1100,355,0.0,0.0
+cell,random,bimodal,12,client disconnect,client_disconnect,200,True,False,1,47760.900459,11,1100,355,,0.090909
+cell,random,sharegpt,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,18,120002.230729,3,300,18,100.0,6.0
+cell,random,sharegpt,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,3,300,18,0.0,0.0
+cell,random,sharegpt,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,3,300,18,0.0,0.0
+cell,random,sharegpt,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,3,300,18,0.0,0.0
+cell,random,sharegpt,8,client disconnect,client_disconnect,200,True,False,0,,3,300,18,,0.0
+cell,round_robin,uniform,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,round_robin,uniform,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,round_robin,uniform,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,round_robin,uniform,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,round_robin,uniform,4,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,round_robin,uniform,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,round_robin,uniform,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,round_robin,uniform,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,round_robin,uniform,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,round_robin,uniform,8,client disconnect,client_disconnect,200,True,False,1,58123.100959,6,600,0,,0.166667
+cell,round_robin,uniform,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,42,120002.050062,6,600,42,100.0,7.0
+cell,round_robin,uniform,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,42,0.0,0.0
+cell,round_robin,uniform,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,42,0.0,0.0
+cell,round_robin,uniform,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,42,0.0,0.0
+cell,round_robin,uniform,12,client disconnect,client_disconnect,200,True,False,0,,6,600,42,,0.0
+cell,round_robin,bimodal,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,50,120002.141583,6,600,50,100.0,8.333333
+cell,round_robin,bimodal,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,50,0.0,0.0
+cell,round_robin,bimodal,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,50,0.0,0.0
+cell,round_robin,bimodal,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,50,0.0,0.0
+cell,round_robin,bimodal,4,client disconnect,client_disconnect,200,True,False,0,,6,600,50,,0.0
+cell,round_robin,bimodal,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,292,120002.488729,11,1100,292,100.0,26.545455
+cell,round_robin,bimodal,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,11,1100,292,0.0,0.0
+cell,round_robin,bimodal,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,11,1100,292,0.0,0.0
+cell,round_robin,bimodal,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,11,1100,292,0.0,0.0
+cell,round_robin,bimodal,8,client disconnect,client_disconnect,200,True,False,0,,11,1100,292,,0.0
+cell,round_robin,bimodal,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,337,120002.641,11,1100,337,100.0,30.636364
+cell,round_robin,bimodal,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,11,1100,337,0.0,0.0
+cell,round_robin,bimodal,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,11,1100,337,0.0,0.0
+cell,round_robin,bimodal,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,11,1100,337,0.0,0.0
+cell,round_robin,bimodal,12,client disconnect,client_disconnect,200,True,False,0,,11,1100,337,,0.0
+cell,round_robin,sharegpt,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,13,120002.09075,6,600,13,100.0,2.166667
+cell,round_robin,sharegpt,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,13,0.0,0.0
+cell,round_robin,sharegpt,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,13,0.0,0.0
+cell,round_robin,sharegpt,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,13,0.0,0.0
+cell,round_robin,sharegpt,8,client disconnect,client_disconnect,200,True,False,0,,6,600,13,,0.0
+cell,weighted_round_robin,uniform,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,uniform,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,uniform,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,uniform,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,uniform,4,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,weighted_round_robin,uniform,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,uniform,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,uniform,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,uniform,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,uniform,8,client disconnect,client_disconnect,200,True,False,1,23420.416291,6,600,0,,0.166667
+cell,weighted_round_robin,uniform,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,uniform,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,uniform,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,uniform,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,uniform,12,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,weighted_round_robin,bimodal,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,10,120002.142167,6,600,10,100.0,1.666667
+cell,weighted_round_robin,bimodal,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,10,0.0,0.0
+cell,weighted_round_robin,bimodal,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,10,0.0,0.0
+cell,weighted_round_robin,bimodal,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,10,0.0,0.0
+cell,weighted_round_robin,bimodal,4,client disconnect,client_disconnect,200,True,False,0,,6,600,10,,0.0
+cell,weighted_round_robin,bimodal,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,66,120002.448604,7,700,66,100.0,9.428571
+cell,weighted_round_robin,bimodal,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,7,700,66,0.0,0.0
+cell,weighted_round_robin,bimodal,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,7,700,66,0.0,0.0
+cell,weighted_round_robin,bimodal,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,7,700,66,0.0,0.0
+cell,weighted_round_robin,bimodal,8,client disconnect,client_disconnect,200,True,False,1,54785.85875,7,700,66,,0.142857
+cell,weighted_round_robin,bimodal,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,215,120002.323416,19,1900,215,100.0,11.315789
+cell,weighted_round_robin,bimodal,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,19,1900,215,0.0,0.0
+cell,weighted_round_robin,bimodal,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,19,1900,215,0.0,0.0
+cell,weighted_round_robin,bimodal,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,19,1900,215,0.0,0.0
+cell,weighted_round_robin,bimodal,12,client disconnect,client_disconnect,200,True,False,1,21753.681125,19,1900,215,,0.052632
+cell,weighted_round_robin,sharegpt,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,sharegpt,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,sharegpt,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,sharegpt,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,weighted_round_robin,sharegpt,4,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,weighted_round_robin,sharegpt,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,4,120002.388208,6,600,4,100.0,0.666667
+cell,weighted_round_robin,sharegpt,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,4,0.0,0.0
+cell,weighted_round_robin,sharegpt,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,4,0.0,0.0
+cell,weighted_round_robin,sharegpt,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,4,0.0,0.0
+cell,weighted_round_robin,sharegpt,8,client disconnect,client_disconnect,200,True,False,0,,6,600,4,,0.0
+cell,weighted_round_robin,sharegpt,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,19,120002.37725,6,600,19,100.0,3.166667
+cell,weighted_round_robin,sharegpt,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,19,0.0,0.0
+cell,weighted_round_robin,sharegpt,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,19,0.0,0.0
+cell,weighted_round_robin,sharegpt,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,19,0.0,0.0
+cell,weighted_round_robin,sharegpt,12,client disconnect,client_disconnect,200,True,False,0,,6,600,19,,0.0
+cell,least_connections,uniform,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,least_connections,uniform,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,least_connections,uniform,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,least_connections,uniform,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,least_connections,uniform,4,client disconnect,client_disconnect,200,True,False,2,44786.786354,6,600,0,,0.333333
+cell,least_connections,uniform,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,least_connections,uniform,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,least_connections,uniform,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,least_connections,uniform,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,least_connections,uniform,8,client disconnect,client_disconnect,200,True,False,3,17124.618334,6,600,0,,0.5
+cell,least_connections,uniform,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,4,120002.002666,6,600,4,100.0,0.666667
+cell,least_connections,uniform,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,4,0.0,0.0
+cell,least_connections,uniform,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,4,0.0,0.0
+cell,least_connections,uniform,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,4,0.0,0.0
+cell,least_connections,uniform,12,client disconnect,client_disconnect,200,True,False,0,,6,600,4,,0.0
+cell,least_connections,bimodal,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,least_connections,bimodal,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,least_connections,bimodal,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,least_connections,bimodal,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,least_connections,bimodal,4,client disconnect,client_disconnect,200,True,False,1,2051.810416,6,600,0,,0.166667
+cell,least_connections,bimodal,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,50,120002.377125,7,700,50,100.0,7.142857
+cell,least_connections,bimodal,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,7,700,50,0.0,0.0
+cell,least_connections,bimodal,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,7,700,50,0.0,0.0
+cell,least_connections,bimodal,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,7,700,50,0.0,0.0
+cell,least_connections,bimodal,8,client disconnect,client_disconnect,200,True,False,0,,7,700,50,,0.0
+cell,least_connections,bimodal,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,194,120002.544188,11,1100,194,100.0,17.636364
+cell,least_connections,bimodal,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,11,1100,194,0.0,0.0
+cell,least_connections,bimodal,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,11,1100,194,0.0,0.0
+cell,least_connections,bimodal,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,11,1100,194,0.0,0.0
+cell,least_connections,bimodal,12,client disconnect,client_disconnect,200,True,False,0,,11,1100,194,,0.0
+cell,least_connections,sharegpt,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,7,120002.174167,6,600,7,100.0,1.166667
+cell,least_connections,sharegpt,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,7,0.0,0.0
+cell,least_connections,sharegpt,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,7,0.0,0.0
+cell,least_connections,sharegpt,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,7,0.0,0.0
+cell,least_connections,sharegpt,8,client disconnect,client_disconnect,200,True,False,0,,6,600,7,,0.0
+cell,weighted_least_connections,uniform,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,uniform,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,uniform,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,uniform,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,uniform,4,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,weighted_least_connections,uniform,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,uniform,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,uniform,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,uniform,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,uniform,8,client disconnect,client_disconnect,200,True,False,3,66665.710625,6,600,0,,0.5
+cell,weighted_least_connections,uniform,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,1,120001.634209,6,600,1,100.0,0.166667
+cell,weighted_least_connections,uniform,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,1,0.0,0.0
+cell,weighted_least_connections,uniform,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,1,0.0,0.0
+cell,weighted_least_connections,uniform,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,1,0.0,0.0
+cell,weighted_least_connections,uniform,12,client disconnect,client_disconnect,200,True,False,0,,6,600,1,,0.0
+cell,weighted_least_connections,bimodal,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,bimodal,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,bimodal,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,bimodal,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,bimodal,4,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,weighted_least_connections,bimodal,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,20,120002.395521,11,1100,20,100.0,1.818182
+cell,weighted_least_connections,bimodal,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,11,1100,20,0.0,0.0
+cell,weighted_least_connections,bimodal,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,11,1100,20,0.0,0.0
+cell,weighted_least_connections,bimodal,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,11,1100,20,0.0,0.0
+cell,weighted_least_connections,bimodal,8,client disconnect,client_disconnect,200,True,False,0,,11,1100,20,,0.0
+cell,weighted_least_connections,bimodal,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,92,120002.365396,12,1200,97,94.845361,7.666667
+cell,weighted_least_connections,bimodal,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,5,120001.235417,12,1200,97,5.154639,0.416667
+cell,weighted_least_connections,bimodal,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,12,1200,97,0.0,0.0
+cell,weighted_least_connections,bimodal,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,12,1200,97,0.0,0.0
+cell,weighted_least_connections,bimodal,12,client disconnect,client_disconnect,200,True,False,2,26222.163563,12,1200,97,,0.166667
+cell,weighted_least_connections,sharegpt,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,sharegpt,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,sharegpt,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,sharegpt,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,weighted_least_connections,sharegpt,4,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,weighted_least_connections,sharegpt,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,9,900,0,,0.0
+cell,weighted_least_connections,sharegpt,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,9,900,0,,0.0
+cell,weighted_least_connections,sharegpt,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,9,900,0,,0.0
+cell,weighted_least_connections,sharegpt,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,9,900,0,,0.0
+cell,weighted_least_connections,sharegpt,8,client disconnect,client_disconnect,200,True,False,1,46936.293,9,900,0,,0.111111
+cell,weighted_least_connections,sharegpt,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,1,120001.451416,6,600,1,100.0,0.166667
+cell,weighted_least_connections,sharegpt,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,1,0.0,0.0
+cell,weighted_least_connections,sharegpt,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,1,0.0,0.0
+cell,weighted_least_connections,sharegpt,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,1,0.0,0.0
+cell,weighted_least_connections,sharegpt,12,client disconnect,client_disconnect,200,True,False,0,,6,600,1,,0.0
+cell,wlc_conc,uniform,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,wlc_conc,uniform,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,uniform,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,uniform,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,uniform,4,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,wlc_conc,uniform,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,wlc_conc,uniform,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,uniform,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,uniform,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,uniform,8,client disconnect,client_disconnect,200,True,False,1,22229.895125,6,600,0,,0.166667
+cell,wlc_conc,uniform,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,1,0.0,0.0
+cell,wlc_conc,uniform,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,1,0.0,0.0
+cell,wlc_conc,uniform,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,1,0.0,0.0
+cell,wlc_conc,uniform,12,immediate upstream connect failure (502),upstream_error,502,False,True,1,0.596417,6,600,1,100.0,0.166667
+cell,wlc_conc,uniform,12,client disconnect,client_disconnect,200,True,False,0,,6,600,1,,0.0
+cell,wlc_conc,bimodal,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,wlc_conc,bimodal,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,bimodal,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,bimodal,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,bimodal,4,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,wlc_conc,bimodal,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,6,120002.518062,6,600,6,100.0,1.0
+cell,wlc_conc,bimodal,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,6,0.0,0.0
+cell,wlc_conc,bimodal,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,6,0.0,0.0
+cell,wlc_conc,bimodal,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,6,0.0,0.0
+cell,wlc_conc,bimodal,8,client disconnect,client_disconnect,200,True,False,0,,6,600,6,,0.0
+cell,wlc_conc,bimodal,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,67,120002.404625,8,800,68,98.529412,8.375
+cell,wlc_conc,bimodal,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,1,120003.410917,8,800,68,1.470588,0.125
+cell,wlc_conc,bimodal,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,8,800,68,0.0,0.0
+cell,wlc_conc,bimodal,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,8,800,68,0.0,0.0
+cell,wlc_conc,bimodal,12,client disconnect,client_disconnect,200,True,False,0,,8,800,68,,0.0
+cell,wlc_conc,sharegpt,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,wlc_conc,sharegpt,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,sharegpt,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,sharegpt,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,sharegpt,4,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,wlc_conc,sharegpt,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,wlc_conc,sharegpt,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,sharegpt,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,sharegpt,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,sharegpt,8,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,wlc_conc,sharegpt,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,wlc_conc,sharegpt,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,sharegpt,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,sharegpt,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,wlc_conc,sharegpt,12,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,state_aware,uniform,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,state_aware,uniform,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,state_aware,uniform,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,state_aware,uniform,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,state_aware,uniform,4,client disconnect,client_disconnect,200,True,False,1,52754.804375,6,600,0,,0.166667
+cell,state_aware,uniform,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,state_aware,uniform,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,state_aware,uniform,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,state_aware,uniform,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,state_aware,uniform,8,client disconnect,client_disconnect,200,True,False,1,30830.294292,6,600,0,,0.166667
+cell,state_aware,uniform,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,1,120003.10625,6,600,1,100.0,0.166667
+cell,state_aware,uniform,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,1,0.0,0.0
+cell,state_aware,uniform,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,1,0.0,0.0
+cell,state_aware,uniform,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,1,0.0,0.0
+cell,state_aware,uniform,12,client disconnect,client_disconnect,200,True,False,1,44522.239792,6,600,1,,0.166667
+cell,state_aware,bimodal,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,1,0.0,0.0
+cell,state_aware,bimodal,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,1,0.0,0.0
+cell,state_aware,bimodal,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,1,0.0,0.0
+cell,state_aware,bimodal,4,immediate upstream connect failure (502),upstream_error,502,False,True,1,1.796625,6,600,1,100.0,0.166667
+cell,state_aware,bimodal,4,client disconnect,client_disconnect,200,True,False,0,,6,600,1,,0.0
+cell,state_aware,bimodal,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,25,120002.334167,6,600,25,100.0,4.166667
+cell,state_aware,bimodal,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,25,0.0,0.0
+cell,state_aware,bimodal,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,25,0.0,0.0
+cell,state_aware,bimodal,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,25,0.0,0.0
+cell,state_aware,bimodal,8,client disconnect,client_disconnect,200,True,False,0,,6,600,25,,0.0
+cell,state_aware,bimodal,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,79,120002.171,9,900,84,94.047619,8.777778
+cell,state_aware,bimodal,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,5,120002.882709,9,900,84,5.952381,0.555556
+cell,state_aware,bimodal,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,9,900,84,0.0,0.0
+cell,state_aware,bimodal,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,9,900,84,0.0,0.0
+cell,state_aware,bimodal,12,client disconnect,client_disconnect,200,True,False,0,,9,900,84,,0.0
+cell,state_aware,sharegpt,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,1,120003.429167,6,600,1,100.0,0.166667
+cell,state_aware,sharegpt,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,1,0.0,0.0
+cell,state_aware,sharegpt,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,1,0.0,0.0
+cell,state_aware,sharegpt,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,1,0.0,0.0
+cell,state_aware,sharegpt,4,client disconnect,client_disconnect,200,True,False,0,,6,600,1,,0.0
+cell,state_aware,sharegpt,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,state_aware,sharegpt,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,state_aware,sharegpt,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,state_aware,sharegpt,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,state_aware,sharegpt,8,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,state_aware,sharegpt,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,7,120002.889959,6,600,8,87.5,1.166667
+cell,state_aware,sharegpt,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,8,0.0,0.0
+cell,state_aware,sharegpt,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,8,0.0,0.0
+cell,state_aware,sharegpt,12,immediate upstream connect failure (502),upstream_error,502,False,True,1,0.9,6,600,8,12.5,0.166667
+cell,state_aware,sharegpt,12,client disconnect,client_disconnect,200,True,False,0,,6,600,8,,0.0
+cell,state_aware_v2,uniform,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,state_aware_v2,uniform,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,state_aware_v2,uniform,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,state_aware_v2,uniform,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,state_aware_v2,uniform,4,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,state_aware_v2,uniform,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,state_aware_v2,uniform,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,state_aware_v2,uniform,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,state_aware_v2,uniform,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,state_aware_v2,uniform,8,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,state_aware_v2,uniform,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,3,120002.905375,6,600,3,100.0,0.5
+cell,state_aware_v2,uniform,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,3,0.0,0.0
+cell,state_aware_v2,uniform,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,3,0.0,0.0
+cell,state_aware_v2,uniform,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,3,0.0,0.0
+cell,state_aware_v2,uniform,12,client disconnect,client_disconnect,200,True,False,0,,6,600,3,,0.0
+cell,state_aware_v2,bimodal,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,state_aware_v2,bimodal,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,state_aware_v2,bimodal,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,state_aware_v2,bimodal,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,state_aware_v2,bimodal,4,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,state_aware_v2,bimodal,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,27,120002.483625,6,600,27,100.0,4.5
+cell,state_aware_v2,bimodal,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,27,0.0,0.0
+cell,state_aware_v2,bimodal,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,27,0.0,0.0
+cell,state_aware_v2,bimodal,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,27,0.0,0.0
+cell,state_aware_v2,bimodal,8,client disconnect,client_disconnect,200,True,False,0,,6,600,27,,0.0
+cell,state_aware_v2,bimodal,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,89,120002.592417,5,500,89,100.0,17.8
+cell,state_aware_v2,bimodal,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,5,500,89,0.0,0.0
+cell,state_aware_v2,bimodal,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,5,500,89,0.0,0.0
+cell,state_aware_v2,bimodal,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,5,500,89,0.0,0.0
+cell,state_aware_v2,bimodal,12,client disconnect,client_disconnect,200,True,False,0,,5,500,89,,0.0
+cell,state_aware_v2,sharegpt,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,state_aware_v2,sharegpt,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,state_aware_v2,sharegpt,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,state_aware_v2,sharegpt,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,state_aware_v2,sharegpt,4,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,state_aware_v2,sharegpt,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,state_aware_v2,sharegpt,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,state_aware_v2,sharegpt,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,state_aware_v2,sharegpt,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,state_aware_v2,sharegpt,8,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,state_aware_v2,sharegpt,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,14,120003.4025,6,600,15,93.333333,2.333333
+cell,state_aware_v2,sharegpt,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,15,0.0,0.0
+cell,state_aware_v2,sharegpt,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,15,0.0,0.0
+cell,state_aware_v2,sharegpt,12,immediate upstream connect failure (502),upstream_error,502,False,True,1,1.800917,6,600,15,6.666667,0.166667
+cell,state_aware_v2,sharegpt,12,client disconnect,client_disconnect,200,True,False,0,,6,600,15,,0.0
+cell,cost_predict_v3,uniform,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,uniform,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,uniform,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,uniform,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,uniform,4,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,cost_predict_v3,uniform,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,uniform,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,uniform,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,uniform,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,uniform,8,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,cost_predict_v3,uniform,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,uniform,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,uniform,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,uniform,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,uniform,12,client disconnect,client_disconnect,200,True,False,3,45653.930167,6,600,0,,0.5
+cell,cost_predict_v3,bimodal,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,bimodal,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,bimodal,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,bimodal,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,bimodal,4,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,cost_predict_v3,bimodal,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,3,120003.50375,11,1100,3,100.0,0.272727
+cell,cost_predict_v3,bimodal,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,11,1100,3,0.0,0.0
+cell,cost_predict_v3,bimodal,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,11,1100,3,0.0,0.0
+cell,cost_predict_v3,bimodal,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,11,1100,3,0.0,0.0
+cell,cost_predict_v3,bimodal,8,client disconnect,client_disconnect,200,True,False,0,,11,1100,3,,0.0
+cell,cost_predict_v3,bimodal,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,73,120002.171709,11,1100,73,100.0,6.636364
+cell,cost_predict_v3,bimodal,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,11,1100,73,0.0,0.0
+cell,cost_predict_v3,bimodal,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,11,1100,73,0.0,0.0
+cell,cost_predict_v3,bimodal,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,11,1100,73,0.0,0.0
+cell,cost_predict_v3,bimodal,12,client disconnect,client_disconnect,200,True,False,0,,11,1100,73,,0.0
+cell,cost_predict_v3,sharegpt,4,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,sharegpt,4,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,sharegpt,4,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,sharegpt,4,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,sharegpt,4,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+cell,cost_predict_v3,sharegpt,8,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,11,1100,0,,0.0
+cell,cost_predict_v3,sharegpt,8,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,11,1100,0,,0.0
+cell,cost_predict_v3,sharegpt,8,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,11,1100,0,,0.0
+cell,cost_predict_v3,sharegpt,8,immediate upstream connect failure (502),upstream_error,502,False,True,0,,11,1100,0,,0.0
+cell,cost_predict_v3,sharegpt,8,client disconnect,client_disconnect,200,True,False,0,,11,1100,0,,0.0
+cell,cost_predict_v3,sharegpt,12,"upstream deadline expiry, first token seen",upstream_error,200,True,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,sharegpt,12,"upstream deadline expiry, no first token",upstream_error,200,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,sharegpt,12,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,sharegpt,12,immediate upstream connect failure (502),upstream_error,502,False,True,0,,6,600,0,,0.0
+cell,cost_predict_v3,sharegpt,12,client disconnect,client_disconnect,200,True,False,0,,6,600,0,,0.0
+grid_total,ALL,ALL,ALL,"upstream deadline expiry, first token seen",upstream_error,200,True,True,2359,120002.46725,508,50800,2630,89.695817,4.643701
+grid_total,ALL,ALL,ALL,"upstream deadline expiry, no first token",upstream_error,200,False,True,215,120002.4805,508,50800,2630,8.174905,0.423228
+grid_total,ALL,ALL,ALL,no response headers within the timeout (504),upstream_timeout_headers,504,False,True,52,120002.293875,508,50800,2630,1.977186,0.102362
+grid_total,ALL,ALL,ALL,immediate upstream connect failure (502),upstream_error,502,False,True,4,1.348313,508,50800,2630,0.152091,0.007874
+grid_total,ALL,ALL,ALL,client disconnect,client_disconnect,200,True,False,25,44522.239792,508,50800,2630,,0.049213
+grid_total,ALL,ALL,ALL,bench_failures,ALL_FAILURE_OUTCOMES,,,True,2630,120002.464146,508,50800,2630,100.0,5.177165

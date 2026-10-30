@@ -1,0 +1,927 @@
+Starting thermal logger on pi-node-2 (2s interval, current-state throttle bits)...
+  remote logger PID: 1890
+Loaded 11 cells from grid_cells/manifest.tsv — 33 total runs planned.
+
+=== [backbone] R200_B1  B=1 R_target=200  rep=1/3 ===
+  pi-node-2 at 33.1°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 1 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=1  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=1  mode=open-loop
+  completed=1/1  failed=0  duration=10.4s
+  throughput: 0.096 req/s  3.8 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft             6149.3     6149.3     6149.3
+  tpot              109.0      109.0      109.0
+  itl               109.0      107.7      115.0
+  e2el            10399.5    10399.5    10399.5
+  queue_delay         0.1        0.1        0.1
+  actual_input_len: min=160  mean=160.0  max=160  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=1  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c1_20261025_105851.json
+  R_actual=200 (target 200)  tpot_mean=108.977ms  ttft_mean=6149.348ms  temp_peak=51.1C  throttled=0
+
+=== [backbone] R200_B1  B=1 R_target=200  rep=2/3 ===
+  pi-node-2 at 50.1°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 1 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=1  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=1  mode=open-loop
+  completed=1/1  failed=0  duration=10.4s
+  throughput: 0.096 req/s  3.9 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft             6139.3     6139.3     6139.3
+  tpot              108.9      108.9      108.9
+  itl               108.9      107.8      111.5
+  e2el            10388.2    10388.2    10388.2
+  queue_delay         0.1        0.1        0.1
+  actual_input_len: min=160  mean=160.0  max=160  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=1  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c1_20261025_105916.json
+  R_actual=200 (target 200)  tpot_mean=108.947ms  ttft_mean=6139.308ms  temp_peak=54.5C  throttled=0
+
+=== [backbone] R200_B1  B=1 R_target=200  rep=3/3 ===
+  pi-node-2 at 51.6°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 1 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=1  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=1  mode=open-loop
+  completed=1/1  failed=0  duration=10.4s
+  throughput: 0.096 req/s  3.8 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft             6126.1     6126.1     6126.1
+  tpot              109.5      109.5      109.5
+  itl               109.5      107.7      117.9
+  e2el            10397.5    10397.5    10397.5
+  queue_delay         0.1        0.1        0.1
+  actual_input_len: min=160  mean=160.0  max=160  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=1  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c1_20261025_105941.json
+  R_actual=200 (target 200)  tpot_mean=109.525ms  ttft_mean=6126.059ms  temp_peak=57.4C  throttled=0
+
+=== [backbone] R200_B2  B=2 R_target=200  rep=1/3 ===
+  pi-node-2 at 56.4°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 2 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=2  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=2  mode=open-loop
+  completed=2/2  failed=0  duration=8.6s
+  throughput: 0.233 req/s  4.7 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft             6100.1     6100.1     6101.1
+  tpot              130.8      130.8      130.8
+  itl               130.8      128.3      144.3
+  e2el             8585.7     8585.7     8586.7
+  queue_delay         0.6        0.6        1.0
+  actual_input_len: min=80  mean=80.0  max=80  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=2  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c2_20261025_105957.json
+  R_actual=200 (target 200)  tpot_mean=130.816ms  ttft_mean=6100.142ms  temp_peak=59.9C  throttled=0
+
+=== [backbone] R200_B2  B=2 R_target=200  rep=2/3 ===
+  pi-node-2 at 56.4°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 2 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=2  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=2  mode=open-loop
+  completed=2/2  failed=0  duration=8.6s
+  throughput: 0.234 req/s  4.7 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft             6102.6     6102.6     6102.6
+  tpot              129.6      129.6      129.6
+  itl               129.6      129.1      132.6
+  e2el             8564.8     8564.8     8564.9
+  queue_delay         0.7        0.7        1.2
+  actual_input_len: min=80  mean=80.0  max=80  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=2  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c2_20261025_110017.json
+  R_actual=200 (target 200)  tpot_mean=129.589ms  ttft_mean=6102.604ms  temp_peak=60.8C  throttled=0
+
+=== [backbone] R200_B2  B=2 R_target=200  rep=3/3 ===
+  pi-node-2 at 56.9°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 2 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=2  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=2  mode=open-loop
+  completed=2/2  failed=0  duration=8.6s
+  throughput: 0.233 req/s  4.7 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft             6103.3     6103.3     6103.5
+  tpot              131.0      131.0      131.0
+  itl               131.0      129.3      141.7
+  e2el             8592.7     8592.7     8592.7
+  queue_delay         0.7        0.7        1.1
+  actual_input_len: min=80  mean=80.0  max=80  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=2  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c2_20261025_110036.json
+  R_actual=200 (target 200)  tpot_mean=131.025ms  ttft_mean=6103.252ms  temp_peak=61.3C  throttled=0
+
+=== [backbone] R200_B4  B=4 R_target=200  rep=1/3 ===
+  NOTE: LOW_ITL_GAPS: only ~9 ITL gaps/rep -- noisiest cell by design, do not drop
+  pi-node-2 at 60.8°C — waiting to cool below 60°C...
+  pi-node-2 at 47.7°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=8.0s
+  throughput: 0.499 req/s  5.0 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft             6050.1     6049.8     6051.8
+  tpot              218.2      218.2      218.4
+  itl               218.2      215.8      237.6
+  e2el             8013.8     8013.6     8014.5
+  queue_delay         1.1        1.3        1.7
+  actual_input_len: min=40  mean=40.0  max=40  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_110106.json
+  R_actual=200 (target 200)  tpot_mean=218.184ms  ttft_mean=6050.117ms  temp_peak=61.3C  throttled=0
+
+=== [backbone] R200_B4  B=4 R_target=200  rep=2/3 ===
+  NOTE: LOW_ITL_GAPS: only ~9 ITL gaps/rep -- noisiest cell by design, do not drop
+  pi-node-2 at 60.3°C — waiting to cool below 60°C...
+  pi-node-2 at 46.7°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=8.0s
+  throughput: 0.499 req/s  5.0 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft             6049.9     6049.9     6052.2
+  tpot              217.9      217.9      218.0
+  itl               217.8      216.1      230.5
+  e2el             8010.8     8010.8     8012.2
+  queue_delay         0.7        0.8        1.0
+  actual_input_len: min=40  mean=40.0  max=40  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_110134.json
+  R_actual=200 (target 200)  tpot_mean=217.879ms  ttft_mean=6049.925ms  temp_peak=60.8C  throttled=0
+
+=== [backbone] R200_B4  B=4 R_target=200  rep=3/3 ===
+  NOTE: LOW_ITL_GAPS: only ~9 ITL gaps/rep -- noisiest cell by design, do not drop
+  pi-node-2 at 58.4°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=8.0s
+  throughput: 0.498 req/s  5.0 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft             6058.5     6058.2     6062.1
+  tpot              219.0      219.0      219.1
+  itl               219.0      217.1      233.5
+  e2el             8029.3     8029.1     8031.1
+  queue_delay         1.2        1.4        1.8
+  actual_input_len: min=40  mean=40.0  max=40  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_110152.json
+  R_actual=200 (target 200)  tpot_mean=218.975ms  ttft_mean=6058.502ms  temp_peak=64.2C  throttled=0
+
+=== [backbone] R800_B1  B=1 R_target=800  rep=1/3 ===
+  pi-node-2 at 64.2°C — waiting to cool below 60°C...
+  pi-node-2 at 48.2°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 1 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=1  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=1  mode=open-loop
+  completed=1/1  failed=0  duration=45.1s
+  throughput: 0.022 req/s  3.5 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            25358.1    25358.1    25358.1
+  tpot              124.3      124.3      124.3
+  itl               124.3      122.0      135.8
+  e2el            45120.9    45120.9    45120.9
+  queue_delay         0.2        0.2        0.2
+  actual_input_len: min=640  mean=640.0  max=640  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=1  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c1_20261025_110302.json
+  R_actual=800 (target 800)  tpot_mean=124.294ms  ttft_mean=25358.144ms  temp_peak=65.2C  throttled=0
+
+=== [backbone] R800_B1  B=1 R_target=800  rep=2/3 ===
+  pi-node-2 at 60.8°C — waiting to cool below 60°C...
+  pi-node-2 at 49.6°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 1 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=1  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=1  mode=open-loop
+  completed=1/1  failed=0  duration=45.1s
+  throughput: 0.022 req/s  3.5 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            25323.7    25323.7    25323.7
+  tpot              124.3      124.3      124.3
+  itl               124.3      122.0      133.7
+  e2el            45082.1    45082.1    45082.1
+  queue_delay         0.2        0.2        0.2
+  actual_input_len: min=640  mean=640.0  max=640  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=1  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c1_20261025_110412.json
+  R_actual=800 (target 800)  tpot_mean=124.267ms  ttft_mean=25323.723ms  temp_peak=65.2C  throttled=0
+
+=== [backbone] R800_B1  B=1 R_target=800  rep=3/3 ===
+  pi-node-2 at 59.9°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 1 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=1  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=1  mode=open-loop
+  completed=1/1  failed=0  duration=45.1s
+  throughput: 0.022 req/s  3.5 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            25352.8    25352.8    25352.8
+  tpot              124.1      124.1      124.1
+  itl               124.1      121.9      135.3
+  e2el            45077.4    45077.4    45077.4
+  queue_delay         0.1        0.1        0.1
+  actual_input_len: min=640  mean=640.0  max=640  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=1  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c1_20261025_110511.json
+  R_actual=800 (target 800)  tpot_mean=124.054ms  ttft_mean=25352.754ms  temp_peak=68.1C  throttled=0
+
+=== [backbone] R800_B2  B=2 R_target=800  rep=1/3 ===
+  pi-node-2 at 63.3°C — waiting to cool below 60°C...
+  pi-node-2 at 52.1°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 2 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=2  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=2  mode=open-loop
+  completed=2/2  failed=0  duration=35.9s
+  throughput: 0.056 req/s  4.5 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            24610.1    24610.1    24610.4
+  tpot              142.7      142.7      142.7
+  itl               142.7      140.9      156.8
+  e2el            35884.7    35884.7    35884.7
+  queue_delay         0.5        0.5        0.9
+  actual_input_len: min=320  mean=320.0  max=320  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=2  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c2_20261025_110605.json
+  R_actual=800 (target 800)  tpot_mean=142.716ms  ttft_mean=24610.144ms  temp_peak=68.6C  throttled=0
+
+=== [backbone] R800_B2  B=2 R_target=800  rep=2/3 ===
+  pi-node-2 at 68.6°C — waiting to cool below 60°C...
+  pi-node-2 at 53.5°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 2 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=2  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=2  mode=open-loop
+  completed=2/2  failed=0  duration=43.8s
+  throughput: 0.046 req/s  3.6 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            24920.3    24920.3    24920.9
+  tpot              239.4      239.4      239.4
+  itl               239.4      236.3      254.7
+  e2el            43835.9    43835.9    43836.2
+  queue_delay         0.2        0.2        0.3
+  actual_input_len: min=320  mean=320.0  max=320  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=2  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c2_20261025_110711.json
+  R_actual=800 (target 800)  tpot_mean=239.437ms  ttft_mean=24920.34ms  temp_peak=68.6C  throttled=0
+
+=== [backbone] R800_B2  B=2 R_target=800  rep=3/3 ===
+  pi-node-2 at 64.7°C — waiting to cool below 60°C...
+  pi-node-2 at 53.5°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 2 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=2  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=2  mode=open-loop
+  completed=2/2  failed=0  duration=43.8s
+  throughput: 0.046 req/s  3.7 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            24887.2    24887.2    24888.5
+  tpot              239.7      239.7      239.7
+  itl               239.7      236.6      258.7
+  e2el            43821.2    43821.2    43822.1
+  queue_delay         0.6        0.6        1.0
+  actual_input_len: min=320  mean=320.0  max=320  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=2  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c2_20261025_110812.json
+  R_actual=800 (target 800)  tpot_mean=239.671ms  ttft_mean=24887.223ms  temp_peak=69.6C  throttled=0
+
+=== [backbone] R800_B4  B=4 R_target=800  rep=1/3 ===
+  pi-node-2 at 65.2°C — waiting to cool below 60°C...
+  pi-node-2 at 54.0°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=33.4s
+  throughput: 0.120 req/s  4.8 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            24484.5    24484.2    24487.3
+  tpot              229.4      229.4      229.4
+  itl               229.3      227.6      240.1
+  e2el            33429.6    33429.3    33431.9
+  queue_delay         0.7        0.8        1.0
+  actual_input_len: min=160  mean=160.0  max=160  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_110906.json
+  R_actual=800 (target 800)  tpot_mean=229.36ms  ttft_mean=24484.509ms  temp_peak=70.6C  throttled=0
+
+=== [backbone] R800_B4  B=4 R_target=800  rep=2/3 ===
+  pi-node-2 at 66.2°C — waiting to cool below 60°C...
+  pi-node-2 at 54.0°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=33.5s
+  throughput: 0.119 req/s  4.8 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            24479.3    24478.8    24482.2
+  tpot              230.2      230.2      230.2
+  itl               230.2      228.1      242.2
+  e2el            33456.4    33456.4    33458.3
+  queue_delay         1.1        1.3        1.7
+  actual_input_len: min=160  mean=160.0  max=160  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_110959.json
+  R_actual=800 (target 800)  tpot_mean=230.184ms  ttft_mean=24479.255ms  temp_peak=71.1C  throttled=0
+
+=== [backbone] R800_B4  B=4 R_target=800  rep=3/3 ===
+  pi-node-2 at 71.1°C — waiting to cool below 60°C...
+  pi-node-2 at 54.0°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=33.4s
+  throughput: 0.120 req/s  4.8 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            24469.3    24468.8    24471.4
+  tpot              230.1      230.1      230.1
+  itl               230.1      227.9      244.0
+  e2el            33443.0    33443.2    33443.7
+  queue_delay         0.5        0.5        0.7
+  actual_input_len: min=160  mean=160.0  max=160  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_111053.json
+  R_actual=800 (target 800)  tpot_mean=230.097ms  ttft_mean=24469.262ms  temp_peak=71.1C  throttled=0
+
+=== [backbone] R1600_B2  B=2 R_target=1600  rep=1/3 ===
+  pi-node-2 at 70.1°C — waiting to cool below 60°C...
+  pi-node-2 at 56.4°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 2 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=2  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=2  mode=open-loop
+  completed=2/2  failed=0  duration=75.8s
+  throughput: 0.026 req/s  4.2 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            50860.3    50860.3    50860.9
+  tpot              157.2      157.2      157.2
+  itl               157.1      156.1      165.3
+  e2el            75847.1    75847.1    75848.1
+  queue_delay         0.6        0.6        1.0
+  actual_input_len: min=640  mean=640.0  max=640  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=2  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c2_20261025_111226.json
+  R_actual=1600 (target 1600)  tpot_mean=157.15ms  ttft_mean=50860.273ms  temp_peak=72.0C  throttled=0
+
+=== [backbone] R1600_B2  B=2 R_target=1600  rep=2/3 ===
+  pi-node-2 at 71.1°C — waiting to cool below 60°C...
+  pi-node-2 at 56.0°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 2 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=2  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=2  mode=open-loop
+  completed=2/2  failed=0  duration=75.8s
+  throughput: 0.026 req/s  4.2 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            38054.4    38054.4    49505.8
+  tpot              237.0      237.0      308.6
+  itl               237.0      156.1      171.3
+  e2el            75730.3    75730.3    75787.7
+  queue_delay         0.6        0.6        1.1
+  actual_input_len: min=640  mean=640.0  max=640  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=2  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c2_20261025_111400.json
+  R_actual=1600 (target 1600)  tpot_mean=236.955ms  ttft_mean=38054.428ms  temp_peak=73.5C  throttled=0
+
+=== [backbone] R1600_B2  B=2 R_target=1600  rep=3/3 ===
+  pi-node-2 at 68.1°C — waiting to cool below 60°C...
+  pi-node-2 at 56.4°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 2 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=2  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=2  mode=open-loop
+  completed=2/2  failed=0  duration=90.5s
+  throughput: 0.022 req/s  3.5 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            50672.9    50672.9    50673.0
+  tpot              250.8      250.8      250.8
+  itl               250.8      246.5      269.4
+  e2el            90543.8    90543.8    90548.1
+  queue_delay         0.2        0.2        0.4
+  actual_input_len: min=640  mean=640.0  max=640  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=2  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c2_20261025_111552.json
+  R_actual=1600 (target 1600)  tpot_mean=250.76ms  ttft_mean=50672.946ms  temp_peak=73.5C  throttled=0
+
+=== [backbone] R1600_B4  B=4 R_target=1600  rep=1/3 ===
+  pi-node-2 at 69.6°C — waiting to cool below 60°C...
+  pi-node-2 at 56.4°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=69.4s
+  throughput: 0.058 req/s  4.6 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            37487.0    37485.9    50082.9
+  tpot              402.0      402.0      559.9
+  itl               402.0      243.1      255.6
+  e2el            69241.9    69242.5    69361.8
+  queue_delay         1.2        1.4        1.7
+  actual_input_len: min=320  mean=320.0  max=320  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_111724.json
+  R_actual=1600 (target 1600)  tpot_mean=401.961ms  ttft_mean=37486.993ms  temp_peak=74.5C  throttled=0
+
+=== [backbone] R1600_B4  B=4 R_target=1600  rep=2/3 ===
+  pi-node-2 at 73.5°C — waiting to cool below 60°C...
+  pi-node-2 at 59.4°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=68.4s
+  throughput: 0.058 req/s  4.7 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            49114.3    49113.9    49116.0
+  tpot              244.7      244.7      244.7
+  itl               244.6      242.8      258.8
+  e2el            68441.6    68441.8    68442.4
+  queue_delay         0.8        1.0        1.3
+  actual_input_len: min=320  mean=320.0  max=320  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_111853.json
+  R_actual=1600 (target 1600)  tpot_mean=244.65ms  ttft_mean=49114.277ms  temp_peak=75.0C  throttled=0
+
+=== [backbone] R1600_B4  B=4 R_target=1600  rep=3/3 ===
+  pi-node-2 at 74.5°C — waiting to cool below 60°C...
+  pi-node-2 at 58.9°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=68.4s
+  throughput: 0.059 req/s  4.7 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            49095.0    49094.2    49097.9
+  tpot              244.0      244.0      244.0
+  itl               243.9      242.7      255.7
+  e2el            68367.3    68366.8    68369.2
+  queue_delay         1.1        1.3        1.7
+  actual_input_len: min=320  mean=320.0  max=320  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_112021.json
+  R_actual=1600 (target 1600)  tpot_mean=243.953ms  ttft_mean=49094.997ms  temp_peak=75.9C  throttled=0
+
+=== [backbone] R3200_B4  B=4 R_target=3200  rep=1/3 ===
+  pi-node-2 at 71.1°C — waiting to cool below 60°C...
+  pi-node-2 at 58.4°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=145.8s
+  throughput: 0.027 req/s  4.4 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            86450.0    81239.0    98957.4
+  tpot              372.7      405.3      405.3
+  itl               372.7      275.1      290.4
+  e2el           145717.2   145684.0   145798.4
+  queue_delay         1.1        1.3        1.7
+  actual_input_len: min=640  mean=640.0  max=640  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_112307.json
+  R_actual=3200 (target 3200)  tpot_mean=372.749ms  ttft_mean=86450.013ms  temp_peak=76.9C  throttled=0
+
+=== [backbone] R3200_B4  B=4 R_target=3200  rep=2/3 ===
+  pi-node-2 at 75.9°C — waiting to cool below 60°C...
+  pi-node-2 at 58.9°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=146.0s
+  throughput: 0.027 req/s  4.4 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            86453.7    81241.2    98965.4
+  tpot              373.8      406.4      406.4
+  itl               373.8      276.2      292.2
+  e2el           145887.3   145854.2   145968.9
+  queue_delay         0.5        0.5        0.8
+  actual_input_len: min=640  mean=640.0  max=640  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_112554.json
+  R_actual=3200 (target 3200)  tpot_mean=373.797ms  ttft_mean=86453.669ms  temp_peak=76.9C  throttled=0
+
+=== [backbone] R3200_B4  B=4 R_target=3200  rep=3/3 ===
+  pi-node-2 at 75.0°C — waiting to cool below 60°C...
+  pi-node-2 at 61.3°C — waiting to cool below 60°C...
+  pi-node-2 at 56.9°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=146.1s
+  throughput: 0.027 req/s  4.4 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            86460.7    81247.4    98973.0
+  tpot              374.2      406.8      406.8
+  itl               374.2      276.9      290.9
+  e2el           145961.2   145927.4   146043.6
+  queue_delay         1.2        1.4        1.8
+  actual_input_len: min=640  mean=640.0  max=640  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_112850.json
+  R_actual=3200 (target 3200)  tpot_mean=374.216ms  ttft_mean=86460.744ms  temp_peak=77.4C  throttled=0
+
+=== [asymmetric] onebig  B=4 R_target=800  rep=1/3 ===
+  pi-node-2 at 76.4°C — waiting to cool below 60°C...
+  pi-node-2 at 59.9°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=39.0s
+  throughput: 0.103 req/s  4.1 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            24865.4    24864.9    24868.0
+  tpot              207.6      229.2      229.3
+  itl               174.2      143.1      233.1
+  e2el            31661.0    29222.1    37516.3
+  queue_delay         1.0        1.1        1.5
+  actual_input_len: min=80  mean=160.0  max=400  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_112949.json
+  R_actual=800 (target 800)  tpot_mean=207.593ms  ttft_mean=24865.406ms  temp_peak=75.9C  throttled=0
+
+=== [asymmetric] onebig  B=4 R_target=800  rep=2/3 ===
+  pi-node-2 at 69.1°C — waiting to cool below 60°C...
+  pi-node-2 at 58.9°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=38.9s
+  throughput: 0.103 req/s  4.1 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            24877.0    24877.0    24879.6
+  tpot              206.3      227.8      227.8
+  itl               173.3      134.8      235.9
+  e2el            31635.6    29207.1    37467.2
+  queue_delay         1.2        1.4        1.8
+  actual_input_len: min=80  mean=160.0  max=400  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_113051.json
+  R_actual=800 (target 800)  tpot_mean=206.329ms  ttft_mean=24877.02ms  temp_peak=75.9C  throttled=0
+
+=== [asymmetric] onebig  B=4 R_target=800  rep=3/3 ===
+  pi-node-2 at 71.1°C — waiting to cool below 60°C...
+  pi-node-2 at 58.9°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=39.0s
+  throughput: 0.103 req/s  4.1 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            24863.4    24863.8    24864.9
+  tpot              207.3      228.9      229.0
+  itl               174.0      139.8      234.3
+  e2el            31649.7    29213.7    37496.4
+  queue_delay         1.5        1.8        2.2
+  actual_input_len: min=80  mean=160.0  max=400  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_113152.json
+  R_actual=800 (target 800)  tpot_mean=207.325ms  ttft_mean=24863.446ms  temp_peak=75.4C  throttled=0
+
+=== [asymmetric] extreme  B=4 R_target=800  rep=1/3 ===
+  pi-node-2 at 70.6°C — waiting to cool below 60°C...
+  pi-node-2 at 58.9°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=42.9s
+  throughput: 0.093 req/s  3.7 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            25016.2    25015.3    25019.7
+  tpot              204.5      228.4      228.7
+  itl               145.4      126.3      229.2
+  e2el            30686.7    26616.1    40457.5
+  queue_delay         1.2        1.3        1.8
+  actual_input_len: min=32  mean=160.0  max=544  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_113255.json
+  R_actual=800 (target 800)  tpot_mean=204.472ms  ttft_mean=25016.204ms  temp_peak=75.0C  throttled=0
+
+=== [asymmetric] extreme  B=4 R_target=800  rep=2/3 ===
+  pi-node-2 at 70.6°C — waiting to cool below 60°C...
+  pi-node-2 at 57.9°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=42.8s
+  throughput: 0.093 req/s  3.7 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            25027.8    25027.9    25030.2
+  tpot              202.8      226.5      226.6
+  itl               144.5      126.3      226.7
+  e2el            30662.9    26615.5    40380.2
+  queue_delay         0.9        1.1        1.4
+  actual_input_len: min=32  mean=160.0  max=544  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_113400.json
+  R_actual=800 (target 800)  tpot_mean=202.828ms  ttft_mean=25027.831ms  temp_peak=74.5C  throttled=0
+
+=== [asymmetric] extreme  B=4 R_target=800  rep=3/3 ===
+  pi-node-2 at 70.1°C — waiting to cool below 60°C...
+  pi-node-2 at 57.9°C — OK to start.
+Warming up (3 requests, results discarded)…
+Warmup complete.
+Building dataset: local
+Sending 4 requests → http://192.168.2.3:8080
+rate=inf req/s  concurrency=4  mode=open-loop  seed=42
+
+==============================================================
+  dataset=local  rate=inf req/s  concurrency=4  mode=open-loop
+  completed=4/4  failed=0  duration=42.8s
+  throughput: 0.093 req/s  3.7 tok/s
+──────────────────────────────────────────────────────────────
+  metric             mean        p50        p95  (ms)
+  ───────────────────────────────────────────────
+  ttft            25025.0    25025.2    25026.6
+  tpot              205.4      229.9      230.0
+  itl               145.0      126.2      227.8
+  e2el            30679.8    26634.6    40390.3
+  queue_delay         1.0        1.2        1.6
+  actual_input_len: min=32  mean=160.0  max=544  (tokens, from server usage)
+  finish_reason:    stop=0  length(expected)=4  KV-SLOT-TRUNCATED=0
+==============================================================
+
+Saved → <repo>/benchmarks/cost_model_rerun_2026-10/bench_pi2/results/local_rateinf_c4_20261025_113505.json
+  R_actual=800 (target 800)  tpot_mean=205.383ms  ttft_mean=25024.983ms  temp_peak=75.0C  throttled=0
+
+Sweep complete. Summary written to cost_model_rerun_2026-10/pi-node-2_4B-4g/sweep_cost_model_summary.csv
+(33 runs planned; check the CSV for any throttled=1 rows that hit MAX_RETRIES)
+Stopping remote thermal logger (PID 1890)...

@@ -1,0 +1,13 @@
+arm,repetition,verdict,offered,completed,latency_requests,e2el_p50_s,e2el_p95_s,metadata_path
+weighted_least_connections,1,clean,100,100,100,50.29078662500069,82.18419296219935,3e_results/weighted_least_connections/c12_sharegpt/rep1/run_meta.json
+weighted_least_connections,2,clean,100,99,99,48.074988917000155,90.58638319999845,3e_results/weighted_least_connections/c12_sharegpt/rep2/run_meta.json
+weighted_least_connections,3,clean,100,100,100,50.88445764550124,87.19616364729717,3e_results/weighted_least_connections/c12_sharegpt/rep3/run_meta.json
+weighted_least_connections,4,clean,100,100,100,51.6833894374995,89.7876243982522,3e_results/weighted_least_connections/c12_sharegpt/rep4/run_meta.json
+weighted_least_connections,5,clean,100,100,100,49.84807825000098,79.69391064584632,3e_results/weighted_least_connections/c12_sharegpt/rep5/run_meta.json
+weighted_least_connections,6,clean,100,100,100,50.12765489600133,76.26069491905072,3e_results/weighted_least_connections/c12_sharegpt/rep6/run_meta.json
+state_aware,1,clean,100,99,99,44.6208048749977,94.65547591669929,3e_results/state_aware/c12_sharegpt/rep1/run_meta.json
+state_aware,2,clean,100,100,100,47.80368366699986,97.48152467499767,3e_results/state_aware/c12_sharegpt/rep2/run_meta.json
+state_aware,3,clean,100,98,98,44.24382958349997,96.01453787944992,3e_results/state_aware/c12_sharegpt/rep3/run_meta.json
+state_aware,4,clean,100,98,98,41.75499779200072,96.6061187544008,3e_results/state_aware/c12_sharegpt/rep4/run_meta.json
+state_aware,5,clean,100,97,97,40.074069499998586,98.27760759099911,3e_results/state_aware/c12_sharegpt/rep5/run_meta.json
+state_aware,6,clean,100,100,100,46.03401731250051,98.45523243155547,3e_results/state_aware/c12_sharegpt/rep6/run_meta.json

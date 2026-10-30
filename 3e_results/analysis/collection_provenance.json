@@ -1,0 +1,194 @@
+{
+  "recorded_config_comparison": [
+    {
+      "arm": "cost_predict_v3",
+      "original_c8_runs": 11,
+      "extension_runs": 12,
+      "shared_fields": [
+        "bench_timeout_s",
+        "connect_timeout_ms",
+        "cost_coefficients",
+        "dispatch_eviction_threshold",
+        "llama_build",
+        "max_state_age_ms",
+        "minimum_cooldown_s",
+        "model",
+        "num_prompts",
+        "poll_interval_ms",
+        "poll_timeout_ms",
+        "request_rate",
+        "seed",
+        "stream_idle_timeout_ms",
+        "thermal_poll_s",
+        "thermal_stable_readings",
+        "thermal_start_max_c",
+        "thermal_wait_timeout_s",
+        "upstream_timeout_ms",
+        "weights"
+      ],
+      "different_shared_fields": []
+    },
+    {
+      "arm": "state_aware",
+      "original_c8_runs": 6,
+      "extension_runs": 12,
+      "shared_fields": [
+        "bench_timeout_s",
+        "connect_timeout_ms",
+        "dispatch_eviction_threshold",
+        "llama_build",
+        "max_state_age_ms",
+        "minimum_cooldown_s",
+        "model",
+        "num_prompts",
+        "poll_interval_ms",
+        "poll_timeout_ms",
+        "request_rate",
+        "seed",
+        "stream_idle_timeout_ms",
+        "thermal_poll_s",
+        "thermal_stable_readings",
+        "thermal_start_max_c",
+        "thermal_wait_timeout_s",
+        "upstream_timeout_ms",
+        "weights"
+      ],
+      "different_shared_fields": []
+    },
+    {
+      "arm": "state_aware_v2",
+      "original_c8_runs": 6,
+      "extension_runs": 12,
+      "shared_fields": [
+        "bench_timeout_s",
+        "connect_timeout_ms",
+        "cost_coefficients",
+        "dispatch_eviction_threshold",
+        "llama_build",
+        "max_state_age_ms",
+        "minimum_cooldown_s",
+        "model",
+        "num_prompts",
+        "poll_interval_ms",
+        "poll_timeout_ms",
+        "request_rate",
+        "seed",
+        "stream_idle_timeout_ms",
+        "thermal_poll_s",
+        "thermal_stable_readings",
+        "thermal_start_max_c",
+        "thermal_wait_timeout_s",
+        "upstream_timeout_ms",
+        "weights"
+      ],
+      "different_shared_fields": []
+    },
+    {
+      "arm": "weighted_least_connections",
+      "original_c8_runs": 9,
+      "extension_runs": 12,
+      "shared_fields": [
+        "bench_timeout_s",
+        "connect_timeout_ms",
+        "dispatch_eviction_threshold",
+        "llama_build",
+        "max_state_age_ms",
+        "minimum_cooldown_s",
+        "model",
+        "num_prompts",
+        "poll_interval_ms",
+        "poll_timeout_ms",
+        "request_rate",
+        "seed",
+        "stream_idle_timeout_ms",
+        "thermal_poll_s",
+        "thermal_stable_readings",
+        "thermal_start_max_c",
+        "thermal_wait_timeout_s",
+        "upstream_timeout_ms",
+        "weights"
+      ],
+      "different_shared_fields": []
+    },
+    {
+      "arm": "weighted_round_robin",
+      "original_c8_runs": 6,
+      "extension_runs": 12,
+      "shared_fields": [
+        "bench_timeout_s",
+        "connect_timeout_ms",
+        "dispatch_eviction_threshold",
+        "llama_build",
+        "max_state_age_ms",
+        "minimum_cooldown_s",
+        "model",
+        "num_prompts",
+        "poll_interval_ms",
+        "poll_timeout_ms",
+        "request_rate",
+        "seed",
+        "stream_idle_timeout_ms",
+        "thermal_poll_s",
+        "thermal_stable_readings",
+        "thermal_start_max_c",
+        "thermal_wait_timeout_s",
+        "upstream_timeout_ms",
+        "weights"
+      ],
+      "different_shared_fields": []
+    },
+    {
+      "arm": "wlc_conc",
+      "original_c8_runs": 6,
+      "extension_runs": 12,
+      "shared_fields": [
+        "bench_timeout_s",
+        "connect_timeout_ms",
+        "cost_coefficients",
+        "dispatch_eviction_threshold",
+        "llama_build",
+        "max_state_age_ms",
+        "minimum_cooldown_s",
+        "model",
+        "num_prompts",
+        "poll_interval_ms",
+        "poll_timeout_ms",
+        "request_rate",
+        "router_config_file",
+        "seed",
+        "stream_idle_timeout_ms",
+        "thermal_poll_s",
+        "thermal_stable_readings",
+        "thermal_start_max_c",
+        "thermal_wait_timeout_s",
+        "upstream_timeout_ms",
+        "weights"
+      ],
+      "different_shared_fields": []
+    }
+  ],
+  "ordered_request_length_fingerprints": {
+    "extension_c4_c12": {
+      "4e0e2620c4389f12f774dbd27f3cdbba76ebbc7910021c3cb34f187f29bb4b88": 72
+    },
+    "original_c8": {
+      "4e0e2620c4389f12f774dbd27f3cdbba76ebbc7910021c3cb34f187f29bb4b88": 44
+    }
+  },
+  "recorded_commits": {
+    "extension_c4_c12": [
+      "b99fefe"
+    ],
+    "original_c8": [
+      "9fae1d9",
+      "a8feeef",
+      "c1dc002",
+      "d803b61"
+    ]
+  },
+  "limitations": [
+    "Length fingerprints do not establish identical prompt text.",
+    "Recorded git commits do not uniquely establish executed binaries or uncommitted source state.",
+    "This check does not establish phase equivalence experimentally."
+  ]
+}
